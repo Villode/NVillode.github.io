@@ -1,26 +1,27 @@
 ---
-title: Hi
-date: 2014-6-1
-updated: 2023-9-6
-cover: https://isgodata.files.wordpress.com/2023/03/8615073_0_final.png
-description: hi
-tags:
-  - 搞机
-  - tag_name2
-  - tag_name3
+abbrlink: ''
 categories:
-  - UI设计
-  - AI图片
-  - category_name3
-swiper_index: 1 #置顶轮播图顺序，非负整数，数字越大越靠前
+- UI设计
+- AI图片
+- category_name3
+cover: https://isgodata.files.wordpress.com/2023/03/8615073_0_final.png
+date: 2014-6-1
+description: hi
+swiper_index: 1
+tags:
+- 搞机
+- tag_name2
+- tag_name3
+title: Hi
+updated: Wed, 29 Mar 2023 16:58:45 GMT
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+测试！！！
 
 ## Quick Start
 
 ### Create a new post
 
-``` bash
+```bash
 $ hexo new "My New Post"
 ```
 
@@ -28,7 +29,7 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 
 ### Run server
 
-``` bash
+```bash
 $ hexo server
 ```
 
@@ -36,7 +37,7 @@ More info: [Server](https://hexo.io/docs/server.html)
 
 ### Generate static files
 
-``` bash
+```bash
 $ hexo generate
 ```
 
@@ -44,7 +45,7 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 
 ### Deploy to remote sites
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
