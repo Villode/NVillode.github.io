@@ -1,0 +1,31 @@
+- class_name: 赞赏
+  reward_list:
+    - name: xxxx
+      amount: 0
+      datatime: 2022-11-08
+    - name: xxxx
+      amount: 0
+      datatime: 2022-09-20
+    - name: xxxx
+      amount: 0
+      datatime: 2022-10-27
+      suffix: xx
+    - name: xxxx
+      amount: 0
+      datatime: 2022-10-07
+      suffix: xx
+    - name: xxxx
+      amount: 0
+      datatime: 2022-08-25
+      suffix: xx
+    - name: xxxx
+      amount: 0
+      datatime: 2022-08-23
+      suffix: xx
+    - name: xxxx
+      amount: 0
+      datatime: 2022-08-19
+    - name: xxxx
+      amount: 0
+      datatime: 2022-08-19
+      suffix: xx
