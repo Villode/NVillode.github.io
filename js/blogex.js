@@ -158,7 +158,7 @@ function getContrastYIQ(hexcolor) {
 //导航栏文章
 function navTitle() {
   var titlevalue = document.title;
-  var simptitle = titlevalue.replace(' | 张洪Heo', '')
+  var simptitle = titlevalue.replace(' | 萦芑Blog', '')
   document.getElementById("page-name-text").innerHTML = simptitle;
 }
 
