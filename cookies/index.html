@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    cookies
+    
+</title>
+<noscript>开启Javascript是必要的</noscript>
+<link rel="stylesheet" href="/css/var.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<link rel="stylesheet" href="/lib/snackbar.min.css">
+<link rel="icon" type="image/x-icon" href="/">
+<link rel="apple-touch-icon" href="/">
+<meta name="apple-mobile-web-app-title" content="萦芑Blog">
+<link rel="bookmark" href="/">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/">
+<meta name="description" content="">
+<!-- <meta name="theme-color" content="#1C1C1F"> -->
+
+<script type="text/javascript" src="/lib/qrcode.min.js"></script>
+<div class="site-config">
+    <script>
+        var GOBALPAGE = "page"
+    </script> 
+</div>
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body id="body">
+        <div id="console" style="zoom: 1;" class="">
+    <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
+        <i class="fas fa-circle-xmark"></i>
+    </div>
+    <div class="button-group">
+        <div class="console-btn-item"> <a class="darkmode_switchbutton" onclick="acrylic.switchDarkMode()" title="显示模式切换"
+                href="javascript:void(0);" rel="external nofollow" data-pjax-state=""><i class="fas fa-moon"
+                    style="font-size: 1rem;"></i></a></div>
+        <div class="console-btn-item" id="consoleMusic" onclick="heo.musicToggle()" title="音乐开关"><a class="music-switch"
+                data-pjax-state=""><i class="fas fa-music"></i></a></div>
+        <div class="console-btn-item" id="consoleFPS" onclick="heo.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
+                data-pjax-state=""><i class="fas fa-gauge"></i></a></div>
+    </div>
+    <div class="console-mask" onclick="acrylic.hideConsole()" href="javascript:void(0);" rel="external nofollow"></div>
+</div>
+        <div id="sidebar" style="zoom: 1;">
+    <div id="menu-mask" style="display: none;"></div>
+    <div id="sidebar-menus" class="">
+        <span class="sidebar-menu-item-title">功能</span>
+        <div class="sidebar-menu-item">
+            <a class="darkmode_switchbutton menu-child" onclick="acrylic.switchDarkMode()" title="显示模式切换"
+                href="javascript:void(0);" rel="external nofollow">
+                <i class="fas fa-moon" style="font-size: 1rem;"></i>
+                <span>显示模式</span>
+            </a>
+        </div>
+        
+            <div class="back-menu-list-groups">
+    
+        
+            <div class="back-menu-list-group">
+                <div class="back-menu-list-title">
+                    我的
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/" rel="external nofollow"
+                        title="博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            博客
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    
+</div>
+
+        
+        <div class="menus_items">
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 文库</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/archives/">
+                                <i class="fas fa-box-archive"></i>
+                                <span> 文章列表</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/categories/">
+                                <i class="fas fa-cube"></i>
+                                <span> 全部分类</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/tags/">
+                                <i class="fas fa-tags"></i>
+                                <span> 全部标签</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 友链</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/fcircle/">
+                                <i class="fas fa-fish-fins"></i>
+                                <span> 友链鱼塘</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-user-group"></i>
+                                <span> 友情链接</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="javascript:travelling()">
+                                <i class="fas fa-bus"></i>
+                                <span> 宝藏博主</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page not-child" href="/me" rel="external nofollow">
+                    <span> 我的</span>
+                </a>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page not-child" href="/" rel="external nofollow">
+                    <span> 仓库</span>
+                </a>
+             
+        </div>
+    
+</div>
+        <span class="sidebar-menu-item-title">标签</span>
+        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+            <div class="item-headline">
+                <i class="fas fa-tags"></i>
+                <span>标签</span>
+            </div>
+            <div class="card-tag-cloud">
+                
+                    <a href="/tags/HEXO/" style="font-size: 1em; color: #d3d3d3">HEXO
+                        <sup>1</sup>
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</div>    
+        <div class="page" id="body-wrap">
+            <header class="not-top-img" id="page-header">
+    <nav id="nav" class="show">
+    <div id="nav-group">
+        <div id="blog_name">
+            
+                <div class="back-home-button" tabindex="-1">
+                    <i class="back-home-button-icon fas fa-grip-vertical"></i>
+                    <div class="back-menu-list-groups">
+    
+        
+            <div class="back-menu-list-group">
+                <div class="back-menu-list-title">
+                    我的
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/" rel="external nofollow"
+                        title="博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            博客
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    
+</div>
+
+                </div>
+            
+            <a id="site-name" href="/" title="返回博客主页">
+                <span class="heoicon">
+                    Rot
+                </span>
+            </a>
+        </div>
+        <div id="page-name-mask">
+            <div id="page-name">
+                <a id="page-name-text" onclick="acrylic.toTop()">cookies</a>
+            </div>
+        </div>
+        <div id="menus">
+            <div class="menus_items">
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 文库</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/archives/">
+                                <i class="fas fa-box-archive"></i>
+                                <span> 文章列表</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/categories/">
+                                <i class="fas fa-cube"></i>
+                                <span> 全部分类</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/tags/">
+                                <i class="fas fa-tags"></i>
+                                <span> 全部标签</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 友链</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/fcircle/">
+                                <i class="fas fa-fish-fins"></i>
+                                <span> 友链鱼塘</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-user-group"></i>
+                                <span> 友情链接</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="javascript:travelling()">
+                                <i class="fas fa-bus"></i>
+                                <span> 宝藏博主</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page not-child" href="/me" rel="external nofollow">
+                    <span> 我的</span>
+                </a>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page not-child" href="/" rel="external nofollow">
+                    <span> 仓库</span>
+                </a>
+             
+        </div>
+    
+</div>
+        </div>
+        <!-- <div id="nav-left">
+            <div id="fps-group">
+                <div id="fps">145</div><span class="fpsText">FPS</span>
+            </div>
+        </div> -->
+        <div id="nav-right">
+            
+    <div class="nav-button" id="randomPost_button">
+        <a class="site-page" onclick="toRandomPost()"
+            title="随机前往一个文章">
+            <i class="fas fa-shuffle" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+
+            
+    <div class="nav-button" id="nav-console">
+        <a class="console_switchbutton" onclick="acrylic.showConsole()"
+        title="显示中控台" href="javascript:void(0);" rel="external nofollow">
+        <i class="fas fa-bars-progress" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+<div class="nav-button" id="nav-totop" onclick="acrylic.toTop()">
+    <a class="totopbtn">
+        <i class="fas fa-arrow-up"></i>
+        <span id="percent">0</span>
+    </a>
+</div>     
+<div id="toggle-menu">
+    <a class="site-page">
+        <i class="fas fa-bars fa-fw" style="font-size: 1rem;"></i>
+    </a>
+</div>
+        </div>
+    </div>
+</nav>
+        
+</header>
+            <main class="layout hide-aside" id="content-inner">
+    <div id="page">
+        
+                <div id="article-container">
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>语言切换按钮</title>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        /* 定义新拟物风格按钮样式 */
+        .neo-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #002fa7;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .neo-btn:hover {
+            background-color: #e77d7d;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        .neo-btn:active {
+            background-color: #1e7e34;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+        #english {
+            display: none;
+        }
+    </style>
+
+<body>
+    <button onclick="toggleLanguage()" id="toggleButton" class="neo-btn">English </button>
+    <div id="chinese">
+        <p
+            style="  text-align: center ; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 30px; font-weight: 900;">
+            <font color="#002fa7" style=" ">CooKies 政策</font>
+        </p>
+        <p
+            style="color: #1d1626; display: block; font-weight: bold; font-family: Arial; font-size: 20px; font-weight: 900; ">
+            <br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 17px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;2023年3月23日晚9点33分修订。请指出您可能发现的错误，我们将进行核实 并进行相应的纠正。下面是我们的cookie策略的AI翻译版本。如果你
+                发现任何错误，请让我们知道，我们将作出必要的修改，谢谢！</font>
+            <br><br>
+            当您访问本网站时，我们使用cookies来收集和存储信息，以便为您提供更好的用户体验和服务。下面是我们使用cookies的详细说明：
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;">1.
+                什么是cookies？</a></font>
+            <br>
+            Cookies（即HTTP Cookies）是由网站服务器发送到用户浏览器的小文本文件，通常用于识别用户并存储有关用户的偏好和活动历史记录等信息。Cookies不会损害您的计算机或移动设备。
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;">2.
+                我们使用哪些类型的cookies？</font>
+            <br>
+            我们使用以下类型的cookies：
+            <br>
+            （1）必要性cookies：这些cookie对于使网站正确运行至关重要。这些cookie不包含任何个人信息，并且仅在您对网站进行设置时才设置。
+            <br>
+            （2）功能性cookies：这些cookie用于记录您所做出选择和将其应用到功能内，并且能够记住您偏好的选项。
+            <br>
+            （3）性能和分析cookies：这些cookie用于帮助我们了解如何改进网站性能和访客满意度。这些cookie收集匿名信息，例如访问者数量、页面访问量、页面浏览时间等。
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;"> 3.
+                您如何控制cookies？</font>
+            <br>
+            大多数浏览器都允许您控制cookies的设置，例如可以拒绝接受所有cookies、接受部分cookie或删除已存储在计算机上的cookie。请注意，在某些情况下，如果禁用必要性cookie，则可能无法正常运行某些功能。
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;">4. 我们如何保护隐私权？
+            </font>
+            <br>
+            我们非常注重用户隐私权，并将采取各种安全措施来保护您提供给我们的个人信息。除非法律规定或事先得到您的明确同意，否则我们不会将您提供给我们的任何个人信息披露给第三方。
+            在此向所有访客保证，我们将遵守所有适用法律和法规，并尽最大努力保护您的隐私权。 <a href="/privacy/">点击查看隐私政策</a>
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;">5.
+                我们如何更新Cookie政策？</font>
+            <br>
+            我们可能根据需要更新此Cookie政策。在更新政策后，将立即在本网站上发布更新版本并生效。因此，请定期查看此Cookie政策是否有变化。如果更改会影响个人信息处理方面，则会通过邮件、通知栏等方式通知给各位读者。
+            <br>
+            如果您对本政策有任何疑问，欢迎随时联系我们。 请联系本博主电子邮件: FFF773@outlook.com。
+            <p>这是中文内容。</p>
+        </p>
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <div id="english">
+        <!-- ------------------------------------- -->
+        <p
+            style="  text-align: center ; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 30px; font-weight: 900;">
+            <font color="#002fa7" style=" ">Cookie Policy</font>
+        </p>
+        <p style="color: #1d1626;  font-weight: bold; font-family: Arial; font-size: 20px; font-weight: 900; ">
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 15px;">
+                &nbsp;&nbsp;&nbsp;&nbsp; Revised on March 23, 2023 at 9:33 pm. Please point out any errors you may find,
+                and we will verify
+                and correct them accordingly. The following is an AI-translated version of our cookie policy. If you
+                find any mistakes, please let us know and we will make the necessary revisions. Thank you! </font>
+            <br><br>
+            When you visit this website, we use cookies to collect and store information in order to provide you
+            with a better user experience and service. Below is a detailed explanation of how we use cookies:
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;">What are
+                cookies?</font>
+            <br>
+            Cookies (i.e., HTTP cookies) are small text files sent by a website server to a user's browser,
+            typically used to identify users and store information such as their preferences and activity
+            history. Cookies do not harm your computer or mobile device.
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;"> What types of
+                cookies do we use?</font>
+            <br>
+            We use the following types of cookies:
+            <br><br>
+            (1) Necessary cookies: These cookies are essential for the website to function properly. These
+            cookies do not contain any personal information and are only set when you interact with the website.
+            <br><br>
+            (2) Functional cookies: These cookies are used to remember your choices and apply them to the
+            functionality within the website, and can remember your preferred options.
+            <br><br>
+            (3) Performance and analytics cookies: These cookies are used to help us understand how to improve
+            website performance and visitor satisfaction. These cookies collect anonymous information such as
+            the number of visitors, page views, and page visit duration.
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;"> How can you
+                control cookies?</font><br>
+            Most browsers allow you to control cookie settings, such as rejecting all cookies, accepting some
+            cookies, or deleting cookies stored on your computer. Please note that in some cases, disabling
+            necessary cookies may prevent certain features from functioning properly.
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;"> How do we
+                protect privacy?</font><br>
+            We are committed to protecting your privacy and will take various security measures to safeguard the
+            personal information you provide us with. We will not disclose any personal information you provide
+            us to third parties unless required by law or with your express consent.<br>
+            <br>
+            We assure all visitors that we will comply with all applicable laws and regulations and make every
+            effort to protect your privacy.
+            <br><br>
+            <font color="#002fa7" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 21px;"> How do we
+                update the cookie policy?</font><br>
+            We may update this cookie policy as needed. Upon updating the policy, we will immediately publish
+            the updated version on this website, which will take effect. Therefore, please check this cookie
+            policy regularly for any changes. If any changes affect the processing of personal information, we
+            will notify our readers via email, notification bars, and other means.
+            <br><br>
+            If you have any questions regarding this policy, please feel free to contact us. Please email us at
+            FFF773@outlook.com.
+        </p>
+        <p>This is English content.</p>
+    </div>
+    <script>
+        function toggleLanguage() {
+            var chinese = document.getElementById("chinese");
+            var english = document.getElementById("english");
+            var button = document.getElementById("toggleButton");
+            if (chinese.style.display === "none") {
+                chinese.style.display = "block";
+                english.style.display = "none";
+                button.innerHTML = "English";
+            } else {
+                chinese.style.display = "none";
+                english.style.display = "block";
+                button.innerHTML = "中文";
+            }
+        }
+        var lgh = $('.lightning li').length;
+        console.log(lgh)
+        $('.lightning li').each(function (i) {
+            $(this).css({
+                left: i * (100 / lgh) + '%',
+                bottom: randomNum(-20, 10) + '%',
+                animationDuration: randomNum(1, 5) + 's'
+            });
+        });
+    </script>
+</body>
+
+</html>
+</div>
+             
+                
+    </div>
+       
+</main>     
+
+        </div>
+        <script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script>
+<script type="text/javascript" src="/lib/pjax.min.js"></script>
+<script type="text/javascript" src="/lib/snackbar.min.js"></script>
+<script type="text/javascript" src="/lib/view-image.min.js"></script>
+    
+<!-- <link rel="stylesheet" href="/js/libs/swiper.min.css">
+<script type="text/javascript" src="/js/libs/wiper.min.js"></script> -->
+<script>
+  let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '.site-config',
+  ]
+  
+  const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+</script>
+
+
+        <footer id="footer">
+            <div id="footer_deal">
+    
+        <a class="deal_link" href="/" rel="external nofollow" title="Github">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    
+        <a class="deal_link" href="/" rel="external nofollow" title="Mail">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    
+    <img class="footer_mini_logo" src="/img/avatar.webp"
+        title="返回顶部" onclick="acrylic.toTop()">
+    
+        <a class="deal_link" href="/" rel="external nofollow" title="网易云">
+            <i class="fa-solid fa-music"></i>
+        </a>
+    
+        <a class="deal_link" href="/" rel="external nofollow" title="bilibili">
+            <i class="fa-brands fa-bilibili"></i>
+        </a>
+    
+</div>    
+<div id="heo-footer">
+    
+        <div class="footer-group">
+            <h3 class="footer-title">导航</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" href="/archives/" title="文章归档" rel="noopener external nofollow noreferrer">文章归档</a>
+                
+                    <a class="footer-item" href="/categories/" title="文章分类" rel="noopener external nofollow noreferrer">文章分类</a>
+                
+                    <a class="footer-item" href="/tags/" title="文章标签" rel="noopener external nofollow noreferrer">文章标签</a>
+                
+                    <a class="footer-item" href="/link/" title="友链" rel="noopener external nofollow noreferrer">友链</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">服务</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://51.la/" title="51la统计" rel="noopener external nofollow noreferrer noopener">51la统计</a>
+                
+                    <a class="footer-item" target="_blank" href="https://tongji.baidu.com/" title="百度统计" rel="noopener external nofollow noreferrer noopener">百度统计</a>
+                
+                    <a class="footer-item" target="_blank" href="https://ql.tianli0.top/" title="TianliCDN" rel="noopener external nofollow noreferrer noopener">TianliCDN</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">Acrylic</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://acrylic.zhheo.com/" title="主题官网" rel="noopener external nofollow noreferrer noopener">主题官网</a>
+                
+                    <a class="footer-item" target="_blank" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic" title="Github" rel="noopener external nofollow noreferrer noopener">Github</a>
+                
+                    <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">推荐友链</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
+                
+                    <a class="footer-item" target="_blank" href="https://akilar.top" title="Akilar" rel="noopener external nofollow noreferrer noopener">Akilar</a>
+                    
+            </div>
+        </div>
+    
+    
+</div>
+<div id="footer-banner">
+    <div class="footer-banner-links">
+        <div class="footer-banner-left">
+            <div id="footer-banner-tips">
+                <div class="copyright">©2021 - 2023 By 
+                    <a class="footer-banner-link" href="/" rel="external nofollow">萦芑</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-banner-right">
+            <a class="footer-banner-link" href="/rss/">订阅</a>
+            
+            <a class="footer-banner-link cc" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" title="cc协议">
+                <i class="fa-solid fa-closed-captioning"></i>
+            </a>
+        </div>
+    </div>
+</div>
+        </footer>
+    </body>
+</html>
+<script>const posts=["2023/04/01/即刻短文静态部署版/","2023/03/30/HI/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
