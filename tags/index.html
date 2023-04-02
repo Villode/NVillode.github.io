@@ -4,33 +4,129 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    标签
-    
-</title>
+<title>萦芑Blog</title>
 <noscript>开启Javascript是必要的</noscript>
+<link rel="icon" type="image/x-icon" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
+<link rel="apple-touch-icon" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
+<meta name="apple-mobile-web-app-title" content="萦芑Blog">
+<link rel="bookmark" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
+<meta name="description" content="">
+<meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/custom.css">
+
+
+    <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script>
+
+
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+
 <link rel="stylesheet" href="/lib/snackbar.min.css">
-<link rel="icon" type="image/x-icon" href="/">
-<link rel="apple-touch-icon" href="/">
-<meta name="apple-mobile-web-app-title" content="萦芑Blog">
-<link rel="bookmark" href="/">
-<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/">
-<meta name="description" content="">
-<!-- <meta name="theme-color" content="#1C1C1F"> -->
 
-<script type="text/javascript" src="/lib/qrcode.min.js"></script>
-<div class="site-config">
-    <script>
-        var GOBALPAGE = "page"
-    </script> 
-</div>
 
+<script src="/lib/qrcode.min.js"></script>
+
+
+    
+<script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
+
+
+
+
+
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2021-12-12 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"hightlight":{"enable":true,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{},"copy":{},"time":{},"sayhello":{},"search":{}},"covercolor":true,"localsearch":{"preload":true,"path":"/search.xml"}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"page":false,"comment":false};</script>
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
+        
+            <div id="loading-box" onclick="preloader.endLoading();" class style="zoom: 1;">
+    <div class="loading-bg">
+        <img class="loading-img nolazyload" alt="loading image"
+            src="https://isgodata.files.wordpress.com/2023/04/k.webp">
+        </div>
+</div>
+<script>
+    const preloader = {
+        endLoading: () => {
+            document.getElementById('loading-box').classList.add("loaded")
+        },
+        initLoading: () => {
+            document.getElementById('loading-box').classList.remove("loaded")
+        },
+        removePaceDone: () => {
+            document.getElementById('body').classList = 'pace-done'
+        }
+    }
+    window.addEventListener('load',()=> { preloader.endLoading() })
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+</script>
+<style>
+    #loading-box {
+        -webkit-user-select: none;
+    }
+
+    #loading-box .loading-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: var(--heo-background);
+        z-index: 1999;
+        opacity: 1;
+        transition: 0.2s;
+        pointer-events: all;
+        animation: showLoading 0.3s 0s backwards;
+    }
+
+    #loading-box.loaded .loading-bg {
+        pointer-events: none;
+        transition: 0.2s;
+        animation: hideLoading 0.3s 0s forwards;
+    }
+
+    #loading-box .loading-img {
+        width: 100px;
+        margin: auto;
+        animation-duration: 0.2s;
+        animation-name: loadingAction;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes loadingAction {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes hideLoading {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes showLoading {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+        
         <div id="console" style="zoom: 1;" class="">
     <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
         <i class="fas fa-circle-xmark"></i>
@@ -39,16 +135,17 @@
         <div class="console-btn-item"> <a class="darkmode_switchbutton" onclick="acrylic.switchDarkMode()" title="显示模式切换"
                 href="javascript:void(0);" rel="external nofollow" data-pjax-state=""><i class="fas fa-moon"
                     style="font-size: 1rem;"></i></a></div>
-        <div class="console-btn-item" id="consoleMusic" onclick="heo.musicToggle()" title="音乐开关"><a class="music-switch"
-                data-pjax-state=""><i class="fas fa-music"></i></a></div>
-        <div class="console-btn-item" id="consoleFPS" onclick="heo.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
+                    
+            <div class="console-btn-item" id="consoleMusic" onclick="acrylic.musicToggle()" title="音乐开关"><a class="music-switch"><i class="fas fa-music"></i></a></div>
+        
+        <div class="console-btn-item" id="consoleFPS" onclick="acrylic.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
                 data-pjax-state=""><i class="fas fa-gauge"></i></a></div>
     </div>
     <div class="console-mask" onclick="acrylic.hideConsole()" href="javascript:void(0);" rel="external nofollow"></div>
 </div>
         <div id="sidebar" style="zoom: 1;">
     <div id="menu-mask" style="display: none;"></div>
-    <div id="sidebar-menus" class="">
+    <div id="sidebar-menus" class>
         <span class="sidebar-menu-item-title">功能</span>
         <div class="sidebar-menu-item">
             <a class="darkmode_switchbutton menu-child" onclick="acrylic.switchDarkMode()" title="显示模式切换"
@@ -60,27 +157,26 @@
         
             <div class="back-menu-list-groups">
     
-        
-            <div class="back-menu-list-group">
-                <div class="back-menu-list-title">
-                    我的
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/" rel="external nofollow"
-                        title="博客">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            博客
-                        </span>
-                    </a>
-                </div>
-            
+      
+      <div class="back-menu-list-group">
+        <div class="back-menu-list-title">
+          我的
         </div>
+        <div class="back-menu-list">
+          
+            
+            <a class="back-menu-item" href="https://isgo.top" rel="external nofollow" title="博客">
+              <img class="back-menu-item-icon" src="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                博客
+              </span>
+            </a>
+          
+        </div>
+      </div>
     
-</div>
-
+  </div>
+  
         
         <div class="menus_items">
     
@@ -112,6 +208,13 @@
                             </a>
                         </li>
                     
+                        <li>
+                            <a class="site-page child" href="/essay/">
+                                <i class="fas fas fa-bars-staggered"></i>
+                                <span> 即刻短文</span>
+                            </a>
+                        </li>
+                    
                 </ul>
              
         </div>
@@ -124,23 +227,9 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/fcircle/">
-                                <i class="fas fa-fish-fins"></i>
-                                <span> 友链鱼塘</span>
-                            </a>
-                        </li>
-                    
-                        <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-user-group"></i>
                                 <span> 友情链接</span>
-                            </a>
-                        </li>
-                    
-                        <li>
-                            <a class="site-page child" href="javascript:travelling()">
-                                <i class="fas fa-bus"></i>
-                                <span> 宝藏博主</span>
                             </a>
                         </li>
                     
@@ -150,17 +239,40 @@
     
         <div class="menus_item">
             
-                <a class="site-page not-child" href="/me" rel="external nofollow">
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
                     <span> 我的</span>
                 </a>
-             
-        </div>
-    
-        <div class="menus_item">
-            
-                <a class="site-page not-child" href="/" rel="external nofollow">
-                    <span> 仓库</span>
-                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/tlink/">
+                                <i class="fas fa-screwdriver-wrench"></i>
+                                <span> 在线工具</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/air-conditioner/">
+                                <i class="fas fa-snowflake"></i>
+                                <span> 小空调鸭</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/about/">
+                                <i class="fas fa-sailboat"></i>
+                                <span> 关于本站</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/music/">
+                                <i class="fas fa-sailboat"></i>
+                                <span> 音乐界面</span>
+                            </a>
+                        </li>
+                    
+                </ul>
              
         </div>
     
@@ -173,7 +285,19 @@
             </div>
             <div class="card-tag-cloud">
                 
-                    <a href="/tags/HEXO/" style="font-size: 1em; color: #d3d3d3">HEXO
+                    <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1em; color: #d3d3d3">日常
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/%E7%83%AD%E9%97%A8/" style="font-size: 1em; color: #d3d3d3">热门
+                        <sup>2</sup>
+                    </a>
+                
+                    <a href="/tags/%E6%90%9E%E6%9C%BA/" style="font-size: 1em; color: #d3d3d3">搞机
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1em; color: #d3d3d3">教程
                         <sup>1</sup>
                     </a>
                 
@@ -181,8 +305,9 @@
         </div>
     </div>
 </div>    
-        <div class="page" id="body-wrap">
-            <header class="not-top-img" id="page-header">
+        
+            <div class="page" id="body-wrap">
+                <header class="not-top-img" id="page-header">
     <nav id="nav" class="show">
     <div id="nav-group">
         <div id="blog_name">
@@ -191,38 +316,37 @@
                     <i class="back-home-button-icon fas fa-grip-vertical"></i>
                     <div class="back-menu-list-groups">
     
-        
-            <div class="back-menu-list-group">
-                <div class="back-menu-list-title">
-                    我的
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/" rel="external nofollow"
-                        title="博客">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            博客
-                        </span>
-                    </a>
-                </div>
-            
+      
+      <div class="back-menu-list-group">
+        <div class="back-menu-list-title">
+          我的
         </div>
+        <div class="back-menu-list">
+          
+            
+            <a class="back-menu-item" href="https://isgo.top" rel="external nofollow" title="博客">
+              <img class="back-menu-item-icon" src="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                博客
+              </span>
+            </a>
+          
+        </div>
+      </div>
     
-</div>
-
+  </div>
+  
                 </div>
             
             <a id="site-name" href="/" title="返回博客主页">
-                <span class="heoicon">
-                    Rot
-                </span>
+                    
+                        <span class="heoicon">萦芑</span>
+                    
             </a>
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">标签</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">tags</a>
             </div>
         </div>
         <div id="menus">
@@ -256,6 +380,13 @@
                             </a>
                         </li>
                     
+                        <li>
+                            <a class="site-page child" href="/essay/">
+                                <i class="fas fas fa-bars-staggered"></i>
+                                <span> 即刻短文</span>
+                            </a>
+                        </li>
+                    
                 </ul>
              
         </div>
@@ -268,23 +399,9 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/fcircle/">
-                                <i class="fas fa-fish-fins"></i>
-                                <span> 友链鱼塘</span>
-                            </a>
-                        </li>
-                    
-                        <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-user-group"></i>
                                 <span> 友情链接</span>
-                            </a>
-                        </li>
-                    
-                        <li>
-                            <a class="site-page child" href="javascript:travelling()">
-                                <i class="fas fa-bus"></i>
-                                <span> 宝藏博主</span>
                             </a>
                         </li>
                     
@@ -294,17 +411,40 @@
     
         <div class="menus_item">
             
-                <a class="site-page not-child" href="/me" rel="external nofollow">
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
                     <span> 我的</span>
                 </a>
-             
-        </div>
-    
-        <div class="menus_item">
-            
-                <a class="site-page not-child" href="/" rel="external nofollow">
-                    <span> 仓库</span>
-                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/tlink/">
+                                <i class="fas fa-screwdriver-wrench"></i>
+                                <span> 在线工具</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/air-conditioner/">
+                                <i class="fas fa-snowflake"></i>
+                                <span> 小空调鸭</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/about/">
+                                <i class="fas fa-sailboat"></i>
+                                <span> 关于本站</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/music/">
+                                <i class="fas fa-sailboat"></i>
+                                <span> 音乐界面</span>
+                            </a>
+                        </li>
+                    
+                </ul>
              
         </div>
     
@@ -317,6 +457,13 @@
         </div> -->
         <div id="nav-right">
             
+    <div class="nav-button only-home" id="travellings_button">
+        <a class="site-page"  target="_blank" rel="noopener external nofollow" href="https://www.travellings.cn/go.html" title="开往-友链接力"  width="120">
+            <i class="fa-solid fa-train-subway" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+
     <div class="nav-button" id="randomPost_button">
         <a class="site-page" onclick="toRandomPost()"
             title="随机前往一个文章">
@@ -325,7 +472,14 @@
     </div>
 
 
-            
+    <div class="nav-button" id="search-button">
+        <a class="site-page social-icon search" title="站内搜索"
+            href="javascript:void(0);" rel="external nofollow">
+            <i class="fas fa-magnifying-glass" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+
     <div class="nav-button" id="nav-console">
         <a class="console_switchbutton" onclick="acrylic.showConsole()"
         title="显示中控台" href="javascript:void(0);" rel="external nofollow">
@@ -338,7 +492,7 @@
         <i class="fas fa-arrow-up"></i>
         <span id="percent">0</span>
     </a>
-</div>     
+</div>
 <div id="toggle-menu">
     <a class="site-page">
         <i class="fas fa-bars fa-fw" style="font-size: 1rem;"></i>
@@ -349,63 +503,49 @@
 </nav>
         
 </header>
-            <main class="layout hide-aside" id="content-inner">
+                <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-            <h1 class="page-title" style="display: inline;">标签</h1>
+            <h1 class="page-title">标签</h1>
 <div class="category-lists">
     <div class="tag-cloud-list is-center">
         
-            <a href="/tags/HEXO/">
+            <a href="/tags/%E6%97%A5%E5%B8%B8/">
                 <span class="tags-punctuation">#</span> 
-                HEXO
+                日常
+                <span class="tagsPageCount">1</span>
+            </a>
+        
+            <a href="/tags/%E7%83%AD%E9%97%A8/">
+                <span class="tags-punctuation">#</span> 
+                热门
+                <span class="tagsPageCount">2</span>
+            </a>
+        
+            <a href="/tags/%E6%90%9E%E6%9C%BA/">
+                <span class="tags-punctuation">#</span> 
+                搞机
+                <span class="tagsPageCount">1</span>
+            </a>
+        
+            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                <span class="tags-punctuation">#</span> 
+                教程
                 <span class="tagsPageCount">1</span>
             </a>
         
     </div>
 </div>
              
-                
+            
     </div>
        
 </main>     
 
-        </div>
-        <script type="text/javascript" src="/js/main.js"></script>
-<script type="text/javascript" src="/js/utils.js"></script>
-<script type="text/javascript" src="/lib/pjax.min.js"></script>
-<script type="text/javascript" src="/lib/snackbar.min.js"></script>
-<script type="text/javascript" src="/lib/view-image.min.js"></script>
+                <footer id="footer">
+                    <div id="footer_deal">
     
-<!-- <link rel="stylesheet" href="/js/libs/swiper.min.css">
-<script type="text/javascript" src="/js/libs/wiper.min.js"></script> -->
-<script>
-  let pjaxSelectors = [
-    'title',
-    '#body-wrap',
-    '.site-config',
-  ]
-  
-  const pjax = new Pjax({
-    elements: 'a:not([target="_blank"])',
-    selectors: pjaxSelectors,
-    cacheBust: false,
-    analytics: false,
-    scrollRestoration: false
-  })
-
-  document.addEventListener('pjax:error', (e) => {
-    if (e.request.status === 404) {
-      pjax.loadUrl('/404.html')
-    }
-  })
-</script>
-
-
-        <footer id="footer">
-            <div id="footer_deal">
-    
-        <a class="deal_link" href="/" rel="external nofollow" title="Github">
+        <a class="deal_link" target="_blank" href="https://github.com/Villode" rel="external nofollow noopener" title="Github">
             <i class="fa-brands fa-github"></i>
         </a>
     
@@ -413,7 +553,7 @@
             <i class="fa-solid fa-envelope"></i>
         </a>
     
-    <img class="footer_mini_logo" src="/img/avatar.webp"
+    <img class="footer_mini_logo" src="https://isgodata.files.wordpress.com/2023/04/k.webp"
         title="返回顶部" onclick="acrylic.toTop()">
     
         <a class="deal_link" href="/" rel="external nofollow" title="网易云">
@@ -448,22 +588,20 @@
                 
                     <a class="footer-item" target="_blank" href="https://51.la/" title="51la统计" rel="noopener external nofollow noreferrer noopener">51la统计</a>
                 
-                    <a class="footer-item" target="_blank" href="https://tongji.baidu.com/" title="百度统计" rel="noopener external nofollow noreferrer noopener">百度统计</a>
-                
-                    <a class="footer-item" target="_blank" href="https://ql.tianli0.top/" title="TianliCDN" rel="noopener external nofollow noreferrer noopener">TianliCDN</a>
+                    <a class="footer-item" target="_blank" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic" title="主题" rel="noopener external nofollow noreferrer noopener">主题</a>
                     
             </div>
         </div>
     
         <div class="footer-group">
-            <h3 class="footer-title">Acrylic</h3>
+            <h3 class="footer-title">协议</h3>
             <div class="footer-links">
                 
-                    <a class="footer-item" target="_blank" href="https://acrylic.zhheo.com/" title="主题官网" rel="noopener external nofollow noreferrer noopener">主题官网</a>
+                    <a class="footer-item" href="/privacy/" title="隐私声明" rel="noopener external nofollow noreferrer">隐私声明</a>
                 
-                    <a class="footer-item" target="_blank" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic" title="Github" rel="noopener external nofollow noreferrer noopener">Github</a>
+                    <a class="footer-item" href="/cookies/" title="Cookie" rel="noopener external nofollow noreferrer">Cookie</a>
                 
-                    <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
+                    <a class="footer-item" href="/cc/" title="版权声明" rel="noopener external nofollow noreferrer">版权声明</a>
                     
             </div>
         </div>
@@ -474,7 +612,7 @@
                 
                     <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
                 
-                    <a class="footer-item" target="_blank" href="https://akilar.top" title="Akilar" rel="noopener external nofollow noreferrer noopener">Akilar</a>
+                    <a class="footer-item" href="https://isgo.top" title="ISGO" rel="noopener external nofollow noreferrer">ISGO</a>
                     
             </div>
         </div>
@@ -487,11 +625,16 @@
             <div id="footer-banner-tips">
                 <div class="copyright">©2021 - 2023 By 
                     <a class="footer-banner-link" href="/" rel="external nofollow">萦芑</a>
+                    <!-- <a class="footer-banner-link" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next" rel="external nofollow" target="_blank"> Theme By Acrylic-Next</a> -->
                 </div>
             </div>
         </div>
         <div class="footer-banner-right">
             <a class="footer-banner-link" href="/rss/">订阅</a>
+            
+                <a class="footer-banner-link" target="_blank" href="https://icp.gov.moe/?keyword=20238777" rel="noopener external nofollow noreferrer noopener">
+                    萌ICP备20238777号
+                </a>
             
             <a class="footer-banner-link cc" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" title="cc协议">
                 <i class="fa-solid fa-closed-captioning"></i>
@@ -499,7 +642,126 @@
         </div>
     </div>
 </div>
-        </footer>
+                </footer>
+            </div>
+         
+        <div>
+    <script type="text/javascript" src="/js/utils.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    
+
+<script src="/lib/pjax.min.js"></script>
+
+
+
+<script src="/lib/snackbar.min.js"></script>
+
+
+    
+<script src="/lib/view-image.min.js"></script>
+
+
+
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
+<div id="js-pjax">
+    
+    
+        <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
+     
+</div>
+
+    
+<link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css">
+
+    
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script>
+
+    
+<script src="https://cdn1.tianli0.top/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+
+
+    
+<script src="/js/extend/covercolor/local.js"></script>
+
+        
+
+    <script>
+  let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax'
+  ]
+  
+  const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+  })
+
+  document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+</script>
+    
+</div>
+        
+    <div id="local-search">
+    <div class="search-dialog">
+        <nav class="search-nav">
+            <span class="search-dialog-title">搜索</span>
+            <button class="search-close-button">
+                <i class="fas fa-times"></i>
+            </button>
+        </nav>
+        <div id="loading-database">
+            <i class="fas fa-spinner fa-pulse"></i>
+            <span>加载中</span>
+        </div>
+        <div class="search-wrap">
+            <div class="search-box">
+                <input class="search-box-input" placeholder="输入关键词快速查找" type="text" id="search-input" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off">
+            </div>
+            <div id="loading-status"></div>
+            <div id="search-results"></div>
+        </div>
+    </div>
+    <div id="search-mask"></div>
+</div>
+    
+<link rel="stylesheet" href="/css/search/local-search.css">
+
+    
+<script src="/js/extend/search/local-search.js"></script>
+
+
+     
+        <div class="needEndHide" id="nav-music" onclick="acrylic.musicToggle()">
+    <div id="nav-music-hoverTips">音乐已暂停</div>
+    <meting-js id="1708664797" server="tencent" type="playlist" mutex="true"
+        preload="none" data-lrctype="0" order="random" theme="var(--heo-main)"></meting-js>
+</div>
+    
     </body>
 </html>
-<script>const posts=["2023/04/01/即刻短文静态部署版/","2023/03/30/HI/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>const posts=["2014/06/01/hello-world/","2014/06/01/yun/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

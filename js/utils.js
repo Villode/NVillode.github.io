@@ -54,7 +54,7 @@ const utils = {
   },
 
   fadeOut: (ele, time) => {
-    ele.addEventListener('animationend', function f () {
+    ele.addEventListener('animationend', function f() {
       ele.style.cssText = "display: none; animation: '' "
       ele.removeEventListener('animationend', f)
     })
@@ -73,7 +73,7 @@ const utils = {
   snackbarShow: (text, showAction, duration) => {
     const sa = (typeof showAction !== 'undefined') ? showAction : false
     const dur = (typeof duration !== 'undefined') ? duration : 5000
-    document.styleSheets[0].addRule(':root','--heo-snackbar-time:'+ dur +'ms!important')
+    document.styleSheets[0].addRule(':root', '--heo-snackbar-time:' + dur + 'ms!important')
     Snackbar.show({
       text: text,
       showAction: sa,
@@ -81,7 +81,16 @@ const utils = {
       pos: 'top-center'
     })
   },
-  
+
+  copy: async (text) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      utils.snackbarShow(GLOBALCONFIG.lang.copy.success, false, 2000)
+    } catch (err) {
+      utils.snackbarShow(GLOBALCONFIG.lang.copy.error, false, 2000)
+    }
+  },
+
   getEleTop: ele => {
     let actualTop = ele.offsetTop
     let current = ele.offsetParent
@@ -96,5 +105,48 @@ const utils = {
 
   randomNum: (length) => {
     return Math.floor(Math.random() * length)
-  }
+  },
+
+  timeDiff: (timeObj, today) => {
+    var timeDiff = today.getTime() - timeObj.getTime();
+    return Math.floor(timeDiff / (1000 * 3600 * 24));
+  },
+
+  scrollToDest: (pos, time = 500) => {
+    const currentPos = window.pageYOffset
+    const isNavFixed = document.getElementById('page-header').classList.contains('nav-fixed')
+    if (currentPos > pos || isNavFixed) pos = pos - 70
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        top: pos,
+        behavior: 'smooth'
+      })
+      return
+    }
+    let start = null
+    pos = + pos
+    window.requestAnimationFrame(function step(currentTime) {
+      start = !start ? currentTime : start
+      const progress = currentTime - start
+      if (currentPos < pos) {
+        window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos)
+      } else {
+        window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time))
+      }
+      if (progress < time) {
+        window.requestAnimationFrame(step)
+      } else {
+        window.scrollTo(0, pos)
+      }
+    })
+  },
+  
+  siblings: (ele, selector) => {
+    return [...ele.parentNode.children].filter((child) => {
+      if (selector) {
+        return child !== ele && child.matches(selector)
+      }
+      return child !== ele
+    })
+  },
 }

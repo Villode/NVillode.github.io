@@ -1,11 +1,21 @@
+function setFixed(el) {
+    if (!el) return
+    const currentTop = window.scrollY || document.documentElement.scrollTop
+    if (currentTop > 0) {
+        el.classList.add('nav-fixed')
+    } else {
+        el.classList.remove('nav-fixed')
+    }
+}
+
 const scrollFn = function () {
     const innerHeight = window.innerHeight + 0
-    // 当页面不可滚动时跳出函数
+    const $header = document.getElementById('page-header')
+    setFixed($header)
     if (document.body.scrollHeight <= innerHeight) {
         return
     }
     let initTop = 0
-    const $header = document.getElementById('page-header')
     window.addEventListener('scroll', utils.throttle(function (e) {
         const currentTop = window.scrollY || document.documentElement.scrollTop
         const isDown = scrollDirection(currentTop)
@@ -25,7 +35,6 @@ const scrollFn = function () {
         }
         percent()
     }, 200))
-    // find the scroll direction
     function scrollDirection(currentTop) {
         const result = currentTop > initTop
         initTop = currentTop
@@ -38,6 +47,8 @@ const sidebarFn = () => {
     const $mobileSidebarMenus = document.getElementById('sidebar-menus')
     const $menuMask = document.getElementById('menu-mask')
     const $body = document.body
+
+    if (!$toggleMenu) return
 
     function openMobileSidebar() {
         utils.sidebarPaddingR()
@@ -68,86 +79,113 @@ const sidebarFn = () => {
 
 const showTodayCard = () => {
     const el = document.getElementById('todayCard')
-    if(el){
+    if (el) {
         document.getElementsByClassName('topGroup')[0].addEventListener('mouseleave', () => {
-            if(el.classList.contains('hide')){
+            if (el.classList.contains('hide')) {
                 el.classList.remove('hide')
             }
         })
-    }  
+    }
 }
 
 const setTimeState = () => {
     const el = document.getElementById('author-info__sayhi')
-    if(el){
-        const timeNow = new Date();
-        const hours = timeNow.getHours();
+    if (el) {
+        const timeNow = new Date(), hours = timeNow.getHours(), lang = GLOBALCONFIG.lang.sayhello;
         let text = '';
         if (hours >= 0 && hours <= 5) {
-        text = '晚安';
+            text = lang.goodnight;
         } else if (hours > 5 && hours <= 10) {
-        text = '早上好';
+            text = lang.morning;
         } else if (hours > 10 && hours <= 14) {
-        text = '中午好';
+            text = lang.noon;
         } else if (hours > 14 && hours <= 18) {
-        text = '下午好';
+            text = lang.afternoon;
         } else if (hours > 18 && hours <= 24) {
-        text = '晚上好';
+            text = lang.night;
         }
-        el.innerText= text + ' !  我是'
+        el.innerText = text + lang.iam;
     }
 };
 
+const chageTimeFormate = () => {
+    const timeElements = document.getElementsByTagName("time"), lang = GLOBALCONFIG.lang.time
+    for (var i = 0; i < timeElements.length; i++) {
+        const datetime = timeElements[i].getAttribute("datetime"), timeObj = new Date(datetime), daysDiff = utils.timeDiff(timeObj, new Date())
+        var timeString;
+        if (daysDiff === 0) {
+            timeString = lang.recent;
+        } else if (daysDiff === 1) {
+            timeString = lang.yesterday;
+        } else if (daysDiff === 2) {
+            timeString = lang.berforeyesterday;
+        } else if (daysDiff <= 7) {
+            timeString = daysDiff + lang.daybefore;
+        } else {
+            if (timeObj.getFullYear() !== new Date().getFullYear()) {
+                timeString = timeObj.getFullYear() + "/" + (timeObj.getMonth() + 1) + "/" + timeObj.getDate();
+            } else {
+                timeString = (timeObj.getMonth() + 1) + "/" + timeObj.getDate();
+            }
+        }
+        timeElements[i].textContent = timeString;
+    }
+}
+
 const percent = () => {
     let a = document.documentElement.scrollTop || window.pageYOffset,
-      b = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight, // 整个网页高度
-      result = Math.round(a / b * 100),
-      btn = document.querySelector("#percent");
+        b = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight, // 整个网页高度
+        result = Math.round(a / b * 100),
+        btn = document.querySelector("#percent");
     const visibleBottom = window.scrollY + document.documentElement.clientHeight;
     const eventlistner = document.getElementById('post-tools') || document.getElementById('footer');
     const centerY = eventlistner.offsetTop + (eventlistner.offsetHeight / 2);
     if ((centerY < visibleBottom) || (result > 90)) {
-      document.querySelector("#nav-totop").classList.add("long");
-      btn.innerHTML = "返回顶部";
+        document.querySelector("#nav-totop").classList.add("long");
+        btn.innerHTML = GLOBALCONFIG.lang.backtop;
+        document.querySelectorAll(".needEndHide").forEach(item => {
+            item.classList.add("hide")
+        })
     } else {
-      document.querySelector("#nav-totop").classList.remove("long");
-      if (result >= 0) {
-        btn.innerHTML = result;
-      }
+        document.querySelector("#nav-totop").classList.remove("long");
+        if (result >= 0) {
+            btn.innerHTML = result;
+            document.querySelectorAll(".needEndHide").forEach(item => {
+                item.classList.remove("hide")
+            })
+        }
     }
 }
 
 class toc {
     static init() {
         const el = document.querySelectorAll('.toc a')
-        if(!el){
-            return
-        }
+        if (!el) return
         el.forEach((e) => {
             e.addEventListener('click', (event) => {
                 event.preventDefault()
-                // replace是替换空格，避免跳转报错
-                this.getAnchor(event.target.innerText.replaceAll(' ', '-'))
+                utils.scrollToDest(utils.getEleTop(document.getElementById(decodeURI((event.target.className === 'toc-text' ? event.target.parentNode.hash : event.target.hash).replace('#', '')))), 300)
             })
         })
         this.active(el)
     }
-    static scrollToAnchor(x, y){
-        scrollTo({
-            top: y,
-            left: x,
-            behavior: 'smooth'
-        })
-    }
-    static getAnchor(id){
-        const el = document.getElementById(id)
-        this.scrollToAnchor(el.getBoundingClientRect().left, el.getBoundingClientRect().top + (window.scrollY ? window.scrollY : 0) - 60)
-    }
-    static active(toc){
+
+    static active(toc) {
         const $article = document.getElementById('article-container')
+        const $tocContent = document.getElementById('toc-content')
         const list = $article.querySelectorAll('h1,h2,h3,h4,h5,h6')
         let detectItem = ''
-        const findHeadPosition = function (top) {
+        function autoScroll(el) {
+            const activePosition = el.getBoundingClientRect().top
+            const sidebarScrollTop = $tocContent.scrollTop
+            if (activePosition > (document.documentElement.clientHeight - 100)) {
+                $tocContent.scrollTop = sidebarScrollTop + 150
+            }
+            if (activePosition < 100) {
+                $tocContent.scrollTop = sidebarScrollTop - 150
+            }
+        }
+        function findHeadPosition(top) {
             if (top === 0) {
                 return false
             }
@@ -156,32 +194,33 @@ class toc {
 
             list.forEach(function (ele, index) {
                 if (top > utils.getEleTop(ele) - 80) {
-                currentIndex = index
+                    currentIndex = index
                 }
             })
 
             if (detectItem === currentIndex) return
             detectItem = currentIndex
-            document.querySelectorAll('.active').forEach((i) => {
+            document.querySelectorAll('.toc .active').forEach((i) => {
                 i.classList.remove('active')
             })
-            if (toc[detectItem]){
+            const activeitem = toc[detectItem]
+            if (activeitem) {
                 let parent = toc[detectItem].parentNode
-                toc[detectItem].classList.add('active')
+                activeitem.classList.add('active')
+                autoScroll(activeitem)
                 for (; !parent.matches('.toc'); parent = parent.parentNode) {
                     if (parent.matches('li')) parent.classList.add('active')
                 }
             }
         }
-        window.tocScrollFn = utils.throttle(function() {
+        window.tocScrollFn = utils.throttle(function () {
             const currentTop = window.scrollY || document.documentElement.scrollTop
             findHeadPosition(currentTop)
-          }, 100)
-      
+        }, 100)
+
         window.addEventListener('scroll', tocScrollFn)
     }
 }
-
 class acrylic {
     static switchDarkMode() {
         const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' :
@@ -189,90 +228,197 @@ class acrylic {
         if (nowMode === 'light') {
             document.documentElement.setAttribute('data-theme', 'dark')
             localStorage.setItem('theme', 'dark')
-            utils.snackbarShow('已切换至深色模式', false, 2000)
+            utils.snackbarShow(GLOBALCONFIG.lang.theme.dark, false, 2000)
         } else {
             document.documentElement.setAttribute('data-theme', 'light')
             localStorage.setItem('theme', 'light')
-            utils.snackbarShow('已切换至浅色模式', false, 2000)
+            utils.snackbarShow(GLOBALCONFIG.lang.theme.light, false, 2000)
         }
     }
     static hideTodayCard() {
         document.getElementById('todayCard').classList.add('hide')
     }
     static toTop() {
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        })
+        utils.scrollToDest(0)
     }
-    static showConsole(){
+    static showConsole() {
         const el = document.getElementById('console')
-        if(!el.classList.contains('show')){
+        if (!el.classList.contains('show')) {
             el.classList.add('show')
         }
     }
-    static hideConsole(){
+    static hideConsole() {
         const el = document.getElementById('console')
-        if(el.classList.contains('show')){
+        if (el.classList.contains('show')) {
             el.classList.remove('show')
         }
     }
-    static async copyPageUrl(){
-        try {
-            await navigator.clipboard.writeText(window.location.href)
-            utils.snackbarShow('已将页面链接复制至剪贴板', false, 2000)
-          } catch (err) {
-            utils.snackbarShow('无法将页面链接复制至剪贴板 : ' + err, false, 2000)
-          }
+    static copyPageUrl() {
+        utils.copy(window.location.href)
     }
-    static lightbox(){
-        window.ViewImage && ViewImage.init('#article-container img');
+    static lightbox(el) {
+        window.ViewImage && ViewImage.init(el);
     }
-    static initTheme(){
-       const nowMode = localStorage.getItem('theme')
-       if(nowMode === 'dark')document.documentElement.setAttribute('data-theme', 'dark')
-       if(nowMode === 'light')document.documentElement.setAttribute('data-theme', 'light')
+    static initTheme() {
+        const nowMode = localStorage.getItem('theme')
+        if (nowMode) {
+            document.documentElement.setAttribute('data-theme', nowMode)
+        }
+    }
+    static reflashEssayWaterFall() {
+        if (document.getElementById('waterfall')) {
+            setTimeout(function () {
+                waterfall('#waterfall');
+                document.getElementById("waterfall").classList.add('show');
+            }, 500);
+        }
+    }
+    static addRuntime() {
+        const el = document.getElementById('runtimeshow')
+        if (el && GLOBALCONFIG.runtime) {
+            el.innerText = utils.timeDiff(new Date(GLOBALCONFIG.runtime), new Date()) + GLOBALCONFIG.lang.time.runtime
+        }
+    }
+    static lazyloadImg() {
+        window.lazyLoadInstance = new LazyLoad({
+            elements_selector: 'img',
+            threshold: 0,
+            data_src: 'lazy-src',
+            callback_error: (img) => {
+                img.setAttribute("src", GLOBALCONFIG.lazyload.error);
+            }
+        })
+    }
+    static initbbtalk() {
+        if (document.querySelector('#bber-talk')) {
+            var swiper = new Swiper('.swiper-container', {
+                direction: 'vertical',
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    pauseOnMouseEnter: true
+                },
+            });
+        }
+    }
+    static musicToggle(){
+        const $music = document.querySelector('#nav-music'),
+        $meting = document.querySelector('meting-js'),
+        $console = document.getElementById('consoleMusic')
+        if (acrylic_musicPlaying) {
+            $music.classList.remove("playing")
+            $console.classList.remove("on")
+            acrylic_musicPlaying = false;
+            $meting.aplayer.pause();
+        }else {
+            $music.classList.add("playing")
+            $console.classList.add("on")
+            acrylic_musicPlaying = true;
+            $meting.aplayer.play();
+        }
     }
 }
 
-const onlyHome = () => {
-    if(GOBALPAGE === 'home'){
+class hightlight {
+    static createEle(langEl, item) {
+        const fragment = document.createDocumentFragment()
+        const highlightCopyEle = '<i class="fas fa-paste copy-button"></i>'
+
+        const hlTools = document.createElement('div')
+        hlTools.className = `highlight-tools`
+        hlTools.innerHTML = langEl + highlightCopyEle
+        hlTools.children[1].addEventListener('click', (e) => {
+            utils.copy($table.querySelector('.code').innerText)
+        })
+        fragment.appendChild(hlTools)
+        const itemHeight = item.clientHeight, $table = item.querySelector('table')
+        if (GLOBALCONFIG.hightlight.limit && itemHeight > GLOBALCONFIG.hightlight.limit + 30) {
+            $table.setAttribute('style', `height: ${GLOBALCONFIG.hightlight.limit}px`)
+            const ele = document.createElement('div')
+            ele.className = 'code-expand-btn'
+            ele.innerHTML = '<i class="fas fa-angle-double-down"></i>'
+            ele.addEventListener('click', (e) => {
+                $table.setAttribute('style', `height: ${itemHeight}px`)
+                e.target.className !== 'code-expand-btn' ? e.target.parentNode.classList.add('expand-done') : e.target.classList.add('expand-done')
+            })
+            fragment.appendChild(ele)
+        }
+        item.insertBefore(fragment, item.firstChild)
+    }
+    static init() {
+        const $figureHighlight = document.querySelectorAll('figure.highlight'), that = this
+        $figureHighlight.forEach(function (item) {
+            let langName = item.getAttribute('class').split(' ')[1]
+            if (langName === 'plaintext' || langName === undefined) langName = 'Code'
+            const highlightLangEle = `<div class="code-lang">${langName.toUpperCase()}</div>`
+            that.createEle(highlightLangEle, item)
+        })
+    }
+}
+
+class tabs {
+    static init(){
+        this.clickFnOfTabs()
+        this.backToTop()
+    }
+    static clickFnOfTabs() {
+        document.querySelectorAll('#article-container .tab > button').forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                const that = this
+                const $tabItem = that.parentNode
+                if (!$tabItem.classList.contains('active')) {
+                    const $tabContent = $tabItem.parentNode.nextElementSibling
+                    const $siblings = utils.siblings($tabItem, '.active')[0]
+                    $siblings && $siblings.classList.remove('active')
+                    $tabItem.classList.add('active')
+                    const tabId = that.getAttribute('data-href').replace('#', '')
+                    const childList = [...$tabContent.children]
+                    childList.forEach(item => {
+                        if (item.id === tabId) item.classList.add('active')
+                        else item.classList.remove('active')
+                    })
+                }
+            })
+        })
+    }
+    static backToTop() {
+        document.querySelectorAll('#article-container .tabs .tab-to-top').forEach(function (item) {
+            item.addEventListener('click', function () {
+                utils.scrollToDest(utils.getEleTop(item.parentElement.parentElement.parentNode), 300)
+            })
+        })
+    }
+}
+
+window.refreshFn = () => {
+    scrollFn()
+    sidebarFn()
+    setTimeState()
+    chageTimeFormate()
+    acrylic.addRuntime()
+    GLOBALCONFIG.lazyload.enable && acrylic.lazyloadImg()
+    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img')
+    GLOBALCONFIG.randomlinks && randomLinksList()
+    PAGECONFIG.toc && toc.init()
+    if (PAGECONFIG.is_post) {
+        GLOBALCONFIG.hightlight.enable && hightlight.init()
+        tabs.init()
+    }
+    PAGECONFIG.comment && initComment()
+    if (PAGECONFIG.is_home) {
         showTodayCard()
-        if (typeof randomLinksList === 'function') {
-            randomLinksList();
-        }
+        acrylic.initbbtalk()
     }
+    if (PAGECONFIG.is_page && PAGECONFIG.page === 'says') acrylic.reflashEssayWaterFall()
+    GLOBALCONFIG.covercolor && coverColor()
 }
 
-const onlyPost = () => {
-    if(GOBALPAGE === 'post'){
-        toc.init()
-    }
-}
-
-const onlyPostandPage = () => {
-    if(GOBALPAGE === 'post' || GOBALPAGE === 'page'){
-        acrylic.lightbox()
-        if (typeof initComment === 'function') {
-            initComment();
-        }
-    }
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    sidebarFn()
-    scrollFn()
-    onlyHome()
-    onlyPost()
-    onlyPostandPage()
-    setTimeState()
-    acrylic.initTheme()
+acrylic.initTheme()
+let acrylic_musicPlaying = false
+document.addEventListener('DOMContentLoaded', function () {
+    refreshFn()
 })
-document.addEventListener('pjax:complete', function () {
-    sidebarFn()
-    scrollFn()
-    onlyHome()
-    onlyPost()
-    onlyPostandPage()
-    setTimeState()
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
 })

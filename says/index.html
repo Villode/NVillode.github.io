@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>萦芑Blog</title>
+<title>即刻短文 | 萦芑Blog</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
 <link rel="apple-touch-icon" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
 <meta name="apple-mobile-web-app-title" content="萦芑Blog">
 <link rel="bookmark" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp">
-<meta name="description" content="">
+<meta name="description" content="即刻短文">
 <meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -37,7 +37,7 @@
 
 
 
-<script>var GLOBALCONFIG = {"root":"/","runtime":"2021-12-12 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"hightlight":{"enable":true,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{},"copy":{},"time":{},"sayhello":{},"search":{}},"covercolor":true,"localsearch":{"preload":true,"path":"/search.xml"}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"page":false,"comment":false};</script>
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2021-12-12 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"hightlight":{"enable":true,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{},"copy":{},"time":{},"sayhello":{},"search":{}},"covercolor":true,"localsearch":{"preload":true,"path":"/search.xml"}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":true,"page":"says","toc":false,"comment":false};</script>
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -346,7 +346,7 @@
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">categories</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">即刻短文</a>
             </div>
         </div>
         <div id="menus">
@@ -506,24 +506,64 @@
                 <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-                <h1 class="page-title">分类</h1>
-<div class="category-lists">
-    <div class="tag-cloud-list is-center">
-        
-            <a href="/categories/HI/">
-                <span class="tags-punctuation">#</span> 
-                HI
-                <span class="tagsPageCount">1</span>
-            </a>
-        
-            <a href="/categories/UI%E8%AE%BE%E8%AE%A1/">
-                <span class="tags-punctuation">#</span> 
-                UI设计
-                <span class="tagsPageCount">1</span>
-            </a>
-        
+                <div class="author-content author-content-item essayPage single nolazyload" style="background: url(/img/hello.jpg) no-repeat center;background-size: cover;">
+    <div class="card-content">
+        <div class="author-content-item-tips">即刻短文</div>
+        <span class="author-content-item-title"></span>
+        <div class="content-bottom">
+            <div class="tips"></div>
+        </div>
     </div>
 </div>
+<div id="bber">
+    <section class="timeline page-1">
+        <ul class="list" id="waterfall">
+            
+                
+                <li class="item">
+                    <div class="bber-content">
+    <p class="datacont">终于把相册集搞定了, 耶✌️, 瀑布流在滑动滚动条一个视口范围上下100的情况执行一次, 到底部停止监听让性能高了好多，再也不会布局混乱🤪了</p>
+        
+</div>
+                    <hr>
+                    <div class="bber-bottom">
+    <div class="bber-info">
+        <div class="bber-info-time">
+            <i class="fas fa-calendar-days"></i>
+            <time class="datetime" datetime="2022-10-25T00:00:00+00:00"></time>
+        </div>
+        
+            <a class="bber-content-link" target="_blank" rel="noopener" href="https://anzhiy.cn/album/" title="跳转到短文指引的链接">
+                链接
+            </a>   
+            
+    </div>
+</div>
+                </li>
+            
+                
+                <li class="item">
+                    <div class="bber-content">
+    <p class="datacont">搜索🔍支持缩略图显示啦（默认获取文章内容的第一张图片）</p>
+        
+</div>
+                    <hr>
+                    <div class="bber-bottom">
+    <div class="bber-info">
+        <div class="bber-info-time">
+            <i class="fas fa-calendar-days"></i>
+            <time class="datetime" datetime="2022-10-23T08:00:00+00:00"></time>
+        </div>
+            
+    </div>
+</div>
+                </li>
+            
+        </ul>
+    </section>
+</div>
+<div id="bber-tips" style="color: var(--heo-secondtext);">- 只展示最近30条短文 -</div>
+
              
             
     </div>
@@ -658,6 +698,17 @@
 
 
 <div id="js-pjax">
+    
+        
+<script src="/lib/waterfall.min.js"></script>
+
+        <script>
+            window.addEventListener('resize', utils.throttle(function () {
+                if (document.getElementById('waterfall')) {
+                    acrylic.reflashEssayWaterFall();
+                }
+            }), 500);
+        </script>
     
     
         <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
