@@ -1,0 +1,356 @@
+## Acrylic主题配置文件
+############################################################################################################
+# 为避免主题更新后，配置文件被覆盖，请复制一份此文件到站点根目录下的_config.Acrylic.yml文件中，修改_config.Acrylic.yml文件中的配置
+############################################################################################################
+# 修改此文件前，请仔细阅读官方文档：https://next-docs.acrylic.org.cn/
+############################################################################################################
+
+
+# 站点设置
+site:
+  name:                  # 左上角显示内容
+    class:  text          #i_class/text/img 
+    custom: 萦芑       #自定义内容
+  siteIcon: https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp #/img/avatar.webp # 网页icon
+  icon: https://isgodata.files.wordpress.com/2023/04/k.webp #/img/avatar.webp     # 页脚的icon、加载动画默认的icon
+  icp: 萌ICP备20238777号                 # ICP
+
+# 导航栏
+nav:
+#导航栏左侧
+  left:
+    enable: true
+    menu:
+      我的:
+        博客:
+          icon: https://isgodata.files.wordpress.com/2023/03/e7bb84-9.webp #/img/avatar.webp
+          url: https://isgo.top
+# 导航栏内容
+  menu:
+    文库:
+      url: false
+      child:
+        文章列表:
+          url: /archives/
+          icon: fas fa-box-archive
+        全部分类:
+          url: /categories/
+          icon: fas fa-cube
+        全部标签:
+          url: /tags/
+          icon: fas fa-tags
+        即刻短文:
+          url: /essay/
+          icon: fas fas fa-bars-staggered
+    友链:
+      url: false
+      child:
+        # 友链鱼塘:
+        #   url: /fcircle/
+        #   icon: fas fa-fish-fins
+        友情链接:
+          url: /links/
+          icon: fas fa-user-group
+        # 宝藏博主:
+        #   url: javascript:travelling()
+        #   icon: fas fa-bus
+    我的:
+      url: false
+      child:
+        在线工具:  
+          url: /tlink/
+          icon: fas fa-screwdriver-wrench
+        小空调鸭:  
+          url: /air-conditioner/
+          icon: fas fa-snowflake
+        # 我的追番:   
+        #   url: /bilibili/
+        #   icon: fas fa-bilibili
+        关于本站:  
+          url: /about/
+          icon: fas fa-sailboat
+        音乐界面:  
+          url: /music/
+          icon: fas fa-sailboat
+
+
+# 导航栏右侧快捷菜单
+  right: # @todo 允许用户自定义
+    travellings: true   #开往
+    random: true        #
+    console: true       #控制台
+
+# heo式顶部一大坨
+hometop:
+  bbtime: true
+  banner:
+    enable: true
+    title: 分享技术<br>与科技生活
+    url: isgo.top
+    icon:
+      AE:
+        img: /img/icon/ae.png
+        color: '#989bf8'
+      Sketch:
+        img: /img/icon/Sketch.png
+        color: '#ffffff'
+      Docker:
+        img: /img/icon/docker.png
+        color: '#57b6e6'
+      ps:
+        img: /img/icon/ps.png
+        color: '#4082c3'
+      FinalCutPro:
+        img: /img/icon/FinalCutPro.png
+        color: '#ffffff'
+      Python:
+        img: /img/icon/Python.png
+        color: '#ffffff'
+      Swift:
+        img: /img/icon/Swift.png
+        color: '#eb6840'
+      Principle:
+        img: /img/icon/Principle.png
+        color: '#8f55ba'
+      illustrator:
+        img: /img/icon/illustrator.png
+        color: '#f29e39'
+      CSS3:
+        img: /img/icon/CSS3.png
+        color: '#2c51db'
+      JS:
+        img: /img/icon/JS.png
+        color: '#f7cb4f'
+      Git:
+        img: /img/icon/git.png
+        color: '#df5b40'
+
+  categoryGroup:
+    G1:
+      name: 日常分享
+      icon: fas fa-dove
+      url: /tags/日常/
+    G2:
+      name: 热门文章
+      icon: fas fa-burn
+      url: /tags/热门/
+    G3:
+      name: 实用教程
+      icon: fas fa-book
+      url: /tags/教程/
+
+  recommendList:
+    sup: 置顶文章
+    title: 有趣的设计创作工具
+    url: /
+    img:  https://isgodata.files.wordpress.com/2023/03/e9a1b5e99da2-1-3.png #/img/acrylic.png
+    color: '#006a73'
+
+# 个人卡片
+aside:
+  home:
+    noSticky: ['about', 'flip']
+    Sticky: ['newestPost', 'allInfo']
+  post:
+    noSticky: ['about']
+    Sticky: ['newestPost']   
+  page:
+    noSticky: ['about', 'flip']
+    Sticky: ['newestPost', 'allInfo']
+
+  card:
+    content: 这有关于代码<b>开发</b>、<b>搞机</b>相关的问题和看法，还有对于软件的一些<b>分享</b>。<br>相信你可以在这里找到对你有用的知识和教程。
+    information:
+      Github:
+        icon: fa-brands fa-github
+        url: https://github.com/Villode
+      Mail:
+        icon: fa-solid fa-envelope
+        url: mailto:xiaozhi.hk@outlook.com
+    button:
+      text: 个人主页
+      url: /
+
+  flip:
+    color: '#0099FF'
+    face:
+      title: Skype
+      desc: 加入萦芑官方Skype群与我们交流吧！
+    backface:
+      title: 扫一扫
+      desc: 获取最新信息和帮助
+      img: https://isgodata.files.wordpress.com/2023/04/img_20230402_164402.jpg
+ #/img/qqgroup.png
+
+  # 建站时间
+  siteinfo:
+    postcount: true #文章数量
+    wordcount: true    #字数统计
+    pv: true   #访问量统计
+    uv: true   #独立访客统计
+    updatetime: true   #更新时间
+    runtimeenable: true #运行时间
+    runtime: '2021-12-12 00:00:00'  #运行时间起始时间
+
+# 页脚
+footer:
+  information:
+    left:
+      Github:
+        icon: fa-brands fa-github
+        url: https://github.com/Villode
+      Mail:
+        icon: fa-solid fa-envelope
+        url: /
+    right:
+      网易云:
+        icon: fa-solid fa-music
+        url: /
+      bilibili:
+        icon: fa-brands fa-bilibili
+        url: /
+
+  group:
+    导航:
+      文章归档: /archives/
+      文章分类: /categories/
+      文章标签: /tags/
+      友链: /link/
+    服务:
+      51la统计: https://51.la/
+      # 百度统计: https://tongji.baidu.com/
+      主题: https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic
+
+    协议:
+      隐私声明: /privacy/
+      Cookie: /cookies/  
+      版权声明: /cc/
+
+    推荐友链:
+      Heo: https://blog.zhheo.com/
+      ISGO: https://isgo.top
+
+  randomlink: false
+
+page:
+  error: true
+  tags: true
+  categories: true
+  default:
+    cover: /img/hello.jpg   
+
+# 文章页默认设置
+post:
+  default:
+    cover: /img/hello.jpg
+    locate: 广西
+    copyright: 原创
+    excerpt: 100
+  meta:
+    date: true
+    updated: true
+    locate: true
+    wordcount: true
+    readtime: true
+    pv: true
+    comment: true      
+  award:
+    enable: true
+    wechat: https://isgodata.files.wordpress.com/2023/03/img_20230321_192428.png
+    alipay: https://isgodata.files.wordpress.com/2023/03/img_20230321_192428.png
+    url:
+  covercolor: #文章cover取色  
+    enable: true
+    local: true  
+
+# 关于界面
+about: true
+
+# 404页面
+errorpage:
+  img: /img/acrylic.png
+  text: =awa= 页面走丢了
+  recommendList: true
+
+# 懒加载
+lazyload:
+  enable: false
+  placeholder: /img/acrylic.png
+  errorimg: /img/acrylic.png
+
+# 图片灯箱
+lightbox: true
+
+#代码高亮增强
+hightlight:
+  enable: true
+  hightlimit: 200
+
+# 加载动画
+loading:
+  fullpage: true
+  pace: true
+
+# 第三方设置
+thirdparty:
+  wordcount: true
+  busuanzi: 
+    enable: true
+    usecomment: true #当评论系统开启时文章页面使用评论系统的统计数据
+  search:
+    algolia_search:
+      enable: false
+      # hits:
+      #   per_page: 6
+    local_search:
+      enable: true
+      preload: true
+      CDN:
+    
+  aplayer:
+    enable: true
+    server: tencent
+    id: 1708664797      
+
+toc: 
+  post: true  #文章页是否显示目录
+  page: true #页面是否显示目录
+
+# 评论
+comment:
+  enable: true
+  twikoo:
+    envId: https://twikoo-m4g2.vercel.app
+    region: ap-shanghai
+    path: window.location.pathname
+
+
+# 插入代码到头部 </head> 之前 和 底部 </body> 之前
+# 插入额外代码 如：统计，广告等
+extends: 
+  head: # 在head中插入
+    # - <script></script>
+  body: # 在body中插入
+
+# 非必要勿动
+cdn:
+  head:
+    pacejs: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js
+    fontawesomecss: https://cdn.bootcdn.net/ajax/libs/font-awesome/6.3.0/css/all.min.css
+    snackbarcss: /lib/snackbar.min.css
+    qrcodejs: /lib/qrcode.min.js
+    twikoojs: https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js
+    instantsearch: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/instantsearch.js/4.39.0/instantsearch.production.min.js
+    algolia: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/algoliasearch/4.12.1/algoliasearch-lite.umd.min.js
+  body:
+    swipercss: /lib/swiper.min.css
+    pjaxjs: /lib/pjax.min.js
+    lazyloadjs: /lib/lazyload.min.js
+    snackbarjs: /lib/snackbar.min.js
+    viewimagejs: /lib/view-image.min.js
+    waterfalljs: /lib/waterfall.min.js
+    swiperjs: /lib/swiper.min.js
+    busuanzijs: https://npm.elemecdn.com/penndu@1.0.0/bsz.js
+    aplayercss: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
+    aplayerjs: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
+    metingjs: https://cdn1.tianli0.top/npm/meting@2.0.1/dist/Meting.min.js

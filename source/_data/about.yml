@@ -1,0 +1,162 @@
+authorinfo:
+  leftTags:
+    - "🤖️ 数码科技爱好者"
+    - "🔍 分享与热心帮助"
+    - "🏠 思想交流引领"
+    - "🔨 挖掘科技应用"
+  rightTags:
+    - "追求成长发展 🤝"
+    - "脚踏实地行动派 🏃"
+    - "领路文化魅力 🧱"
+    - "人狠话不多 💢"
+  image: "https://isgodata.files.wordpress.com/2023/04/k.webp" #/img/avatar.webp
+contentinfo:
+  name: 萦芑
+  title: 学生、独立开发者、博主
+  product: 创新科技产品
+  design: 独特软件设计
+  program: 高效的编程
+  user_experience: 人性化体验
+
+skills:
+  title: 技能
+  subtitle: 开启创造力
+  tags:
+    - title: AfterEffect
+      icon: https://p.zhheo.com/20239df3f66615b532ce571eac6d14ff21cf072602.png!cover
+      color: "#989bf8"
+    - title: Sketch
+      icon: https://p.zhheo.com/2023e0ded7b724a39f12d59c3dc8fbdc7cbe074202.png!cover
+      color: "#ffffff"
+    - title: Docker
+      icon: https://p.zhheo.com/20231108a540b2862d26f8850172e4ea58ed075102.png!cover
+      color: "#57b6e6"
+    - title: Photoshop
+      icon: https://p.zhheo.com/2023e4058a91608ea41751c4f102b131f267075902.png!cover
+      color: "#4082c3"
+    - title: FinalCutPro
+      icon: https://p.zhheo.com/20233e777652412247dd57fd9b48cf997c01070702.png!cover
+      color: "#ffffff"
+    - title: Python
+      icon: https://p.zhheo.com/20235c0731cd4c0c95fc136a8db961fdf963071502.png!cover
+      color: "#ffffff"
+    - title: "Swift"
+      color: "#eb6840"
+      icon: "https://p.zhheo.com/202328bbee0b314297917b327df4a704db5c072402.png!cover"
+    - title: "Principle"      
+      color: "#8f55ba"
+      icon: "https://p.zhheo.com/2023f76570d2770c8e84801f7e107cd911b5073202.png!cover"
+    - title: "illustrator"
+      color: "#f29e39"
+      icon: "https://p.zhheo.com/20237359d71b45ab77829cee5972e36f8c30073902.png!cover"
+    - title: "CSS3"
+      color: "#2c51db"
+      icon: "https://p.zhheo.com/20237c548846044a20dad68a13c0f0e1502f074602.png!cover"
+    - title: "JS"
+      color: "#f7cb4f"
+      icon: "https://p.zhheo.com/2023786e7fc488f453d5fb2be760c96185c0075502.png!cover"
+    - title: "HTML"
+      color: "#e9572b"
+      icon: "https://p.zhheo.com/202372b4d760fd8a497d442140c295655426070302.png!cover"
+    - title: "Git"
+      color: "#df5b40"
+      icon: "https://p.zhheo.com/2023ffa5707c4e25b6beb3e6a3d286ede4c6071102.png!cover"
+    - title: "Rhino"
+      color: "#1f1f1f"
+      icon: "https://p.zhheo.com/20231ca53fa0b09a3ff1df89acd7515e9516173302.png!cover"
+careers:
+  title: "生涯"
+  subtitle: "无限进步"
+  items:
+    - school: "Student"
+      major: "软件开发专业"
+      color: "#357ef5"
+    # - school: "ITSO"
+      # major: "UI/产品经理"
+      # color: "#eb372a"
+  image: "https://isgodata.files.wordpress.com/2023/03/6330e9bcc39cc.png"
+#https://p.zhheo.com/20236d5152f4058d0b8b29185c7b71bbd74a071902.png!cover
+personalities:
+  tips: "性格"
+  title: "鉴赏家"
+  color: "#56a178"
+  type: "ISTP-A"
+  image: "https://isgodata.files.wordpress.com/2023/03/ao1bw-gpw69.png"
+  link: "https://www.16personalities.com/"
+  linkText: "16personalities"
+  typeLink: "https://www.16personalities.com/ch/infp-%E4%BA%BA%E6%A0%BC"
+  typeName: "鉴赏家"
+  myphoto: "https://isgodata.files.wordpress.com/2023/03/mtxx_mh20230207132348882.png"
+
+motto:
+  title: 座右铭
+  prefix: 行动胜于言辞，
+  content: 实践出真知。
+expertise:
+  title: 特长
+  prefix: 玄学电脑、手机疑难问题解决
+  specialist: 专家
+  content: 软件学习能力
+  level: MAX
+
+game1:
+  title: "仙剑奇侠传一、三、四"
+  icon: "fas fa-gamepad"
+  tips: "李逍遥、赵灵儿、景天、唐雪见、龙葵、云天河、韩菱纱"
+game2:
+  title: "泡沫冬景"
+  icon: "fas fa-dice-d20"
+  tips: "1988"
+likes:
+  - type: like-technology
+    tips: 关注偏好
+    title: 数码科技
+    subtips: 手机、电脑软硬件
+  - type: like-music
+    tips: 音乐偏好
+    title: Hiphop、民谣、华语流行、粤语
+    subtips: Spotify、网易云、酷狗概念版
+
+
+oneself:
+  location: '中国，广西自治区，桂林'
+  birthYear: '千禧年'
+  university: '信息工程'
+  major: '软件技术'
+  occupation: '学生'
+
+tj: https://v6-widget.51.la/v6/K00bSHT6Efoob02H/quote.js
+
+cause: <br>当我创建这个站点时，我的初衷是想要一个地方来<b>积累知识和兴趣</b>，并与他人分享，以便这些知识能够更好地被沉淀和积累。如果我能够帮助更多的人解决问题，那就太棒了！
+      <br>
+      我从很早以前就开始分享了，一开始是在微信公众号上，现在则是通过这个网站。因为我喜欢研究数码和软件，想要探究在互联网上的事物是如何被创造和发展的。网络给了我很多知识和眼界，我也想分享一些我生活中的琐碎知识，以回馈大家。
+      <br>
+      与大多数垂直技术博客不同，这个网站的内容种类非常丰富，包括<b>技能的教程、实用的生活技巧和吐槽、话题上的思考和想法等等</b>。无论我研究什么，无论我发现什么，都会在这里分享给大家。
+      <br>
+      这就是我创建这个小站点的初衷，也是我分享生活的方式。我很高兴能在这里遇到你，相信我们能共同留下美好的记忆。</p>
+
+rewardList:
+  - name: ISGO
+    money: 25
+    time: 2021-05-06
+    vip: true
+  - name: XXX
+    money: 0
+    time: 2021-04-20
+    vip: false
+  - name: XXX
+    money: 0
+    time: 2021-03-25
+    vip: false
+  - name: XXX
+    money: 0
+    time: 2021-03-13
+    vip: false
+  - name: "XXX"
+    money: 0
+    time: 2021-02-17
+    vip: false
+  - name: XXX
+    money: 0
+    time: 2021-01-11
+    vip: false
