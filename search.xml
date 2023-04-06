@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>IDEA使用JSP用户登录案例</title>
+    <url>/2022/03/25/IDEA%E4%BD%BF%E7%94%A8JSP%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%A1%88%E4%BE%8B/</url>
+    <content><![CDATA[<h2 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h2><p>JSP实现用户登录、注销</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>IDEA、tomcat、JDK18</p>
+<h4 id="登录界面HTML"><a href="#登录界面HTML" class="headerlink" title="登录界面HTML"></a>登录界面HTML</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;title&gt;用户登录&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=&quot;index.jsp&quot; method=&quot;post&quot; &gt;</span><br><span class="line">    &lt;h3&gt;&lt;span&gt;登录&lt;/span&gt;&lt;/h3&gt;</span><br><span class="line">    &lt;a&gt;用户名:&lt;/a&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;br&gt;</span><br><span class="line">    &lt;a &gt;密码:&lt;/a&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;&lt;br&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;button &gt;登录&lt;/button&gt;</span><br><span class="line">        &lt;INPUT TYPE=&quot;reset&quot; value=&quot;重置&quot; &gt;</span><br><span class="line">        &lt;INPUT TYPE=&quot;button&quot; value=&quot;注册&quot; &gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+</table>
+<h4 id="登录信息密码账号正确或错误处理代码"><a href="#登录信息密码账号正确或错误处理代码" class="headerlink" title="登录信息密码账号正确或错误处理代码"></a>登录信息密码账号正确或错误处理代码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%</span><br><span class="line">    request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">    String name=request.getParameter(&quot;username&quot;);</span><br><span class="line">    String password=request.getParameter(&quot;password&quot;);</span><br><span class="line">%&gt;</span><br><span class="line">&lt;%</span><br><span class="line">    if(name.equals(&quot;小梦&quot;)&amp;&amp;password.equals(&quot;666&quot;))</span><br><span class="line">    &#123;</span><br><span class="line">        out.print(&quot;输入正确&quot;);</span><br><span class="line">        request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">        session.setAttribute(&quot;username&quot;,name);</span><br><span class="line">        request.getRequestDispatcher(&quot;welcome.jsp&quot;).forward(request, response);</span><br><span class="line"></span><br><span class="line">    &#125;else&#123;%&gt;</span><br><span class="line"></span><br><span class="line">&lt;% &#125;%&gt;</span><br><span class="line">账号或密码错误,等待 3s 跳转登录&lt;br&gt;</span><br><span class="line">&lt;input type=&quot;button&quot;  value=&quot;返回登录&quot; onclick=&#x27;location.href=(&quot;login.html&quot;)&#x27;/&gt;</span><br><span class="line">&lt;% response.setHeader(&quot;Refresh&quot;, &quot;3,URL=login.html&quot;);%&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+</table>
+<h4 id="登录成功界面"><a href="#登录成功界面" class="headerlink" title="登录成功界面"></a>登录成功界面</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;% String name=(String)session.getAttribute(&quot;username&quot;);</span><br><span class="line">    if(name!=null)&#123;%&gt;</span><br><span class="line"></span><br><span class="line">&lt;div &gt;</span><br><span class="line">    &lt;form action=&quot;index.jsp&quot; method=&quot;post&quot; &gt;</span><br><span class="line">        &lt;h3&gt;&lt;%=session.getAttribute(&quot;username&quot;)%&gt;&lt;a&gt;,欢迎光临,访问个人空间&lt;/a&gt;&lt;/h3&gt;</span><br><span class="line">        &lt;div &gt;</span><br><span class="line">            &lt;INPUT TYPE=&quot;reset&quot; value=&quot;注销&quot;onclick=&#x27;location.href=(&quot;kill.jsp&quot;)&#x27; &gt;</span><br><span class="line">            &lt;input type=&quot;button&quot;  value=&quot;返回登录&quot; onclick=&#x27;location.href=(&quot;login.html&quot;)&#x27;/&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;%&#125;else&#123; %&gt;</span><br><span class="line">&lt;% response.setHeader(&quot;Refresh&quot;, &quot;0,URL=kill.jsp&quot;);%&gt;</span><br><span class="line">&lt;%&#125; %&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+</table>
+<h4 id="注销账号界面"><a href="#注销账号界面" class="headerlink" title="注销账号界面"></a>注销账号界面</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;% String name=(String)session.getAttribute(&quot;username&quot;);</span><br><span class="line">    if(name!=null)&#123;%&gt;</span><br><span class="line">&lt;div  &gt;</span><br><span class="line">    &lt;form action=&quot;index.jsp&quot; method=&quot;post&quot; &gt;</span><br><span class="line">        &lt;h3&gt;&lt;%=session.getAttribute(&quot;username&quot;)%&gt;&lt;a&gt;,正在注销账号登录,请等待5s&lt;/a&gt;&lt;/h3&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;%session.invalidate();</span><br><span class="line">                response.setHeader(&quot;Refresh&quot;, &quot;5,URL=login.html&quot;);</span><br><span class="line">            %&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">            &lt;%&#125;else&#123; %&gt;</span><br><span class="line">        &lt;div &gt;</span><br><span class="line">            &lt;form action=&quot;index.jsp&quot; method=&quot;post&quot; &gt;</span><br><span class="line"></span><br><span class="line">                &lt;h3&gt;&lt;%=session.getAttribute(&quot;username&quot;)%&gt;&lt;a&gt;,原因:您未登录请登录后再拭,5s后自动回登录&lt;/a&gt;&lt;/h3&gt;</span><br><span class="line">                &lt;div style=&quot;text-align: center&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;button&quot;  value=&quot;返回登录&quot; onclick=&#x27;location.href=(&quot;login.html&quot;)&#x27;/&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/form&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">            &lt;% response.setHeader(&quot;Refresh&quot;, &quot;5,URL=login.html&quot;);%&gt;</span><br><span class="line">            &lt;%&#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>IDEA</category>
+      </categories>
+      <tags>
+        <tag>IDEA</tag>
+        <tag>JSP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2014/06/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
