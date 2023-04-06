@@ -187,9 +187,9 @@ aside:
     postcount: true #文章数量
     wordcount: true    #字数统计
     pv: true   #访问量统计
-    uv: true   #独立访客统计
-    updatetime: true   #更新时间
-    runtimeenable: true #运行时间
+    uv: true   #独立访客统计 
+    updatetime: false   #更新时间
+    runtimeenable: false #运行时间 
     runtime: '2021-12-12 00:00:00'  #运行时间起始时间
 
 # 页脚
