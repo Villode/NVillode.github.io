@@ -40,7 +40,7 @@ nav:
 # Code Blocks (代码相关)
 # --------------------------------------
 
-highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -221,7 +221,7 @@ post_copyright:
   enable: true
   decode: false
   author_href:
-  location: 佛山
+  location: ISGO
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -512,10 +512,10 @@ microsoft_clarity:
 
 # Google Adsense (谷歌广告)
 google_adsense:
-  enable: false
+  enable: true
   auto_ads: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client:
+  client: client=ca-pub-8292328171978694
   enable_page_level_ads: true
 
 # Insert ads manually (手动插入广告)
