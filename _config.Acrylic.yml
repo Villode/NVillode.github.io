@@ -29,13 +29,13 @@ nav:
     - title: 网页
       item:
         - name: 博客
-          link: https://blog.monl.cc
+          link: https://isgo.top
           icon: /img/favicon.png
-    - title: 项目
-      item:
-        - name: 朝而往图床
-          link: https://img.muerg.cn/
-          icon: https://image.anzhiy.cn/favicon.ico
+    # - title: 项目
+    #   item:
+    #     - name: 朝而往图床
+    #       link: https://img.muerg.cn/
+    #       icon: https://image.anzhiy.cn/favicon.ico
 
 # Code Blocks (代码相关)
 # --------------------------------------
