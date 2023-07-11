@@ -22,7 +22,7 @@ menu:
 
 # nav相关配置
 nav:
-  enable: true
+  enable: false
   travelling: true
   clock: true
   menu:
