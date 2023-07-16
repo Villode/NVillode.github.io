@@ -1,8 +1,8 @@
 ---
 aside: true
 categories:
-- - IDEA
-cc: 原创
+- - 招聘
+cc: 网络
 comment: true
 cover: ''
 date: '2022-03-25'
@@ -14,36 +14,54 @@ recommend: true
 tags:
 - IDEA
 - JSP
-title: IDEA使用JSP用户登录案例
+title: 南宁地区招聘避雷黑榜
 ---
 <body>
   <h2>黑榜</h2>
 
   <input type="text" id="searchInput" placeholder="搜索公司名称">
 
-  <table>
+  <table id="blacklistTable">
     <tr>
       <th>序号</th>
       <th>公司名称</th>
       <th>原因</th>
       <th>地址/备注</th>
     </tr>
-    <tr>
-      <td>1</td>
-      <td>天天飞</td>
-      <td>欠工资, pua</td>
-      <td>现办公室准备搬走，拖工资，不交社保，老板爱挑刺，发工资前要跟员工一对一面谈这个月做了什么然后借机打压</td>
-    </tr>
-    <!-- Add more rows as needed -->
   </table>
 
   <script>
+    const apiUrl = "https://github.com/Villode/i_DATA/blob/e84dddcaa93c02ee52a8827e31b7499874a114d8/GX_bl.json"; // 替换为你的外部链接
+
+    async function fetchDataAndPopulateTable() {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        const table = document.getElementById("blacklistTable");
+        let html = "";
+
+        data.forEach((row) => {
+          html += "<tr>";
+          Object.values(row).forEach((value) => {
+            html += "<td>" + value + "</td>";
+          });
+          html += "</tr>";
+        });
+
+        table.innerHTML += html;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchDataAndPopulateTable();
+
     document.getElementById("searchInput").addEventListener("keyup", function() {
-      let input, filter, table, tr, td, i, txtValue;
+      let input, filter, tr, td, i, txtValue;
       input = document.getElementById("searchInput");
       filter = input.value.toUpperCase();
-      table = document.querySelector("table");
-      tr = table.getElementsByTagName("tr");
+      tr = document.querySelectorAll("#blacklistTable tr");
 
       for (i = 1; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[1]; // 第2列是公司名称
