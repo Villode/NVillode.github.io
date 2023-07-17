@@ -48,7 +48,7 @@ title: 南宁地区招聘避雷黑榜
   <script>
     const table = document.getElementById("blacklistTable");
     const tableContainer = document.getElementById("tableContainer");
-    const apiUrl = "http://powernod.com/u/f4a2242f3831ada9"; // 替换为你的外部链接
+    const apiUrl = "https://isgo.top/i_DATA/GX_bl.json"; // 替换为你的外部链接
     const itemsPerPage = 99; // 每页显示的数据数量
     let currentPage = 1;
     let data = []; // 存储所有数据
