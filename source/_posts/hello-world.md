@@ -6,9 +6,9 @@ cc: 原创
 comment: true
 cover: https://isgodata.files.wordpress.com/2023/04/e59bbee58fa8e58fa8_20230401_1640260.webp
 date: 2014-6-1
-description: hi
+description: 5G速通厅-超多流量卡
 excerpt: '50'
-keywords: HEXO
+keywords: 流量卡5G
 locate: 深圳
 recommend: true
 tags:
