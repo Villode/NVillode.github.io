@@ -14,41 +14,9 @@ recommend: true
 tags:
 - 日常
 - 热门
-title: 你好世界
+title: 5G速通厅-超多流量卡
 updated: 2023-9-6
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+<iframe src="https://gantanhao.vip/gth/#/minishop?share_id=533629&shop_name=%25E7%25B3%2596%25E6%259E%259C%25E7%259B%2592" width="100%" height="400px"></iframe>
 
-### Create a new post
-
-```bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-```bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-```bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-```bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
