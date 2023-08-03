@@ -32,7 +32,7 @@ Cloudflare是全球著名的老牌CDN（内容分发网络）加速服务商，�
 
 ## 为何IP会显示为Cloudflare？
 
-当人们的IP显示为Cloudflare时，这是因为他们使用了"1.1.1.1 + WARP: Safer Internet"软件。以下是官方的介绍：
+当人们的IP显示为Cloudflare时，这是因为他们使用了“1.1.1.1 + WARP: Safer Internet”。以下是官方的介绍：
 
 ### 什么是Cloudflare 1.1.1.1 DNS解析器?
 
