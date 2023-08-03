@@ -79,7 +79,7 @@
 <h2 id="介绍Cloudflare"><a href="#介绍Cloudflare" class="headerlink" title="介绍Cloudflare"></a>介绍Cloudflare</h2><p>Cloudflare是全球著名的老牌CDN（内容分发网络）加速服务商，简称CF：</p>
 <p><img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/19osma7KeAmFIQRtUIPRpA/9227872979fddb15cc026d3813594744/HP-Hero-Illustration-July-2023_Speed-Security-Everywhere.svg" alt="Cloudflare Logo"></p>
 <p>它提供免费和付费的网站加速和保护服务。即使是免费版，Cloudflare也提供了功能全面且强大的服务，让它备受好评。目前，我将我的域名isgo.top添加在Cloudflare上，以使用其提供的免费CDN服务。</p>
-<h2 id="为何IP会显示为Cloudflare？"><a href="#为何IP会显示为Cloudflare？" class="headerlink" title="为何IP会显示为Cloudflare？"></a>为何IP会显示为Cloudflare？</h2><p>当人们的IP显示为Cloudflare时，这是因为他们使用了”1.1.1.1 + WARP: Safer Internet”软件。以下是官方的介绍：</p>
+<h2 id="为何IP会显示为Cloudflare？"><a href="#为何IP会显示为Cloudflare？" class="headerlink" title="为何IP会显示为Cloudflare？"></a>为何IP会显示为Cloudflare？</h2><p>当人们的IP显示为Cloudflare时，这是因为他们使用了“1.1.1.1 + WARP: Safer Internet”。以下是官方的介绍：</p>
 <h3 id="什么是Cloudflare-1-1-1-1-DNS解析器"><a href="#什么是Cloudflare-1-1-1-1-DNS解析器" class="headerlink" title="什么是Cloudflare 1.1.1.1 DNS解析器?"></a>什么是Cloudflare 1.1.1.1 DNS解析器?</h3><p>1.1.1.1是由Cloudflare运营的公共DNS解析器，它提供了一种快速且私密的浏览互联网的方式。与大多数DNS解析器不同，1.1.1.1不会将用户数据出售给广告商。此外，经过测量后，1.1.1.1被认为是最快的DNS解析器。</p>
 <p><img src="https://www.cloudflare-cn.com/img/learning/dns/what-is-1.1.1.1/dns-lookup.png" alt="Cloudflare Logo"></p>
 <p>总结：1.1.1.1使互联网更安全。</p>
