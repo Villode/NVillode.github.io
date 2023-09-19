@@ -1018,7 +1018,7 @@ css_prefix: true
 # 首页顶部相关配置
 home_top:
   enable: true # 开关
-  timemode: date #date/updated
+  timemode: updated #date/updated
   title: 生活明朗
   subTitle: 万物可爱。
   siteText: anheyu.com
