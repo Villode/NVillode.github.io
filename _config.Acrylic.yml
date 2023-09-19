@@ -102,7 +102,7 @@ algolia_search:
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
-  enable: true
+  enable: false
   appId: 4QEXKM61GW # see email
   apiKey: 5e37ea0059f5459205ab4acf231c18aa # see email
   indexName: # see email
@@ -110,7 +110,7 @@ docsearch:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   preload: true
   CDN:
 
