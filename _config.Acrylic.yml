@@ -559,7 +559,7 @@ theme_color:
 table_interlaced_discoloration: false
 
 # 首页双栏显示
-article_double_row: false
+article_double_row: true
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默认top_img全屏，site_info在中间)
@@ -945,7 +945,7 @@ css_prefix: true
 # 首页顶部相关配置
 home_top:
   enable: true # 开关
-  timemode: date #date/updated
+  timemode: updated #date/updated
   title: 热爱学习
   subTitle: 热爱程序
   siteText: Moon.CN
@@ -1034,7 +1034,7 @@ visitorMail:
 
 # 即刻页面配置
 essay:
-  enable: false
+  enable: true
   title: 即刻短文
   subTitle: 咸鱼的日常生活。
   tips: 使用 即刻短文静态部署版 构建
@@ -1054,7 +1054,7 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: false
+  enable: true
 
 # 文章顶部ai摘要
 post_head_ai_description:
