@@ -39,7 +39,8 @@ jobs:
         run: tree -L 3 -a
 
       - name: 安装主题
-        run: git submodule add https://github.com/Villode/hexo-theme-anzhiyu.git themes/Acrylic
+        run: git submodule add https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/Acrylic
+        #https://github.com/Villode/hexo-theme-anzhiyu.git 
 
       - name: 清理
         run: npm run clean
