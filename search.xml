@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>5G速通厅-超多流量卡</title>
-    <url>/2014/06/01/5g/</url>
+    <url>/2014/05/31/5g/</url>
     <content><![CDATA[<p>点击查看关于流量卡问题解惑？</p>
 <iframe src="https://gantanhao.vip/gth/#/minishop?share_id=533629&shop_name=%25E7%25B3%2596%25E6%259E%259C%25E7%259B%2592" width="100%" height="1000px"></iframe>
 ]]></content>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title>IDEA使用JSP用户登录案例</title>
-    <url>/2022/03/25/IDEA%E4%BD%BF%E7%94%A8JSP%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%A1%88%E4%BE%8B/</url>
+    <url>/2022/03/24/IDEA%E4%BD%BF%E7%94%A8JSP%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%A1%88%E4%BE%8B/</url>
     <content><![CDATA[<h2 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h2><p>JSP实现用户登录、注销</p>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>IDEA、tomcat、JDK18</p>
 <h4 id="登录界面HTML"><a href="#登录界面HTML" class="headerlink" title="登录界面HTML"></a>登录界面HTML</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;title&gt;用户登录&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=&quot;index.jsp&quot; method=&quot;post&quot; &gt;</span><br><span class="line">    &lt;h3&gt;&lt;span&gt;登录&lt;/span&gt;&lt;/h3&gt;</span><br><span class="line">    &lt;a&gt;用户名:&lt;/a&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;br&gt;</span><br><span class="line">    &lt;a &gt;密码:&lt;/a&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;&lt;br&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;button &gt;登录&lt;/button&gt;</span><br><span class="line">        &lt;INPUT TYPE=&quot;reset&quot; value=&quot;重置&quot; &gt;</span><br><span class="line">        &lt;INPUT TYPE=&quot;button&quot; value=&quot;注册&quot; &gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -111,7 +111,7 @@
   </entry>
   <entry>
     <title>南宁地区招聘避雷黑榜</title>
-    <url>/2022/03/25/data_bl/</url>
+    <url>/2022/03/24/data_bl/</url>
     <content><![CDATA[<p>南宁地区招聘避雷黑榜，数据来源于各平台网友的反馈，排名不分先后。我们的初衷是为了帮助大家在寻找心仪工作时避免被骗。</p>
 <p> <a href="https://isgo.top/i_DATA/">https://isgo.top/i_DATA/</a></p>
 ]]></content>
@@ -125,7 +125,7 @@
   </entry>
   <entry>
     <title>Hi</title>
-    <url>/2014/06/01/yun/</url>
+    <url>/2014/05/31/yun/</url>
     <content><![CDATA[<blockquote>
 <p>腾讯云已经跑路了，挂在腾讯云函数的twikoo已经私有部署了，还剩下一个即刻短文还跑在腾讯云开发的服务上。</p>
 <p>找了黑石原来的leancloud方案，主要黑石的公众号是订阅号不是服务号，发起来很麻烦，没有开源无法私有部署。</p>
