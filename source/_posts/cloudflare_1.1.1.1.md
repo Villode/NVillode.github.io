@@ -4,6 +4,7 @@ categories:
 - - WARP
 cc: 原创
 comment: true
+ai: true
 cover: https://1.1.1.1/media/warp-plus.png
 date: '2023-08-03T23:11:14.291466+08:00'
 description: 网络隐私保护，1.1.1.1使 Internet 更安全的免费应用。 现已可用于更多设备。
