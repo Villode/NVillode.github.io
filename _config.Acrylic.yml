@@ -446,7 +446,7 @@ footer:
     centerImg:
     left:
       - title: email
-        link: mailto:anzhiyu-c@qq.com
+        link: mailto:villode@520150.xyz
         icon: anzhiyu-icon-envelope
       # - title: 微博
       #   link: https://weibo.com/u/6378063631
@@ -459,7 +459,7 @@ footer:
         icon: anzhiyu-icon-rss
     right:
       - title: Github
-        link: https://github.com/anzhiyu-c
+        link: https://github.com/villode
         icon: anzhiyu-icon-github
       # - title: Bilibili
       #   link: https://space.bilibili.com/372204786
@@ -471,7 +471,7 @@ footer:
         link: /copyright
         icon: anzhiyu-icon-copyright-line
   list:
-    enable: false
+    enable: true
     randomFriends: 3
     project:
       - title: 服务
@@ -515,10 +515,10 @@ footer:
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
         text: 主题
-      - link: https://image.anheyu.com
+      - link: https://520150.xyz
         text: 图床
-      - link: https://beian.miit.gov.cn/
-        text: 湘ICP备-xxxxxxx号
+      - link: https://icp.gov.moe/join.php?id=20238911
+        text: 萌ICP备20238911号
     subTitle:
       enable: false
       # Typewriter Effect (打字效果)
