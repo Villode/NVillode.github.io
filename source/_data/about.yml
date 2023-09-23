@@ -33,11 +33,6 @@
     selfInfoContent2: 軟體
     selfInfoTips3: 現在職業
     selfInfoContent3: 大三
-  map:
-    title: 我現在居住
-    StrengthenTitle: 中国，廣西桂林市
-    background: https://img.520150.xyz/file/b8446edf17340094e400f.png
-    backgroundDark: https://img.520150.xyz/file/c5d816742610e3168002b.png
   personalities:
     author_name: 鑑賞家
     personality_type: ISTP
