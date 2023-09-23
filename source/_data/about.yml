@@ -1,4 +1,4 @@
-- class_name: 关于页
+- class_name: 關於頁
   subtitle: 生活明朗，万物可爱✨
   avatarImg: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.0/img/avatar.webp
   name: W東方
@@ -8,38 +8,38 @@
     title1: 源于
     title2: 热爱而去 感受
     word:
-      - 学习
+      - 學習
       - 生活
       - 程序
-      - 体验
+      - 體驗
   helloAbout: Hello there!
   skillsTips:
     tips: 技能
-    title: 开启创造力
+    title: 開起創造力
   careers:
     tips: 生涯
-    title: 无限进步
+    title: 無限進步
     item:
-      - EDU,软件工程专业
-    img: https://img02.anheyu.com/adminuploads/1/2022/09/26/6330e9bcc39cc.png
+      - 學生,軟體技術專業
+    img: https://img.520150.xyz/file/a919f517becc0bf826bff.png
   statistic:
     link: /archives
     text: 文章隧道
     cover: https://img02.anheyu.com/adminuploads/1/2022/09/23/632d634f8376d.jpg
   map:
-    title: 我现在住在
+    title: 我現在居住
     StrengthenTitle: 中国，廣西桂林市
     background: https://img.520150.xyz/file/b8446edf17340094e400f.png
     backgroundDark: https://img.520150.xyz/file/c5d816742610e3168002b.png
   selfInfo:
-    selfInfoTips1: 生于
+    selfInfoTips1: 生於
     selfInfoContentYear: 千禧年
     selfInfoTips2: 我的專業
-    selfInfoContent2: 软件工程
-    selfInfoTips3: 现在职业
-    selfInfoContent3: 大三学生👨‍🎓
+    selfInfoContent2: 軟體技術
+    selfInfoTips3: 現在職業
+    selfInfoContent3: 大三學生👨‍🎓
   personalities:
-    author_name: 鉴赏家
+    author_name: 鑑賞家
     personality_type: ISTP
     photo_url: https://img.520150.xyz/file/8d6235c4e02c43c0a7a85.png
     personality_img: https://www.16personalities.com/static/images/personality-types/avatars/istp-virtuoso.svg
@@ -55,27 +55,27 @@
   game:
     game_tips: 爱好游戏
     game_title: 仙劍奇俠傳四
-    game_uid: "UID: 125766904"
-    game_bg: https://img02.anheyu.com/adminuploads/1/2022/12/19/63a079ca63c8a.webp
+    game_uid: "为前人所不能为之事，否则人生一世，还有何意！ —— 玄霄"
+    game_bg: https://img.520150.xyz/file/014cc3bd74ea725661e46.png
   comic:
     comic_tips: 爱好番剧
     comic_title: 追番
     comic_list:
-      - name: 约定的梦幻岛
-        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/63988658aa1b1.webp
-      - name: 咒术回战
-        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/6398864e572ed.webp
-      - name: 紫罗兰永恒花园
-        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/639886315d658.webp
-      - name: 鬼灭之刃
-        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/639886403d472.webp
-      - name: JOJO的奇妙冒险 黄金之风
-        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/6398862649585.webp
+      - name: 某科学的超电磁炮T
+        href: https://www.bilibili.com/bangumi/play/ss29325/?spm_id_from=333.999.0.0
+        cover: https://i0.hdslb.com/bfs/bangumi/image/85c6e348a00a54d0b86d538efb186e006a027e21.png@330w_442h.webp
+      - name: 间谍过家家 粤配版
+        href: https://www.bilibili.com/bangumi/play/ss43056/?spm_id_from=333.999.0.0
+        cover: https://i0.hdslb.com/bfs/bangumi/image/63bbcd872b765f2d76fbc353193bb09f59ed48a1.png@330w_442h.webp
+      - name: 干物妹！小埋 粤配版
+        href: https://www.bilibili.com/bangumi/play/ss40753/?spm_id_from=333.999.0.0
+        cover: https://i0.hdslb.com/bfs/bangumi/image/83bc5ff3e2d5569c4e78a99d2d867ba37c28b40f.jpg@330w_442h.webp
+      - name: 小林家的龙女仆
+        href: https://www.bilibili.com/bangumi/play/ss5800/?spm_id_from=333.999.0.0
+        cover: https://i0.hdslb.com/bfs/bangumi/image/c72a95c3cae82f58f8fa25facd40960aa2003d26.png@330w_442h.webp
+      - name: 犬夜叉
+        href: https://www.bilibili.com/bangumi/play/ep289986?from_spmid=666.4.feed.10
+        cover: https://i0.hdslb.com/bfs/bangumi/0c39256b7c701547a0ce7082740dc082a50c9e68.jpg@330w_442h.webp
   like:
     like_tips: 关注偏好
     like_title: 数码科技
