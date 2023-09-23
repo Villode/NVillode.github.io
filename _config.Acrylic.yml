@@ -66,8 +66,8 @@ copy:
 # formal:
 #   name: link || icon
 social:
-  # Github: https://github.com/anzhiyu-c || anzhiyu-icon-github
-  # BiliBili: https://space.bilibili.com/372204786 || anzhiyu-icon-bilibili
+  Github: https://github.com/villode || anzhiyu-icon-github
+  BiliBili: https://space.bilibili.com/354097917?spm_id_from=333.1007.0.0 || anzhiyu-icon-bilibili
 
 # 作者卡片 状态
 author_status:
@@ -246,10 +246,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
+    - img: https://img.520150.xyz/file/c01abf5abd0c5face3d09.png
       link:
       text: 微信
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
+    - img: https://img.520150.xyz/file/35c74046c0ae3ccfa3839.jpg
       link:
       text: 支付宝
 
@@ -417,9 +417,9 @@ footer:
   runtime:
     enable: true
     launch_time: 04/01/2021 00:00:00 # 网站上线时间
-    work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
+    work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/W東方-上班摸鱼中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
+    offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/W東方-下班啦.svg
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
@@ -1062,7 +1062,7 @@ universe:
 
 # 页面卡片顶部气泡升起效果
 bubble:
-  enable: false
+  enable: true
 
 #  控制台打印信息
 console:
@@ -1113,7 +1113,7 @@ ptool:
   share_weibo: true
   share_copyurl: true
   categories: false # 是否显示分类
-  mode: # 运营模式与责任，不配置不显示
+  mode: /wechat/ # 运营模式与责任，不配置不显示
 
 # 欢迎语配置
 greetingBox:
