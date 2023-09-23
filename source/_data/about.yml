@@ -38,7 +38,7 @@
       - desc: EDU,软件工程专业
         color: "#357ef5"
     img: https://bu.dusays.com/2023/04/21/644287166329b.png
-  statistic:
+statistic:
     link: /archives
     text: 文章隧道
     cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
