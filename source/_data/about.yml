@@ -31,13 +31,13 @@
     StrengthenTitle: 中国，廣西桂林市
     background: https://img.520150.xyz/file/b8446edf17340094e400f.png
     backgroundDark: https://img.520150.xyz/file/c5d816742610e3168002b.png
-  selfInfo:
-    selfInfoTips1: 生於
-    selfInfoContentYear: 千禧
-    selfInfoTips2: 我的專業
-    selfInfoContent2: 軟體
-    selfInfoTips3: 現在職業
-    selfInfoContent3: 大三
+  # selfInfo:
+  #   selfInfoTips1: 生於
+  #   selfInfoContentYear: 千禧
+  #   selfInfoTips2: 我的專業
+  #   selfInfoContent2: 軟體
+  #   selfInfoTips3: 現在職業
+  #   selfInfoContent3: 大三
   personalities:
     author_name: 鑑賞家
     personality_type: ISTP
