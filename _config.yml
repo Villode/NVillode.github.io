@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: W东方
+title: Hexo
 subtitle: ''
 description: ''
 keywords:
@@ -122,11 +122,19 @@ envelope_comment:
     top_img: false
     type: envelope
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-  type: 'git'
-  repo: git@github.com:Villode/Villode.github.io.git
-  branch: gh-pages
-  # 默认提交信息： Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
-  message: "${{ github.event.head_commit.message }}" # 用双引号括起来
 
+# Deployment
+		
+## Docs: https://hexo.io/docs/one-command-deployment
+		
+deploy:
+		
+  type: 'git'
+		
+  repo: git@github.com:Villode/Villode.github.io.git
+		
+  branch: gh-pages
+		
+  # 默认提交信息： Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+		
+  message: ${{ github.event.head_commit.message }} # 直接将提交消息传输到 GitHub Pages 存储库
