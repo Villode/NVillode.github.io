@@ -57,6 +57,9 @@ jobs:
             hexo-server@^2.0.0 \
             hexo-util@^2.2.0
 
+      - name: Install bulma-stylus
+        run: npm install --save bulma-stylus@0.8.0
+
       - name: Install hexo-butterfly-envelope
         run: npm install hexo-butterfly-envelope --save
 
