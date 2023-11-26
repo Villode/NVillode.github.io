@@ -2,42 +2,42 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://isgo.top/</loc>
+        <loc>http://example.com/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
 
     <url>
-        <loc>https://isgo.top/categories/%25E6%258B%259B%25E8%2581%2598/</loc>
-        <lastmod>2023-11-26T18:02:45.698Z</lastmod>
+        <loc>http://example.com/categories/%25E6%258B%259B%25E8%2581%2598/</loc>
+        <lastmod>2023-11-26T18:05:30.356Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://isgo.top/categories/WARP/</loc>
-        <lastmod>2023-11-26T18:02:45.698Z</lastmod>
+        <loc>http://example.com/categories/WARP/</loc>
+        <lastmod>2023-11-26T18:05:30.356Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://isgo.top/categories/IDEA/</loc>
-        <lastmod>2023-11-26T18:02:45.698Z</lastmod>
+        <loc>http://example.com/categories/IDEA/</loc>
+        <lastmod>2023-11-26T18:05:30.356Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://isgo.top/categories/UI%25E8%25AE%25BE%25E8%25AE%25A1/</loc>
+        <loc>http://example.com/categories/UI%25E8%25AE%25BE%25E8%25AE%25A1/</loc>
         <lastmod>2023-09-05T16:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://isgo.top/categories/%25E6%25B5%2581%25E9%2587%258F%25E5%258D%25A1/</loc>
+        <loc>http://example.com/categories/%25E6%25B5%2581%25E9%2587%258F%25E5%258D%25A1/</loc>
         <lastmod>2023-09-05T16:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

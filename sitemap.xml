@@ -3,23 +3,23 @@
 
 
     <sitemap>
-        <loc>https://isgo.top/post-sitemap.xml</loc>
-        <lastmod>2023-11-26T18:02:45.698Z</lastmod>
+        <loc>http://example.com/post-sitemap.xml</loc>
+        <lastmod>2023-11-26T18:05:30.356Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>https://isgo.top/page-sitemap.xml</loc>
-        <lastmod>2023-11-26T18:02:45.702Z</lastmod>
+        <loc>http://example.com/page-sitemap.xml</loc>
+        <lastmod>2023-11-26T18:05:30.356Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>https://isgo.top/category-sitemap.xml</loc>
-        <lastmod>2023-11-26T18:02:45.698Z</lastmod>
+        <loc>http://example.com/category-sitemap.xml</loc>
+        <lastmod>2023-11-26T18:05:30.356Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>https://isgo.top/tag-sitemap.xml</loc>
-        <lastmod>2023-11-26T18:02:45.698Z</lastmod>
+        <loc>http://example.com/tag-sitemap.xml</loc>
+        <lastmod>2023-11-26T18:05:30.356Z</lastmod>
     </sitemap>
 
 </sitemapindex>
