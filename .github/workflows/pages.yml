@@ -31,31 +31,31 @@ jobs:
         run: tree -L 3 -a
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install hexo@^5.0
 
       - name: Install Additional Hexo Dependencies
         run: |
           npm install --save \
-            hexo-baidu-url-submit \
-            hexo-browsersync \
-            hexo-component-inferno \
-            hexo-deployer-git \
-            hexo-generator-archive \
-            hexo-generator-baidu-sitemap \
-            hexo-generator-category \
-            hexo-generator-feed \
-            hexo-generator-index \
-            hexo-generator-seo-friendly-sitemap \
-            hexo-generator-tag \
-            hexo-log \
-            hexo-pagination \
-            hexo-post-series \
-            hexo-renderer-ejs \
-            hexo-renderer-inferno \
-            hexo-renderer-markdown-it \
-            hexo-renderer-stylus \
-            hexo-server \
-            hexo-util
+            hexo-baidu-url-submit@^0.0.6 \
+            hexo-browsersync@^0.3.0 \
+            hexo-component-inferno@^0.10.1 \
+            hexo-deployer-git@^2.1.0 \
+            hexo-generator-archive@^1.0.0 \
+            hexo-generator-baidu-sitemap@^0.1.9 \
+            hexo-generator-category@^1.0.0 \
+            hexo-generator-feed@^3.0.0 \
+            hexo-generator-index@^2.0.0 \
+            hexo-generator-seo-friendly-sitemap@^0.2.0 \
+            hexo-generator-tag@^1.0.0 \
+            hexo-log@^2.0.0 \
+            hexo-pagination@^1.0.0 \
+            hexo-post-series@^1.0.8 \
+            hexo-renderer-ejs@^1.0.0 \
+            hexo-renderer-inferno@^0.1.3 \
+            hexo-renderer-markdown-it@^5.0.0 \
+            hexo-renderer-stylus@^2.0.0 \
+            hexo-server@^2.0.0 \
+            hexo-util@^2.2.0
 
       - name: Install hexo-butterfly-envelope
         run: npm install hexo-butterfly-envelope --save
