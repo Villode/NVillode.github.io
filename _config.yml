@@ -101,4 +101,6 @@ theme: candy
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:Moon-lights/Moon-lights.github.io.git
+  branch: main
