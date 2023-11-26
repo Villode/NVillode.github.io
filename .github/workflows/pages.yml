@@ -11,14 +11,15 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: 使用 Node.js 16.x
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '18.15.0'
 
-      - name: 缓存 NPM 依赖
+      - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
           path: ~/.npm
@@ -26,50 +27,54 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
 
-      - name: 查看目录列表
+      - name: List Directory
         run: tree -L 3 -a
 
-      - name: 安装依赖
+      - name: Install Dependencies
         run: npm install
 
-      - name: 安装额外的 Hexo 依赖
+      - name: Install Additional Hexo Dependencies
         run: |
-          npm install hexo-baidu-url-submit@^0.0.6 \
-                      hexo-browsersync@^0.3.0 \
-                      hexo-component-inferno@^2.0.3 \
-                      hexo-deployer-git@^2.1.0 \
-                      hexo-generator-archive@^1.0.0 \
-                      hexo-generator-baidu-sitemap@^0.1.9 \
-                      hexo-generator-category@^1.0.0 \
-                      hexo-generator-feed@^3.0.0 \
-                      hexo-generator-index@^2.0.0 \
-                      hexo-generator-seo-friendly-sitemap@^0.2.0 \
-                      hexo-generator-tag@^1.0.0 \
-                      hexo-log@^2.0.0 \
-                      hexo-pagination@^1.0.0 \
-                      hexo-post-series@^1.0.8 \
-                      hexo-renderer-ejs@^1.0.0 \
-                      hexo-renderer-inferno@^0.1.3 \
-                      hexo-renderer-markdown-it@^5.0.0 \
-                      hexo-renderer-stylus@^3.0.0 \
-                      hexo-server@^2.0.0 \
-                      hexo-util@^2.2.0
+          npm install --save \
+            hexo-baidu-url-submit \
+            hexo-browsersync \
+            hexo-component-inferno \
+            hexo-deployer-git \
+            hexo-generator-archive \
+            hexo-generator-baidu-sitemap \
+            hexo-generator-category \
+            hexo-generator-feed \
+            hexo-generator-index \
+            hexo-generator-seo-friendly-sitemap \
+            hexo-generator-tag \
+            hexo-log \
+            hexo-pagination \
+            hexo-post-series \
+            hexo-renderer-ejs \
+            hexo-renderer-inferno \
+            hexo-renderer-markdown-it \
+            hexo-renderer-stylus \
+            hexo-server \
+            hexo-util
 
-      - name: 再次查看目录列表
+      - name: Install hexo-butterfly-envelope
+        run: npm install hexo-butterfly-envelope --save
+
+      - name: List Directory Again
         run: tree -L 3 -a
 
-      - name: 安装主题
+      - name: Install Theme
         run: git submodule add https://github.com/MannyCooper/hexo-theme-candy.git themes/Acrylic
         # https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git 
         # https://github.com/Villode/hexo-theme-anzhiyu.git 
 
-      - name: 清理
+      - name: Clean
         run: npm run clean
 
-      - name: 构建
+      - name: Build
         run: npm run build
 
-      - name: 部署
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -81,6 +86,6 @@ jobs:
           publish_dir: ./public
           allow_empty_commit: true
 
-      - name: 获取输出
+      - name: Get Output
         run: |
           echo "${{ steps.deploy.outputs.notify }}"
