@@ -3,14 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: W東方
-subtitle: “歲聿雲暮”
-description: 最具人文煙火氣息博客
-keywords: W東方, 歲聿雲暮, 網站
-author: W東方
-language: zh-TW
-timezone: Asia/Taipei
-
+title: Hexo
+subtitle: ''
+description: ''
+keywords:
+author: John Doe
+language: en
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
