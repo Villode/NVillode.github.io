@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://example.com/</loc>
+        <loc>https://isgo.top/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
@@ -10,8 +10,8 @@
     
     
     <url>
-        <loc>http://example.com/cookies/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/cookies/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -19,8 +19,8 @@
     
     
     <url>
-        <loc>http://example.com/essay/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/dailyPhoto%2520/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -28,8 +28,8 @@
     
     
     <url>
-        <loc>http://example.com/dailyPhoto%2520/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/essay/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -37,8 +37,8 @@
     
     
     <url>
-        <loc>http://example.com/fcircle%2520/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/fcircle%2520/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -46,8 +46,8 @@
     
     
     <url>
-        <loc>http://example.com/link/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/link/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -55,8 +55,8 @@
     
     
     <url>
-        <loc>http://example.com/music%2520/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/music%2520/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -64,8 +64,8 @@
     
     
     <url>
-        <loc>http://example.com/privacy/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/privacy/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -73,8 +73,8 @@
     
     
     <url>
-        <loc>http://example.com/says/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/says/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -82,8 +82,8 @@
     
     
     <url>
-        <loc>http://example.com/tags/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/tags/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -91,8 +91,8 @@
     
     
     <url>
-        <loc>http://example.com/wordScenery%2520/</loc>
-        <lastmod>2023-11-26T19:07:47.034Z</lastmod>
+        <loc>https://isgo.top/wordScenery%2520/</loc>
+        <lastmod>2023-11-26T19:12:10.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -100,8 +100,8 @@
     
     
     <url>
-        <loc>http://example.com/about/</loc>
-        <lastmod>2023-11-26T19:07:47.030Z</lastmod>
+        <loc>https://isgo.top/album/</loc>
+        <lastmod>2023-11-26T19:12:10.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -109,8 +109,8 @@
     
     
     <url>
-        <loc>http://example.com/album/</loc>
-        <lastmod>2023-11-26T19:07:47.030Z</lastmod>
+        <loc>https://isgo.top/about/</loc>
+        <lastmod>2023-11-26T19:12:10.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -118,8 +118,8 @@
     
     
     <url>
-        <loc>http://example.com/bilibili/</loc>
-        <lastmod>2023-11-26T19:07:47.030Z</lastmod>
+        <loc>https://isgo.top/bilibili/</loc>
+        <lastmod>2023-11-26T19:12:10.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -127,8 +127,8 @@
     
     
     <url>
-        <loc>http://example.com/books/</loc>
-        <lastmod>2023-11-26T19:07:47.030Z</lastmod>
+        <loc>https://isgo.top/books/</loc>
+        <lastmod>2023-11-26T19:12:10.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -136,8 +136,8 @@
     
     
     <url>
-        <loc>http://example.com/categories/</loc>
-        <lastmod>2023-11-26T19:07:47.030Z</lastmod>
+        <loc>https://isgo.top/categories/</loc>
+        <lastmod>2023-11-26T19:12:10.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -145,8 +145,8 @@
     
     
     <url>
-        <loc>http://example.com/cc/</loc>
-        <lastmod>2023-11-26T19:07:47.030Z</lastmod>
+        <loc>https://isgo.top/cc/</loc>
+        <lastmod>2023-11-26T19:12:10.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -154,7 +154,7 @@
     
     
     <url>
-        <loc>http://example.com/Apply/</loc>
+        <loc>https://isgo.top/Apply/</loc>
         <lastmod>2023-09-06T01:17:27.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
