@@ -127,5 +127,5 @@ envelope_comment:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:Moon-lights/Moon-lights.github.io.git
+  repo: git@github.com:Villode/Villode.github.io.git
   branch: main
