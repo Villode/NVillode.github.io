@@ -3,49 +3,49 @@
 
 
     <url>
-        <loc>https://520150.xyz/tags/WARP/</loc>
-        <lastmod>2023-11-26T18:27:03.125Z</lastmod>
+        <loc>http://example.com/tags/WARP/</loc>
+        <lastmod>2023-11-26T18:29:29.072Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://520150.xyz/tags/JSP/</loc>
-        <lastmod>2023-11-26T18:27:03.125Z</lastmod>
+        <loc>http://example.com/tags/JSP/</loc>
+        <lastmod>2023-11-26T18:29:29.072Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://520150.xyz/tags/IDEA/</loc>
-        <lastmod>2023-11-26T18:27:03.125Z</lastmod>
+        <loc>http://example.com/tags/IDEA/</loc>
+        <lastmod>2023-11-26T18:29:29.072Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://520150.xyz/tags/%E6%95%99%E7%A8%8B/</loc>
+        <loc>http://example.com/tags/%E6%95%99%E7%A8%8B/</loc>
         <lastmod>2023-09-06T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://520150.xyz/tags/%E7%83%AD%E9%97%A8/</loc>
+        <loc>http://example.com/tags/%E7%83%AD%E9%97%A8/</loc>
         <lastmod>2023-09-06T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://520150.xyz/tags/%E6%90%9E%E6%9C%BA/</loc>
+        <loc>http://example.com/tags/%E6%90%9E%E6%9C%BA/</loc>
         <lastmod>2023-09-06T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://520150.xyz/tags/5G%E5%A4%A7%E9%A2%9D%E6%B5%81%E9%87%8F%E5%8D%A1/</loc>
+        <loc>http://example.com/tags/5G%E5%A4%A7%E9%A2%9D%E6%B5%81%E9%87%8F%E5%8D%A1/</loc>
         <lastmod>2023-09-06T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
