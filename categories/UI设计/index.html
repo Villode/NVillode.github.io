@@ -1,44 +1,10 @@
-const { Component } = require('inferno');
-const classname = require('hexo-component-inferno/lib/util/classname');
-const Head = require('./common/head');
-const Navbar = require('./common/navbar');
-const Widgets = require('./common/widgets');
-const Footer = require('./common/footer');
-const Scripts = require('./common/scripts');
-const Search = require('./common/search');
-
-module.exports = class extends Component {
-    render() {
-        const { site, config, page, helper, body } = this.props;
-
-        const language = page.lang || page.language || config.language;
-        const columnCount = Widgets.getColumnCount(config.widgets);
-
-        return <html lang={language ? language.substr(0, 2) : ''}>
-            <Head site={site} config={config} helper={helper} page={page} />
-            <body class={`is-${columnCount}-column`}>
-                <script type="text/javascript" src="/js/dark.js"></script>
-                <Navbar config={config} helper={helper} page={page} />
-                <section class="section">
-                    <div class="container">
-                        <div class="columns">
-                            <div class={classname({
-                                column: true,
-                                'order-2': true,
-                                'column-main': true,
-                                'is-12': columnCount === 1,
-                                'is-8-tablet is-8-desktop is-8-widescreen': columnCount === 2,
-                                'is-8-tablet is-8-desktop is-6-widescreen': columnCount === 3
-                            })} dangerouslySetInnerHTML={{ __html: body }}></div>
-                            <Widgets site={site} config={config} helper={helper} page={page} position={'left'} />
-                            <Widgets site={site} config={config} helper={helper} page={page} position={'right'} />
-                        </div>
-                    </div>
-                </section>
-                <Footer config={config} helper={helper} />
-                <Scripts site={site} config={config} helper={helper} page={page} />
-                <Search config={config} helper={helper} />
-            </body>
-        </html>;
-    }
-};
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>分類: UI设计 - W東方</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="W東方"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="W東方"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="最具人文煙火氣息博客"><meta property="og:type" content="website"><meta property="og:title" content="W東方"><meta property="og:url" content="https://isgo.top/"><meta property="og:site_name" content="W東方"><meta property="og:description" content="最具人文煙火氣息博客"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://isgo.top/img/og_image.png"><meta property="article:author" content="W東方"><meta property="article:tag" content="W東方, 歲聿雲暮, 網站"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://isgo.top"},"headline":"W東方","image":["https://isgo.top/img/og_image.png"],"author":{"@type":"Person","name":"W東方"},"description":"最具人文煙火氣息博客"}</script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="W東方" type="application/atom+xml">
+</head><body class="is-1-column"><script type="text/javascript" src="/js/dark.js"></script><nav class="navbar navbar-main"><div class="container"><div class="navbar-menu"><a class="navbar-item navbar-logo" href="/">W東方</a><div class="navbar-end"><a class="navbar-item dark" id="dark-nav" title="Dark Mode" href="javascript:;"><i class="fas fa-moon" id="dark-icon"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分類</a></li><li class="is-active"><a href="#" aria-current="page">UI设计</a></li></ul></nav></div></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2014/05/31/yun/"><img class="fill" src="https://isgodata.files.wordpress.com/2023/04/e59bbee58fa8e58fa8_20230401_1640260.webp" alt="Hi"><img class="fill_dark" src="https://isgodata.files.wordpress.com/2023/04/e59bbee58fa8e58fa8_20230401_1640260.webp" alt="Hi"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item create-data"><i class="far fa-calendar-alt">&nbsp;&nbsp;</i><time dateTime="2014-05-31T16:00:00.000Z" title="2014-05-31T16:00:00.000Z">2014-06-01</time>發表</span><span class="level-item cate"><i class="far fa-folder-open">  </i><a class="link-muted" href="/categories/UI%E8%AE%BE%E8%AE%A1/">UI设计</a></span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2014/05/31/yun/">Hi</a></h1><div class="content">100</div></article></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">W東方</a><p class="is-size-7"><span>&copy; 2020-2023 W東方</span><br>Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> with <a href="https://github.com/MannyCooper/hexo-theme-candy" target="_blank" rel="noopener">Candy</a><br><i class="fas fa-globe-asia" style=""></i><a target="_blank" rel="noopener" href="http://beian.miit.gov.cn"> 苏ICP备 2020060340 号 </a><br><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011202000528"><img src="/img/beian.png" style="height: 14px;margin-left: -1px;margin-right: -1px;margin-top: 1.2px;"> 苏公网安备 32011202000528 号</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>
