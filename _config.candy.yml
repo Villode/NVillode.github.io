@@ -17,7 +17,7 @@ head:
         # Web应用程序的名称（默认为站点标题）
         name: 
         # Web应用的简称
-        short_name: 
+        short_name: W东方
         # Web应用程序的启动URL
         start_url: 
         # 应用程序的默认主题颜色
