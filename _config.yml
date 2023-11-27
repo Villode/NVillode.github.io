@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 萦芑Blog
+title: W東方
 subtitle: ''
 description: ''
 keywords:
-author: 萦芑
+author: W東方
 language: zh-TW
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://isgo.top
+url: https://520150.xyz/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
