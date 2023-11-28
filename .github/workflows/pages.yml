@@ -16,7 +16,7 @@ jobs:
       - name: 使用 Node.js 16.x
         uses: actions/setup-node@v2
         with:
-          node-version: '18.15.0' 
+          node-version: '18.15.0'
 
       - name: 缓存 NPM 依赖
         uses: actions/cache@v2
@@ -33,13 +33,10 @@ jobs:
         run: npm install
 
       - name: 安装 hexo-renderer-pug 和 hexo-renderer-stylus
-        run: npm install hexo-renderer-pug hexo-renderer-stylus --save
+        run: npm install hexo-renderer-pug hexo-renderer-stylus --save 
 
       - name: 安装 hexo-butterfly-envelope
         run: npm install hexo-butterfly-envelope --save
-
-      - name: 安装 hexo-offline
-        run: npm install hexo-offline --save
 
       - name: 再次查看目录列表
         run: tree -L 3 -a
@@ -57,7 +54,7 @@ jobs:
       - name: 部署
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY  }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           user_name: Villode
           user_email: vip520moyan@gmail.com
           commit_message: ${{ github.event.head_commit.message }}
