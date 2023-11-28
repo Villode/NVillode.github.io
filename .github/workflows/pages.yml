@@ -38,9 +38,6 @@ jobs:
       - name: 安装 hexo-butterfly-envelope
         run: npm install hexo-butterfly-envelope --save
 
-      - name: 安装 hexo-offline
-        run: npm install hexo-offline --save
-
       - name: 再次查看目录列表
         run: tree -L 3 -a
 
