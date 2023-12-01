@@ -66,10 +66,12 @@ jobs:
       - name: 获取输出
         run: |
                  echo "${{ steps.deploy.outputs.notify }}"
-      - name: 设置 Git 配置
+      - name: 设置新仓库
         run: |
-              git config user.name "github-actions[bot]"
-              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git init
+            git config user.name "Villode"
+            git config user.email "vip520moyan@gmail.com"
+            git remote add destination_repo https://github.com/Villode/Villode.github.io.git
 
       - name: 等待
         run: sleep 5s  # 可能需要适当的等待时间
