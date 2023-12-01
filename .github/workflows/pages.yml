@@ -91,7 +91,8 @@ jobs:
         run: |
              git push --force destination_repo master
         env:
-         DESTINATION_REPO_TOKEN: ${{ secrets.DESTINATION_REPO_TOKEN }}
+         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
 
 
 
