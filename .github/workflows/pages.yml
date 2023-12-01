@@ -89,8 +89,9 @@ jobs:
 
       - name: 推送到目标仓库
         run: |
-              git push --force destination_repo master
+             git push --force destination_repo master
         env:
-              DESTINATION_REPO_TOKEN: ${{ secrets.DESTINATION_REPO_TOKEN }}
+         DESTINATION_REPO_TOKEN: ${{ secrets.DESTINATION_REPO_TOKEN }}
+
 
 
