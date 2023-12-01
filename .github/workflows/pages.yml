@@ -63,36 +63,5 @@ jobs:
           publish_dir: ./public
           allow_empty_commit: true # 允许空提交
       # Use the output from the `deploy` step(use for test action)
-      - name: 获取输出
-        run: |
-                 echo "${{ steps.deploy.outputs.notify }}"
-      - name: 设置新仓库
-        run: |
-            git init
-            git config user.name "Villode"
-            git config user.email "vip520moyan@gmail.com"
-            git remote add destination_repo "Villode/Villode.github.io"
-
-      - name: 等待
-        run: sleep 5s  # 可能需要适当的等待时间
-
-      - name: 复制构建文件到新仓库
-        run: |
-              mkdir -p new_repo_directory
-              cp -r ./public/* new_repo_directory/
-              cd new_repo_directory
-              git add .
-              git commit -m "Add built files"
-
-      - name: 等待
-        run: sleep 5s  # 可能需要适当的等待时间
-
-      - name: 推送到目标仓库
-        run: |
-             git push --force destination_repo master
-        env:
-         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-
-
-
+      
 
