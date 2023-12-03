@@ -46,7 +46,7 @@ mourn:
 # Code Blocks (代码相关)
 # --------------------------------------
 
-highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -140,7 +140,8 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202311281731582.jpg
+  img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312030306423.gif
+  #https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312020105765.png
   effect: false
 
 # Disable all banner image
@@ -232,12 +233,12 @@ toc:
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true
   author_href:
   location: 火星
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-  avatarSinks: false # hover时头像下沉
+  avatarSinks: true #false # hover时头像下沉
   copyright_author_img_back:
   copyright_author_img_front:
   copyright_author_link: /
@@ -305,7 +306,7 @@ sharejs:
 # AddToAny
 # https://www.addtoany.com/
 addtoany:
-  enable: false
+  enable: true
   item: facebook,twitter,wechat,sina_weibo,email,copy_link
 
 # Comments System
@@ -314,7 +315,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Valine/Waline/Twikoo/Artalk
-  use: # Twikoo/Waline
+  use: Valine # Twikoo/Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -325,14 +326,14 @@ comments:
 # valine
 # https://valine.js.org
 valine:
-  appId: xxxxx # leancloud application app id
-  appKey: xxxxx # leancloud application app key
+  appId: bnCJxNvsx2gEpdgjvn0Qb4Ks-gzGzoHsz # leancloud application app id
+  appKey: 9L8UJQzf91U9CV43YpfxFe2T # leancloud application app key
   pageSize: 10 # comment list page size
   avatar: mp # gravatar style https://valine.js.org/#/avatar
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
   placeholder: 填写QQ邮箱就会使用QQ头像喔~. # valine comment input placeholder (like: Please leave your footprints)
   guest_info: nick,mail,link # valine comment header info (nick/mail/link)
-  recordIP: false # Record reviewer IP
+  recordIP: true # Record reviewer IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: /img/comment_bg.png # valine background
   emojiCDN: //i0.hdslb.com/bfs/emote/ # emoji CDN
@@ -616,6 +617,19 @@ theme_color:
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
 
+
+
+colorScheme:
+  primary:
+    light: "#425AEF"
+    dark: "#f2b94b"
+  secondary:
+    light: "#f7f9fe"
+    dark: "#18171d"
+
+
+
+
 # 移动端侧栏
 sidebar:
   site_data:
@@ -631,7 +645,7 @@ sidebar:
 h2Divider: false
 
 # 表格隔行变色
-table_interlaced_discoloration: false
+table_interlaced_discoloration: true #false
 
 # 首页双栏显示
 article_double_row: true
@@ -715,7 +729,7 @@ ClickShowText:
 
 # Default display mode (网站默认的显示模式)
 # light (default) / dark
-display_mode: light
+display_mode: dark
 
 # Beautify (美化页面显示)
 beautify:
@@ -776,7 +790,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312030306423.gif # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -793,11 +807,11 @@ aside:
     category: true
   card_author:
     enable: true
-    description: <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
+    description: <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">搞机、主题、编程</b>相关的问题和看法，还有<b style="color:#fff">Ai相关</b><b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
     name_link: /
 
   card_announcement:
-    enable: false
+    enable: true
     content: 欢迎来看我的博客鸭~
   card_weixin:
     enable: true
@@ -860,7 +874,7 @@ newest_comments:
 
 # Conversion between Traditional and Simplified Chinese (简繁转换)
 translate:
-  enable: true
+  enable:  false  #true
   # The text of a button
   default: 繁
   # Right-click menu default text
@@ -879,7 +893,7 @@ translate:
   rightMenuMsgToSimplifiedChinese: "转为简体"
 
 # Read Mode (閲读模式)
-readmode: true
+readmode: false
 
 # 中控台
 centerConsole:
@@ -887,7 +901,7 @@ centerConsole:
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
       # - Hexo
@@ -902,7 +916,7 @@ centerConsole:
 
 # dark mode
 darkmode:
-  enable: true
+  enable: false
   # Toggle Button to switch dark/light mode
   button: true
   # Switch dark/light mode automatically (自动切换 dark mode和 light mode)
@@ -1034,10 +1048,10 @@ css_prefix: true
 # 首页顶部相关配置
 home_top:
   enable: true # 开关
-  timemode: date #date/updated
+  timemode: updated #date/updated
   title: 生活明朗
   subTitle: 万物可爱。
-  siteText: anheyu.com
+  siteText: 520773.xyz
   category:
     - name: 前端
       path: /categories/前端开发/
@@ -1056,13 +1070,13 @@ home_top:
       icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
-    enable: false
+    enable: true
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
+    tips: 关于博客
     title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
+    image: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312020248071.png
     link: https://docs.anheyu.com/
 
 # 朋友圈配置
@@ -1079,7 +1093,7 @@ universe:
 
 # 页面卡片顶部气泡升起效果
 bubble:
-  enable: false
+  enable: true
 
 #  控制台打印信息
 console:
@@ -1165,14 +1179,14 @@ greetingBox:
 # 文章顶部ai摘要
 post_head_ai_description:
   enable: true
-  gptName: AnZhiYu
-  mode: local # 默认模式 可选值: tianli/local
+  gptName: 星微
+  mode: tianli # 默认模式 可选值: tianli/local
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
   btnLink: https://afdian.net/item/886a79d4db6711eda42a52540025c377
   randomNum: 3 # 按钮最大的随机次数，也就是一篇文章最大随机出来几种
   basicWordCount: 1000 # 最低获取字符数, 最小1000, 最大1999
-  key: xxxx
-  Referer: https://xx.xx/
+  key: 33c04deb0ac607654b4d
+  Referer: https://520773.xyz/
 
 # 快捷键配置
 shortcutKey:
@@ -1186,7 +1200,7 @@ accesskey:
 
 # 友情链接顶部相关配置
 linkPageTop:
-  enable: false
+  enable: true
   title: 与数百名博主无限进步
   # 添加博主友链的评论自定义格式
   addFriendPlaceholder: "昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"
@@ -1196,22 +1210,22 @@ pageThumbnailSuffix: ""
 
 # 隐私协议弹窗
 agreementPopup:
-  enable: false
+  enable: true
   url: /privacy
 
 # 右键菜单
 rightClickMenu:
-  enable: false
+  enable: true
 
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
-  enable: true
+  enable: false #true
   img: https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png
 
 # 动效
 dynamicEffect:
   postTopWave: true # 文章顶部波浪效果
-  postTopRollZoomInfo: false # 文章顶部滚动时缩放
+  postTopRollZoomInfo: true # 文章顶部滚动时缩放
   pageCommentsRollZoom: false # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
 
 # Inject
