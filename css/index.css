@@ -2710,7 +2710,6 @@ i.anzhiyu-icon-hashtag {
   --anzhiyu-radius: 8px;
   --anzhiyu-border-radius: 8px;
   --anzhiyu-main: var(--anzhiyu-theme);
-  --anzhiyu-main-op: rgba(80,75,242,0.871);
   --anzhiyu-shadow-theme: 0 8px 12px -3px var(--anzhiyu-theme-op);
   --anzhiyu-shadow-main: 0 8px 12px -3px var(--anzhiyu-main-op);
   --anzhiyu-shadow-blue: 0 8px 12px -3px rgba(40,109,234,0.2);
