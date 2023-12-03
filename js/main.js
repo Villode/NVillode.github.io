@@ -714,7 +714,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         e.preventDefault();
         anzhiyu.scrollToDest(
-          anzhiyu.getEleTop(document.getElementById(decodeURI(target.getAttribute("href")).replace("#", ""))) - 60,
+          anzhiyu.getEleTop(document.getElementById(decodeURI(target.getAttribute("href")).replace("#", ""))),
           300
         );
         if (window.innerWidth < 900) {

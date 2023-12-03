@@ -2,6 +2,7 @@
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 60px;
 }
 
 /* 滚动条轨道样式 */
@@ -2693,7 +2694,7 @@ i.anzhiyu-icon-hashtag {
   --anzhiyu-bar-background: var(--anzhiyu-main);
   --anzhiyu-theme-op: rgba(66,89,239,0.137);
   --anzhiyu-card-bg-none: rgba(255,255,255,0);
-  --anzhiyu-main-op-deep: var(--anzhiyu-theme-op-deep) !important;
+  --anzhiyu-main-op-deep: rgba(80,75,242,0.871);
   --anzhiyu-gray-op: rgba(153,153,153,0.169);
   --anzhiyu-theme-top: var(--anzhiyu-theme);
   --anzhiyu-white: #fff;
@@ -2739,7 +2740,7 @@ i.anzhiyu-icon-hashtag {
 [data-theme="light"] {
   --anzhiyu-meta-theme-post-color: #fff;
   --anzhiyu-meta-theme-color: #f7f9fe;
-  --anzhiyu-theme-op-deep: rgba(66,89,239,0.867);
+  --anzhiyu-theme-op-deep: rgba(80,75,242,0.871);
   --global-bg: #f7f9fe;
   --anzhiyu-theme: #425aef;
   --anzhiyu-theme-deep: #1856fb;
@@ -3279,6 +3280,23 @@ figure.highlight pre .coffeescript .title {
 figure.highlight pre .tag .attr,
 figure.highlight pre .javascript .function {
   color: #c792ea;
+}
+#article-container > header {
+  height: 0;
+  text-indent: -9999px;
+}
+#article-container > header time,
+#article-container > header span {
+  height: 0;
+  display: block;
+}
+#article-container > header h1 {
+  z-index: -1;
+  pointer-events: none;
+}
+#article-container > header a {
+  background: none !important;
+  border-bottom: none !important;
 }
 #article-container figure.highlight .line.marked {
   background-color: rgba(97,97,97,0.314);
@@ -10340,23 +10358,6 @@ h1.page-title + .tag-cloud-list {
   margin-right: 1rem;
   -webkit-box-shadow: var(--anzhiyu-shadow-border);
   box-shadow: var(--anzhiyu-shadow-border);
-}
-#article-container > header {
-  height: 0;
-  text-indent: -9999px;
-}
-#article-container > header time,
-#article-container > header span {
-  height: 0;
-  display: block;
-}
-#article-container > header h1 {
-  z-index: -1;
-  pointer-events: none;
-}
-#article-container > header a {
-  background: none !important;
-  border-bottom: none !important;
 }
 #post-comment .comment-head {
   margin-bottom: 20px;
