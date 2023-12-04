@@ -140,7 +140,8 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312030306423.gif
+  img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042027013.gif
+  #https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312030306423.gif
   #https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312020105765.png
   effect: false
 
@@ -247,10 +248,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
+    - img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042106866.png
       link:
       text: 微信
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
+    - img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042106755.png
       link:
       text: 支付宝
 
@@ -417,11 +418,11 @@ footer:
   custom_text:
   runtime:
     enable: true
-    launch_time: 04/01/2021 00:00:00 # 网站上线时间
-    work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
-    work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
-    offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
+    launch_time: 01/01/2021 00:00:00 # 网站上线时间
+    work_img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042124603.png
+    work_description: 每天都要元气满满呀，哈哈~
+    offduty_img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042120300.png
+    offduty_description: 自己时间就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
@@ -460,7 +461,7 @@ footer:
         icon: anzhiyu-icon-rss
     right:
       - title: Github
-        link: https://github.com/anzhiyu-c
+        link: https://github.com/
         icon: anzhiyu-icon-github
       # - title: Bilibili
       #   link: https://space.bilibili.com/372204786
@@ -511,7 +512,7 @@ footer:
     enable: true
     authorLink: /
     cc:
-      enable: false
+      enable: true
       link: /copyright
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
@@ -718,14 +719,14 @@ click_heart:
 
 # Mouse click effects: words (鼠标点击效果: 文字)
 ClickShowText:
-  enable: false
+  enable: true
   text:
-    # - I
-    # - LOVE
-    # - YOU
+    - I
+    - LOVE
+    - YOU
   fontSize: 15px
   random: false
-  mobile: false
+  mobile: true
 
 # Default display mode (网站默认的显示模式)
 # light (default) / dark
@@ -790,7 +791,8 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312030306423.gif # 自定加载动画义头像
+  avatar: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042027013.gif
+  #https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312030306423.gif # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -815,8 +817,8 @@ aside:
     content: 欢迎来看我的博客鸭~
   card_weixin:
     enable: true
-    face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
-    backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
+    face: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042218647.png
+    backFace: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042218674.png
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
