@@ -1,17 +1,18 @@
 - class_name: 关于页
   subtitle: 生活明朗，万物可爱✨
-  avatarImg: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.0/img/avatar.webp
+  avatarImg: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042027013.gif
+  #https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312030306423.gif
   avatarSkills:
     left:
       - 🤖️ 数码科技爱好者
       - 🔍 分享与热心帮助
-      - 🏠 智能家居小能手
-      - 🔨 设计开发一条龙
+      - 🏠 系统装机小能手
+      - 🔨 创意开发小达人
     right:
-      - 专修交互与设计 🤝
-      - 脚踏实地行动派 🏃
-      - 团队小组发动机 🧱
-      - 壮汉人狠话不多 💢
+      - 主题美化爱好者 🤝
+      - 稳重踏实实践者 🏃
+      - 玩机坚强的后盾 🧱
+      - 沉默寡言实干家 💢
   name: W東方
   description: 是一名 學生、打工人、UP主、獨立開發者
   aboutsiteTips:
@@ -21,8 +22,8 @@
     word:
       - 學習
       - 生活
-      - 程序
-      - 體驗
+      - 体验
+      - 开发
   helloAbout: Hello there!
   skillsTips:
     tips: 技能
@@ -30,30 +31,30 @@
   careers:
     tips: 生涯
     title: 无限进步
-    list:
-      - desc: 學生,軟體技術專業
-        color: "#357ef5"
-    img: https://img.520150.xyz/file/a919f517becc0bf826bff.png
+    # list:
+    #   - desc: 學生,軟體技術專業
+    #     color: "#357ef5"
+    img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312040357938.gif
   statistic:
     link: /archives
     text: 文章隧道
     cover: https://img02.anheyu.com/adminuploads/1/2022/09/23/632d634f8376d.jpg
   map:
     title: 我现在住在
-    StrengthenTitle: 中国，廣西桂林市
-    background: https://img.520150.xyz/file/b8446edf17340094e400f.png
-    backgroundDark: https://img.520150.xyz/file/c5d816742610e3168002b.png
+    StrengthenTitle: 中国大陆
+    background: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312040144919.gif
+    backgroundDark: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312040144919.gif
   selfInfo:
     selfInfoTips1: 生于
     selfInfoContentYear: 千禧年
     selfInfoTips2: 我的專業
-    selfInfoContent2: 軟體工程
+    selfInfoContent2: 软件工程
     selfInfoTips3: 现在职业
-    selfInfoContent3: 大三学生👨‍🎓
+    selfInfoContent3: 自由者👨‍🎓
   personalities:
     author_name: 鑑賞家
     personality_type: ISTP
-    photo_url: https://img.520150.xyz/file/8d6235c4e02c43c0a7a85.png
+    photo_url: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312041612948.gif
     personality_img: https://www.16personalities.com/static/images/personality-types/avatars/istp-virtuoso.svg
     name_url: https://www.16personalities.com/ch/istp-%E4%BA%BA%E6%A0%BC
   maxim:
@@ -62,7 +63,7 @@
     maxim_bottom: 万物可爱。
   buff:
     buff_tips: 特长
-    buff_top: 愛研究數碼的 老閒魚
+    buff_top: 愛研究數碼的 闲魚老玩家
     buff_bottom: 愛研究指数 MAX
   game:
     game_tips: 爱好游戏
@@ -74,20 +75,20 @@
     comic_title: 追番
     comic_list:
       - name: 某科学的超电磁炮T
-        href: https://www.bilibili.com/bangumi/play/ss29325/?spm_id_from=333.999.0.0
-        cover: https://img.520150.xyz/file/edc5bb4d42dcba4d3c403.png
+        href:  https://www.bilibili.com/bangumi/play/ss29325/?spm_id_from=333.999.0.0
+        cover: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312041557213.gif
       - name: 间谍过家家 粤配版
-        href: https://www.bilibili.com/bangumi/play/ss43056/?spm_id_from=333.999.0.0
-        cover: https://img.520150.xyz/file/48bf9554bd3094121b1ea.png
+        href:  https://www.bilibili.com/bangumi/play/ss43056/?spm_id_from=333.999.0.0
+        cover: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312041557134.gif
       - name: 干物妹！小埋 粤配版
-        href: https://www.bilibili.com/bangumi/play/ss40753/?spm_id_from=333.999.0.0
-        cover: https://img.520150.xyz/file/8fc1e30fd1c106e4ff962.jpg
+        href:  https://www.bilibili.com/bangumi/play/ss40753/?spm_id_from=333.999.0.0
+        cover: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312041558607.gif
       - name: 小林家的龙女仆
-        href: https://www.bilibili.com/bangumi/play/ss5800/?spm_id_from=333.999.0.0
-        cover: https://img.520150.xyz/file/0c0f34d2a172ba3878c49.png
+        href:  https://www.bilibili.com/bangumi/play/ss5800/?spm_id_from=333.999.0.0
+        cover: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312041559812.gif
       - name: 犬夜叉
-        href: https://www.bilibili.com/bangumi/play/ep289986?from_spmid=666.4.feed.10
-        cover: https://img.520150.xyz/file/310ec15b63c8cdfc6ba95.jpg
+        href:  https://www.bilibili.com/bangumi/play/ep289986?from_spmid=666.4.feed.10
+        cover: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312041555764.gif
   like:
     like_tips: 关注偏好
     like_title: 数码科技
