@@ -354,7 +354,7 @@ waline:
   serverURL: # Waline server address url
   bg: # waline background
   pageview: false
-  meta: false # 归属地, 操作系统 前是否显示图标
+  meta: true # 归属地, 操作系统 前是否显示图标
   imageUploader: true # 是否启用图片上传功能，默认开启，限制为 128kb 的 base64 图片
   # 以下为可选配置，后续若有新增/修改配置参数可在此自行添加/修改
   option:
@@ -649,7 +649,7 @@ h2Divider: false
 table_interlaced_discoloration: true #false
 
 # 首页双栏显示
-article_double_row: true
+article_double_row: false
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默认top_img全屏，site_info在中间)
