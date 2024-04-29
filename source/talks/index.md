@@ -13,7 +13,6 @@ date: 2024-04-29 14:45:09
   <script>
     qexoDaodao?.init({
       el: "#qexoDaoDao",
-      avatar: "https://q1.qlogo.cn/g?b=qq&nk=2496091142&s=640",
       title: "说说",
       name: "小骏",
       limit: 10,
