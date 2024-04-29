@@ -20,7 +20,7 @@ menu:
     闲言碎语: /essay/ || anzhiyu-icon-lightbulb
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
   
-  说说: /talk/ || anzhiyu-icon-chat
+  说说: /talks/ || anzhiyu-icon-chat
 # nav相关配置
 nav:
   enable: true
