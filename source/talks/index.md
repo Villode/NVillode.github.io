@@ -14,7 +14,7 @@ date: 2024-04-29 14:45:09
     qexoDaodao?.init({
       el: "#qexoDaoDao",
       title: "说说",
-      name: "小骏",
+      name: "Villode",
       limit: 10,
       useLoadingImg: false,
       baseURL: "https://qexo-wheat-iota.vercel.app/",
