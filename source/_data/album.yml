@@ -4,8 +4,8 @@
   description: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
   cover: https://bu.dusays.com/2023/04/09/64329399d1175.jpg
   top_background: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
-  rowHeight: 220
-  limit: 10
+  rowHeight: 2
+  limit: 2
   lazyload: true
   btnLazyload: false
   url: true
