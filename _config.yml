@@ -36,7 +36,22 @@ aplayer:
   meting: true
   asset_inject: false
 
-
+# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+algolia:
+  appId: "ZGTYPJ1CYW"
+  apiKey: "6e6873c85c56eae51614bd549071c1d7"
+  adminApiKey: "58a44cf65d3c50246c7999b63c8b1b74"
+  chunkSize: 5000
+  indexName: "blog"
+  fields:
+    - content:strip:truncate,0,200
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
 
 # Writing
 new_post_name: :title.md # File name of new posts
