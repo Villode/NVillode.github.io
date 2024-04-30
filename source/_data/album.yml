@@ -39,3 +39,45 @@
       content: 老妹的画
       image:
         - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+
+- class_name: 我的日常1
+  path_name: /dailyPhoto
+  type: 2
+  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  top_link: /album
+  top_btn_text: 返回
+  top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  cover: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  album_list:
+    - date: 2022-10-24
+      content: 老妹的画
+      image:
+        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+
+- class_name: 我的日常2
+  path_name: /dailyPhoto
+  type: 2
+  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  top_link: /album
+  top_btn_text: 返回
+  top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  cover: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  album_list:
+    - date: 2022-10-24
+      content: 老妹的画
+      image:
+        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+
+- class_name: 我的日常3
+  path_name: /dailyPhoto
+  type: 2
+  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  top_link: /album
+  top_btn_text: 返回
+  top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  cover: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  album_list:
+    - date: 2022-10-24
+      content: 老妹的画
+      image:
+        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
