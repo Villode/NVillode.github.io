@@ -36,7 +36,7 @@ jobs:
         run: npm install hexo-butterfly-envelope --save
         
       - name: 安装本地搜索
-        run: npm install hexo-generator-search --save
+        run: npm install hexo-algoliasearch --save
 
       - name: 再次查看目录列表
         run: tree -L 3 -a
