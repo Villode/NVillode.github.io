@@ -137,12 +137,12 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /favicon.ico
+favicon: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/TX_20240430_014532.jpg   #/favicon.ico
 
 # Avatar (头像)
 avatar:
   img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/TX_20240430_014532.jpg
-  effect: true
+  effect: false
 
 # Disable all banner image
 disable_top_img: false
@@ -418,9 +418,9 @@ footer:
   runtime:
     enable: true
     launch_time: 04/01/2021 00:00:00 # 网站上线时间
-    work_img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042124603.png
+    work_img: https://ntiwnzcz5rc46l+c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042124603.png
     work_description: 每天都要元气满满呀，哈哈~
-    offduty_img: https://9d5d1-8738f8-6f7-f86f7-9d5-c6villode-fgf7-gf8vg6i8t828g7b7-88kc.520150.xyz/202312042120300.png
+    offduty_img: https://ntiwnzcz5rc46l+c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042120300.png
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
@@ -1139,7 +1139,7 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: false #开启后必须配置下面的list对应的时间段，不然会出现小白条
+  enable: true #开启后必须配置下面的list对应的时间段，不然会出现小白条
   default: 晚上好👋
   list:
      - greeting: 晚安😴
