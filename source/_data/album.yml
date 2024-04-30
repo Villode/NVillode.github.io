@@ -7,7 +7,7 @@
   rowHeight: 220
   limit: 10
   lazyload: false
-  btnLazyload: true
+  btnLazyload: false
   url: false
   top_link: /album
   top_btn_text: 返回
