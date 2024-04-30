@@ -39,7 +39,7 @@ jobs:
         run: npm install hexo-algoliasearch --save
 
       - name: 传递搜索数据
-        run: npm install --save hexo-algolia
+        run: hexo algolia
 
       - name: 再次查看目录列表
         run: tree -L 3 -a
