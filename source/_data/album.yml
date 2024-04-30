@@ -8,7 +8,7 @@
   limit: 10
   lazyload: true
   btnLazyload: false
-  url: false
+  url: true
   top_link: /album
   top_btn_text: 返回
   album_list:
