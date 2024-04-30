@@ -36,11 +36,6 @@ aplayer:
   meting: true
   asset_inject: false
 
-search:
-  path: search.xml
-  field: post
-  content: true
-  template: ./search.xml
 
 # Writing
 new_post_name: :title.md # File name of new posts
