@@ -91,12 +91,12 @@ author_status:
 
 # Algolia search
 algolia_search:
-  enable: true
+  enable: false
   hits:
     per_page: 6
   tags:
-    - 前端
-    - Hexo
+    # - 前端
+    # - Hexo
 
 # Docsearch
 # Apply and Docs: see https://docsearch.algolia.com/
@@ -111,7 +111,7 @@ docsearch:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   preload: true
   CDN:
 
