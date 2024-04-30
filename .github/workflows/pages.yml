@@ -41,6 +41,9 @@ jobs:
       - name: 字数统计
         run: npm install hexo-wordcount --save
 
+      - name: 安装留言功能
+        run: npm install hexo-butterfly-envelope --save
+
       - name: 再次查看目录列表
         run: tree -L 3 -a
 
