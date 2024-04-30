@@ -1,13 +1,13 @@
 - class_name: 世界各地夕阳与风景
   path_name: /wordScenery
-  type: 2
+  type: 1
   description: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
   cover: https://bu.dusays.com/2023/04/09/64329399d1175.jpg
   top_background: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
-  rowHeight: 2
-  limit: 2
+  rowHeight: 220
+  limit: 10
   lazyload: true
-  btnLazyload: false
+  btnLazyload: true
   url: true
   top_link: /album
   top_btn_text: 返回
@@ -42,7 +42,7 @@
 
 - class_name: 我的日常1
   path_name: /dailyPhoto
-  type: 2
+  type: 1
   description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
   top_link: /album
   top_btn_text: 返回
@@ -56,7 +56,7 @@
 
 - class_name: 我的日常2
   path_name: /dailyPhoto
-  type: 2
+  type: 1
   description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
   top_link: /album
   top_btn_text: 返回
@@ -70,7 +70,7 @@
 
 - class_name: 我的日常3
   path_name: /dailyPhoto
-  type: 2
+  type: 1
   description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
   top_link: /album
   top_btn_text: 返回
