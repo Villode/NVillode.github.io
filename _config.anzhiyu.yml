@@ -418,9 +418,9 @@ footer:
   runtime:
     enable: true
     launch_time: 04/01/2021 00:00:00 # 网站上线时间
-    work_img: https://ntiwnzcz5rc46l+c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042124603.png
+    work_img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042124603.png
     work_description: 每天都要元气满满呀，哈哈~
-    offduty_img: https://ntiwnzcz5rc46l+c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042120300.png
+    offduty_img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042120300.png
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
@@ -777,7 +777,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/TX_20240430_014532.jpg #https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -794,7 +794,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: # <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
+    description:  <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于聊<b style="color:#fff">科技、搞机、编程</b>相关的问题和看法，聊<b style="color:#fff">生活</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
     name_link: /
 
   card_announcement:
