@@ -6,9 +6,9 @@
   top_background: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
   rowHeight: 220
   limit: 10
-  lazyload: false
-  btnLazyload: false
-  url: false
+  lazyload: true
+  btnLazyload: true
+  url: true
   top_link: /album
   top_btn_text: 返回
   album_list:
