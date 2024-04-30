@@ -103,7 +103,7 @@ algolia_search:
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
-  enable: false
+  enable: true
   appId: ZGTYPJ1CYW # see email
   apiKey: 6e6873c85c56eae51614bd549071c1d7 # see email
   indexName: Villode # see email
