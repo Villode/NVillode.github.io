@@ -44,14 +44,11 @@ jobs:
       - name: 安装留言功能
         run: npm install hexo-butterfly-envelope --save
 
-      - name: 安装模块
-        run: npm install cheerio --save
-
       - name: 再次查看目录列表
         run: tree -L 3 -a
 
       - name: 安装主题
-        run: git submodule add https://github.com/YL2209/hexo-theme-anzhiyu.git themes/anzhiyu
+        run: git submodule add https://github.com/Villode/Vblog.git themes/anzhiyu
         #https://github.com/Villode/Vblog.git themes/anzhiyu
         #https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git 
         #https://github.com/Villode/hexo-theme-anzhiyu.git 
