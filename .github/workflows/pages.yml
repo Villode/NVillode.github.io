@@ -48,7 +48,7 @@ jobs:
         run: tree -L 3 -a
 
       - name: 安装主题
-        run: git submodule add https://github.com/Villode/Vblog.git themes/anzhiyu
+        run: git submodule add https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
         #https://github.com/Villode/Vblog.git themes/anzhiyu
         #https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git 
         #https://github.com/Villode/hexo-theme-anzhiyu.git 
