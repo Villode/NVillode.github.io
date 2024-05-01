@@ -68,25 +68,45 @@ window.addEventListener("load", () => {
           });
         }
         let content = item.querySelector("content") && item.querySelector("content").textContent;
-        let imgReg = /<img.*?(?:>|\/>)/gi; //匹配图片中的img标签
-        let srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i; // 匹配图片中的src
-        let arr = content.match(imgReg); //筛选出所有的img
+        let imgUrl = item.querySelector("cover") && item.querySelector("cover").textContent;
+        let dateText = item.querySelector("date") && item.querySelector("date").textContent;
+        let postsUrl = item.querySelector("url") && item.querySelector("url").textContent;
+        let dateMatch = null
+        let dateUrl = null
+        // 解码和匹配日期部分...
+        const decodedDate = decodeURIComponent(dateText);
+        const dateRegex = /^([a-zA-Z]{3})\s+([a-zA-Z]{3})\s+(\d{1,2})\s+(\d{4})/;
+        const date_match = dateRegex.exec(decodedDate);
+        const monthToNumber = {
+          'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4,
+          'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8,
+          'Sep': 9, 'Sept': 9, // 注意：有时候会使用全拼"September"
+          'Oct': 10, 'Nov': 11, 'Dec': 12
+        };
+        if (date_match) {
+          const day = parseInt(date_match[3], 10);
+          const monthName = date_match[2];
+          const year = parseInt(date_match[4], 10);
+          // 映射英文月份到数字月份
+          const monthNumber = monthToNumber[monthName];
 
-        let srcArr = [];
-        if (arr) {
-          for (let i = 0; i < arr.length; i++) {
-            let src = arr[i].match(srcReg);
-            // 获取图片地址
-            if (!src[1].indexOf("http")) srcArr.push(src[1]);
-          }
+          dateMatch = year + "-" + (monthNumber < 10 ? "0" + monthNumber : monthNumber) + "-" + (day < 10 ? "0" + day : day);
+          dateUrl = "/archives/" + year + "/" + (monthNumber < 10 ? "0" + monthNumber : monthNumber) + "/";
         }
 
+        // let postsregex = /(.*)\.html$/; // 匹配任何字符直到遇到".html"结尾
+        // postsUrl = postsUrl.match(postsregex);
+        // if (postsUrl) {
+        //   postsUrl = postsUrl[1];
+        // }
         return {
           title: item.querySelector("title").textContent,
           content: content,
-          url: item.querySelector("url").textContent,
+          url: postsUrl,
           tags: tagsArr,
-          oneImage: srcArr && srcArr[0],
+          oneImage: imgUrl,
+          dateText: dateMatch,
+          dateUrl: dateUrl,
         };
       });
     }
@@ -109,7 +129,7 @@ window.addEventListener("load", () => {
     $input.addEventListener("input", function () {
       const keywords = this.value.trim().toLowerCase().split(/[\s]+/);
       if (keywords[0] !== "")
-        $loadingStatus.innerHTML = '<i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i>';
+        $loadingStatus.innerHTML = '<i class="naokuofont naokuo-icon-spinner anzhiyu-pulse-icon"></i>';
 
       $resultContent.innerHTML = "";
       let str = '<div class="search-result-list">';
@@ -122,11 +142,13 @@ window.addEventListener("load", () => {
           let dataTitle = data.title ? data.title.trim().toLowerCase() : "";
           let dataTags = data.tags;
           let oneImage = data.oneImage ?? "";
+          let dateText = data.dateText;
+          let dateUrl = data.dateUrl;
           const dataContent = data.content
             ? data.content
-                .trim()
-                .replace(/<[^>]+>/g, "")
-                .toLowerCase()
+              .trim()
+              .replace(/<[^>]+>/g, "")
+              .toLowerCase()
             : "";
           const dataUrl = data.url.startsWith("/") ? data.url : GLOBAL_CONFIG.root + data.url;
           let indexTitle = -1;
@@ -184,13 +206,13 @@ window.addEventListener("load", () => {
               // highlight all keywords
               keywords.forEach(keyword => {
                 const regS = new RegExp(keyword, "gi");
-                matchContent = matchContent.replace(regS, '<span class="search-keyword">' + keyword + "</span>");
-                dataTitle = dataTitle.replace(regS, '<span class="search-keyword">' + keyword + "</span>");
+                matchContent = matchContent.replace(regS, `<span class="search-keyword">${keyword}</span>`);
+                dataTitle = dataTitle.replace(regS, `<span class="search-keyword">${keyword}</span>`);
               });
 
               str += '<div class="local-search__hit-item">';
               if (oneImage) {
-                str += `<div class="search-left"><img src=${oneImage} alt=${dataTitle} data-fancybox='gallery'>`;
+                str += `<div class="search-left"><a href="javascript:;" onclick="pjax.loadUrl('${dataUrl}')" title="${data.title ? data.title.trim().toLowerCase() : ''}" data-pjax-state=""><img src="${oneImage}" alt="${data.title ? data.title.trim().toLowerCase() : ''}"></a>`;
               } else {
                 str += '<div class="search-left" style="width:0">';
               }
@@ -198,32 +220,15 @@ window.addEventListener("load", () => {
               str += "</div>";
 
               if (oneImage) {
-                str +=
-                  '<div class="search-right"><a href="' +
-                  dataUrl +
-                  '" class="search-result-title">' +
-                  dataTitle +
-                  "</a>";
+                str += `<div class="search-right"><a class="search-result-title" href="javascript:;" onclick="pjax.loadUrl('${dataUrl}')" title="${data.title ? data.title.trim().toLowerCase() : ''}" data-pjax-state="">${dataTitle}</a>`;
               } else {
-                str +=
-                  '<div class="search-right" style="width: 100%"><a href="' +
-                  dataUrl +
-                  '" class="search-result-title">' +
-                  dataTitle +
-                  "</a>";
+                str += `<div class="search-right" style="width: 100%"><a class="search-result-title" href="javascript:;" onclick="pjax.loadUrl('${dataUrl}')" title="${data.title ? data.title.trim().toLowerCase() : ''}" data-pjax-state="">${dataTitle}</a>`;
               }
 
               count += 1;
 
               if (dataContent !== "") {
-                str +=
-                  '<p class="search-result" onclick="pjax.loadUrl(`' +
-                  dataUrl +
-                  '`)">' +
-                  pre +
-                  matchContent +
-                  post +
-                  "</p>";
+                str += `<p class="search-result" onclick="pjax.loadUrl('${dataUrl}')" data-pjax-state="">${pre}${matchContent}${post}</p>`;
               }
               if (dataTags.length) {
                 str += '<div class="search-result-tags">';
@@ -231,15 +236,13 @@ window.addEventListener("load", () => {
                 for (let i = 0; i < dataTags.length; i++) {
                   const element = dataTags[i].trim();
 
-                  str +=
-                    '<a class="tag-list" href="/tags/' +
-                    element +
-                    '/" data-pjax-state="" one-link-mark="yes">#' +
-                    element +
-                    "</a>";
+                  str += `<a class="tag-list" href="javascript:;" onclick="pjax.loadUrl('/tags/${element}/')" one-link-mark="yes" title="#${element}" data-pjax-state="">#${element}</a>`;
                 }
-
-                str += "</div>";
+              }
+              if (dateText.length && dateUrl.length) {
+                str += `<a class="tag-list" href="javascript:;" onclick="pjax.loadUrl('${dateUrl}')" title="发表于${dateText}" data-pjax-state=""><i class="naokuofont naokuo-icon-calendar-days" style="font-size: 15px;"></i><span> 发表于 ${dateText}</span></a></div>`;
+              } else {
+                str += `</div>`;
               }
             }
             str += "</div></div>";

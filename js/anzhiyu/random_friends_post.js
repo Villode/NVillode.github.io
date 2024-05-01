@@ -97,7 +97,8 @@ var randomPostTips = [
 ];
 var randomPostClick = 0;
 function fetchRandomPost() {
-  if (!document.getElementById("random-post")) return;
+  const Element = document.getElementById('random-post');
+  if (!Element) return;
   if (randomPostWorking == false) {
     randomPostWorking = true;
     //获取旋转角度
@@ -124,10 +125,10 @@ function fetchRandomPost() {
       randomPostLevel = "钓鱼新手";
     }
     if (randomPostTimes >= 5) {
-      document.getElementById("random-post").innerHTML =
+      Element.innerHTML =
         `钓鱼中... （Lv.` + randomPostTimes + ` 当前称号：` + randomPostLevel + `）`;
     } else {
-      document.getElementById("random-post").innerHTML = `钓鱼中...`;
+      Element.innerHTML = `钓鱼中...`;
     }
 
     let randomTime = randomNum(1000, 3000);
@@ -135,31 +136,36 @@ function fetchRandomPost() {
     if (randomPostTimes == 0) {
       randomTime = 0;
     }
-
-    document.querySelector(".random-post-start").style.opacity = "0.2";
-    document.querySelector(".random-post-start").style.transitionDuration = "0.3s";
-    document.querySelector(".random-post-start").style.transform = "rotate(" + randomRotate + "deg)";
+    const random_post_start = document.querySelector(".random-post-start");
+    if (random_post_start) {
+      random_post_start.style.opacity = "0.2";
+      random_post_start.style.transitionDuration = "0.3s";
+      random_post_start.style.transform = "rotate(" + randomRotate + "deg)";
+    }
 
     //判断是否饥饿
     if (
-      document.getElementById("random-post") &&
+      Element !== null &&
       randomPostClick * fdata.hungryFish + fdata.defaultFish < randomPostTimes &&
       Math.round(Math.random()) == 0
     ) {
-      document.getElementById("random-post").innerHTML =
+      Element.innerHTML =
         "因为只钓鱼不吃鱼，过分饥饿导致本次钓鱼失败...(点击任意一篇钓鱼获得的文章即可恢复）";
       randomPostWorking = false;
     } else {
-      var fetchUrl = fdata.apiurl + "randompost";
-      fetch(fetchUrl)
-        .then(res => res.json())
-        .then(json => {
-          var title = json.title;
-          var link = json.link;
-          var author = json.author;
-          if (document.getElementById("random-post")) {
+      try {
+        const fetchRandomPost = async url => {
+          const response = await fetch(url);
+          return await response.json();
+        };
+        const fetchUrl = fdata.apiurl + "randompost";
+        fetchRandomPost(fetchUrl).then(json => {
+          let title = json.title;
+          let link = json.link;
+          let author = json.author;
+          if (Element !== null) {
             window.setTimeout(function () {
-              document.getElementById("random-post").innerHTML =
+              Element.innerHTML =
                 randomPostTipsItem +
                 `来自友链 <b>` +
                 author +
@@ -170,11 +176,26 @@ function fetchRandomPost() {
                 `</a>`;
               randomPostTimes += 1;
               localStorage.setItem("randomPostTimes", randomPostTimes);
-              document.querySelector(".random-post-start").style.opacity = "1";
+              document.querySelector(".random-post-start") && (document.querySelector(".random-post-start").style.opacity = "1");
             }, randomTime);
           }
+          randomPostWorking = false;
+        }).catch(() => {
+          if (Element !== null) {
+            window.setTimeout(function () {
+              Element.innerHTML = "😮啊！鱼塘都不见了。";
+            }, randomTime);
+          }
+          randomPostWorking = false;
         });
-      randomPostWorking = false;
+      } catch {
+        if (Element !== null) {
+          window.setTimeout(function () {
+            Element.innerHTML = "😮啊！鱼塘都不见了。";
+          }, randomTime);
+        }
+        randomPostWorking = false;
+      }
     }
   }
 }
@@ -185,8 +206,11 @@ function initRandomPost() {
   if (localStorage.randomPostTimes) {
     randomPostTimes = parseInt(localStorage.randomPostTimes);
     randomPostClick = parseInt(localStorage.randomPostClick);
-    document.querySelector(".random-post-start").style.transitionDuration = "0.3s";
-    document.querySelector(".random-post-start").style.transform = "rotate(" + 360 * randomPostTimes + "deg)";
+    const random_post_start = document.querySelector(".random-post-start");
+    if (random_post_start) {
+      random_post_start.style.transitionDuration = "0.3s";
+      random_post_start.style.transform = "rotate(" + 360 * randomPostTimes + "deg)";
+    }
   }
   fetchRandomPost();
 }
