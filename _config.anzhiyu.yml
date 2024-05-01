@@ -716,7 +716,7 @@ ClickShowText:
 
 # Default display mode (网站默认的显示模式)
 # light (default) / dark
-display_mode: light
+display_mode: dark
 
 # Beautify (美化页面显示)
 beautify:
