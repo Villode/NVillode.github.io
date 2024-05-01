@@ -97,7 +97,7 @@ if (document.querySelector(".comment-barrage")) {
             </a>
             <div class="barrageNick">${data.nick}</div>
             <img class="nolazyload barrageAvatar" src="https://cravatar.cn/avatar/${data.mailMd5}"/>
-            <a class="comment-barrage-close" href="javascript:anzhiyu.switchCommentBarrage()"><i class="naokuofont naokuo-icon-xmark"></i></a>
+            <a class="comment-barrage-close" href="javascript:anzhiyu.switchCommentBarrage()"><i class="anzhiyufont anzhiyu-icon-xmark"></i></a>
           </div>
           <anzhiyu class="barrageContent" onClick="window.location.hash = '${data.id}'">
             ${data.comment}
@@ -165,7 +165,7 @@ if (document.querySelector(".comment-barrage")) {
 
   initCommentBarrage();
 
-  if (saveToLocal.get("commentBarrageSwitch") !== "false") {
+  if (localStorage.getItem("commentBarrageSwitch") !== "false") {
     document.querySelector(".comment-barrage").style.display = "flex";
     document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
   } else {

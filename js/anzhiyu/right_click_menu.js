@@ -13,7 +13,7 @@ for (let i = 0; i < aElements.length; i++) {
 
 // 显示菜单
 rm.showRightMenu = function (isTrue, x = 0, y = 0) {
-  // console.info(x, y);
+  console.info(x, y);
   let rightMenu = document.getElementById("rightMenu");
   rightMenu.style.top = x + "px";
   rightMenu.style.left = y + "px";
@@ -387,7 +387,6 @@ function addRightMenuClickEvent() {
   });
 
   document.getElementById("menu-refresh").addEventListener("click", function () {
-    window.localStorage.clear();
     window.location.reload();
   });
 
@@ -450,7 +449,7 @@ function addRightMenuClickEvent() {
   document.getElementById("menu-copylink").addEventListener("click", rm.copyLink);
 
   document.getElementById("menu-downloadimg").addEventListener("click", function () {
-    anzhiyu.downloadImage(domImgSrc, "Naokuo_的图片");
+    anzhiyu.downloadImage(domImgSrc, "anzhiyu");
   });
 
   document.getElementById("menu-newwindowimg").addEventListener("click", function () {
@@ -473,6 +472,7 @@ function addRightMenuClickEvent() {
 
   document.getElementById("menu-music-copyMusicName").addEventListener("click", function () {
     rm.rightmenuCopyText(anzhiyu.musicGetName());
+    anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
   });
 }
 

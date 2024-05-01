@@ -211,11 +211,8 @@ const anzhiyu = {
       if (!window.fancyboxRun) {
         Fancybox.bind("[data-fancybox]", {
           Hash: false,
-          // Thumbs: {
-          //   autoStart: false,
-          // },
           Thumbs: {
-            showOnStart: false,
+            autoStart: false,
           },
         });
         window.fancyboxRun = true;
@@ -422,7 +419,7 @@ const anzhiyu = {
         anzhiyu.snackbarShow("✨ 已关闭评论弹幕");
         document.querySelector(".menu-commentBarrage-text").textContent = "显示热评";
         document.querySelector("#consoleCommentBarrage").classList.remove("on");
-        saveToLocal.set("commentBarrageSwitch", "false", 2);
+        localStorage.setItem("commentBarrageSwitch", "false");
       } else {
         commentBarrage.style.display = "flex";
         document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
@@ -459,38 +456,28 @@ const anzhiyu = {
   },
   // 初始化即刻
   initIndexEssay: function () {
-    if (!document.querySelector(".bbTimeList#bbTimeList")) return;
+    if (!document.getElementById("bbTimeList")) return;
     setTimeout(() => {
-      const setessay_bar_swiper = () => {
-        const essay_bar_swiper = new Swiper(".essay_bar_swiper_container", {
-          passiveListeners: true,
-          direction: "vertical",
-          loop: true,
-          autoplay: {
-            disableOnInteraction: true,
-            delay: 3000,
-          },
-          mousewheel: true,
-        });
+      let essay_bar_swiper = new Swiper(".essay_bar_swiper_container", {
+        passiveListeners: true,
+        direction: "vertical",
+        loop: true,
+        autoplay: {
+          disableOnInteraction: true,
+          delay: 3000,
+        },
+        mousewheel: true,
+      });
 
-        let essay_bar_comtainer = document.getElementById("bbtalk");
-        if (essay_bar_comtainer !== null) {
-          essay_bar_comtainer.onmouseenter = function () {
-            essay_bar_swiper.autoplay.stop();
-          };
-          essay_bar_comtainer.onmouseleave = function () {
-            essay_bar_swiper.autoplay.start();
-          };
-        }
-      };
-      (async function () {
-        if (typeof Swiper === 'function') {
-          setessay_bar_swiper()
-        } else {
-          await getCSS(`${GLOBAL_CONFIG.source.swiper.css}`);
-          await getScript(`${GLOBAL_CONFIG.source.swiper.js}`).then(setessay_bar_swiper)
-        }
-      })();
+      let essay_bar_comtainer = document.getElementById("bbtalk");
+      if (essay_bar_comtainer !== null) {
+        essay_bar_comtainer.onmouseenter = function () {
+          essay_bar_swiper.autoplay.stop();
+        };
+        essay_bar_comtainer.onmouseleave = function () {
+          essay_bar_swiper.autoplay.start();
+        };
+      }
     }, 100);
   },
   scrollByMouseWheel: function ($list, $target) {
@@ -662,22 +649,19 @@ const anzhiyu = {
       anzhiyu.musicBindEvent();
       anzhiyu_musicFirst = true;
     }
-    let msgPlay = '<i class="naokuofont naokuo-icon-play"></i><span>播放音乐</span>';
-    let msgPause = '<i class="naokuofont naokuo-icon-pause"></i><span>暂停音乐</span>';
-    const menu_music_toggle = document.getElementById("menu-music-toggle"),
-      nav_music_hoverTips = document.getElementById("nav-music-hoverTips"),
-      consoleMusic = document.querySelector("#consoleMusic");
+    let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span>';
+    let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暂停音乐</span>';
     if (anzhiyu_musicPlaying) {
       navMusicEl.classList.remove("playing");
-      menu_music_toggle && (menu_music_toggle.innerHTML = msgPlay);
-      nav_music_hoverTips && (nav_music_hoverTips.innerHTML = "音乐已暂停");
-      consoleMusic && consoleMusic.classList.remove("on");
+      document.getElementById("menu-music-toggle").innerHTML = msgPlay;
+      document.getElementById("nav-music-hoverTips").innerHTML = "音乐已暂停";
+      document.querySelector("#consoleMusic").classList.remove("on");
       anzhiyu_musicPlaying = false;
       navMusicEl.classList.remove("stretch");
     } else {
       navMusicEl.classList.add("playing");
-      menu_music_toggle && (menu_music_toggle.innerHTML = msgPause);
-      consoleMusic && consoleMusic.classList.add("on");
+      document.getElementById("menu-music-toggle").innerHTML = msgPause;
+      document.querySelector("#consoleMusic").classList.add("on");
       anzhiyu_musicPlaying = true;
       navMusicEl.classList.add("stretch");
     }
@@ -707,18 +691,14 @@ const anzhiyu = {
 
   //获取音乐中的名称
   musicGetName: function () {
-    // 直接使用querySelector获取类名为"aplayer-title"的第一个元素
-    const titleElement = document.querySelector("#nav-music .aplayer-title");
-
-    // 如果找到了该元素，则复制其innerText并显示成功消息；否则显示失败消息
-    if (titleElement) {
-      anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
-      return titleElement.innerText;
-    } else {
-      anzhiyu.snackbarShow("复制歌曲名称失败", false, 3000);
-      return "复制的歌曲名称不存在";
+    var x = document.querySelector(".aplayer-title");
+    var arr = [];
+    for (var i = x.length - 1; i >= 0; i--) {
+      arr[i] = x[i].innerText;
     }
+    return arr[0];
   },
+
   //初始化console图标
   initConsoleState: function () {
     //初始化隐藏边栏
@@ -726,35 +706,6 @@ const anzhiyu = {
     $htmlDomClassList.contains("hide-aside")
       ? document.querySelector("#consoleHideAside").classList.add("on")
       : document.querySelector("#consoleHideAside").classList.remove("on");
-
-    const consoleKeyboard = document.querySelector("#consoleKeyboard");
-    if (consoleKeyboard) {
-      if (!saveToLocal.get("keyboardToggle")) {
-        consoleKeyboard.classList.add("on");
-      } else {
-        consoleKeyboard.classList.remove("on");
-      }
-    }
-
-    // 热评控制台按钮状态
-    const consoleCommentBarrage = document.querySelector("#consoleCommentBarrage");
-    if (consoleCommentBarrage) {
-      if (saveToLocal.get("commentBarrageSwitch") !== "false") {
-        consoleCommentBarrage.classList.add("on");
-      } else {
-        consoleCommentBarrage.classList.remove("on");
-      }
-    }
-
-    // 音乐控制台按钮状态
-    const consoleMusic = document.querySelector("#consoleMusic");
-    if (consoleMusic) {
-      if (!anzhiyu_musicPlaying) {
-        consoleMusic.classList.remove("on");
-      } else {
-        consoleMusic.classList.add("on");
-      }
-    }
   },
 
   // 显示打赏中控台
@@ -864,7 +815,7 @@ const anzhiyu = {
     if (isChangeBg) {
       // player listswitch 会进入此处
       const musiccover = document.querySelector("#anMusic-page .aplayer-pic");
-      musiccover && (anMusicBg.style.backgroundImage = musiccover.style.backgroundImage);
+      anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;
     } else {
       // 第一次进入，绑定事件，改背景
       let timer = setInterval(() => {
@@ -889,20 +840,20 @@ const anzhiyu = {
     }
   },
   // 获取自定义播放列表
-  getCustomPlayList: function (musicId = "3067156818", Server = "netease") {
-
-    if (!document.querySelector('body[data-type="music"]')) return;
-
+  getCustomPlayList: function () {
+    if (!window.location.pathname.startsWith("/music/")) {
+      return;
+    }
     const urlParams = new URLSearchParams(window.location.search);
-    const userId = musicId;
-    const userServer = Server;
+    const userId = "8152976493";
+    const userServer = "netease";
     const anMusicPageMeting = document.getElementById("anMusic-page-meting");
     if (urlParams.get("id") && urlParams.get("server")) {
       const id = urlParams.get("id");
       const server = urlParams.get("server");
-      anMusicPageMeting.innerHTML = `<meting-js class="eo-music eoHide" id="${id}" server=${server} type="playlist" mutex="true" preload="auto" theme="var(--anzhiyu-main)" order="list" list-max-height="calc(100vh - 169px)!important"></meting-js>`;
+      anMusicPageMeting.innerHTML = `<meting-js id="${id}" server=${server} type="playlist" type="playlist" mutex="true" preload="auto" theme="var(--anzhiyu-main)" order="list" list-max-height="calc(100vh - 169px)!important"></meting-js>`;
     } else {
-      anMusicPageMeting.innerHTML = `<meting-js class="eo-music eoHide" id="${userId}" server="${userServer}" type="playlist" mutex="true" preload="auto" theme="var(--anzhiyu-main)" order="list" list-max-height="calc(100vh - 169px)!important"></meting-js>`;
+      anMusicPageMeting.innerHTML = `<meting-js id="${userId}" server="${userServer}" type="playlist" mutex="true" preload="auto" theme="var(--anzhiyu-main)" order="list" list-max-height="calc(100vh - 169px)!important"></meting-js>`;
     }
     anzhiyu.changeMusicBg(false);
   },
@@ -933,22 +884,18 @@ const anzhiyu = {
     });
 
     aplayerIconMenu.addEventListener("click", function () {
-      const menu_mask = document.getElementById("menu-mask"),
-        aplayer_list = anMusicPage.querySelector(".aplayer.aplayer-withlist .aplayer-list");
-      if (menu_mask && aplayer_list) {
-        menu_mask.style.display = "block";
-        menu_mask.style.animation = "0.5s ease 0s 1 normal none running to_show";
-        aplayer_list.style.opacity = "1";
-      }
+      document.getElementById("menu-mask").style.display = "block";
+      document.getElementById("menu-mask").style.animation = "0.5s ease 0s 1 normal none running to_show";
+      anMusicPage.querySelector(".aplayer.aplayer-withlist .aplayer-list").style.opacity = "1";
     });
 
     function anMusicPageMenuAask() {
-      if (!document.querySelector('body[data-type="music"]')) {
+      if (window.location.pathname != "/music/") {
         document.getElementById("menu-mask").removeEventListener("click", anMusicPageMenuAask);
         return;
       }
-      document.getElementById("eo-music-list").classList.remove("eomusic-onoff"),
-        anMusicPage.querySelector(".aplayer-list") && anMusicPage.querySelector(".aplayer-list").classList.remove("aplayer-list-hide");
+
+      anMusicPage.querySelector(".aplayer-list").classList.remove("aplayer-list-hide");
     }
 
     document.getElementById("menu-mask").addEventListener("click", anMusicPageMenuAask);
@@ -965,8 +912,6 @@ const anzhiyu = {
       } else {
         anzhiyu.cacheAndPlayMusic();
       }
-      // 黑胶唱片状态
-      document.querySelector(".aplayer-button").classList.contains("aplayer-pause") ? document.querySelector(".naokuo-song-disc").classList.add("naokuo-play") : document.querySelector(".naokuo-song-disc").classList.remove("naokuo-play");
     });
     anMusicRefreshBtn.addEventListener("click", () => {
       localStorage.removeItem("musicData");
@@ -978,11 +923,7 @@ const anzhiyu = {
 
     // 监听键盘事件
     //空格控制音乐
-    document.addEventListener("keydown", function anMusicKeyDown(event) {
-      if (!document.querySelector('body[data-type="music"]')) {
-        document.removeEventListener("keydown", anMusicKeyDown);
-        return;
-      }
+    document.addEventListener("keydown", function (event) {
       //暂停开启音乐
       if (event.code === "Space") {
         event.preventDefault();
@@ -1100,15 +1041,15 @@ const anzhiyu = {
 
     function dr_js_autofill_commentinfos() {
       var lauthor = [
-        "#author",
-        "input[name='comname']",
-        "#inpName",
-        "input[name='author']",
-        "#ds-dialog-name",
-        "#name",
-        "input[name='nick']",
-        "#comment_author",
-      ],
+          "#author",
+          "input[name='comname']",
+          "#inpName",
+          "input[name='author']",
+          "#ds-dialog-name",
+          "#name",
+          "input[name='nick']",
+          "#comment_author",
+        ],
         lmail = [
           "#mail",
           "#email",
@@ -1244,17 +1185,17 @@ const anzhiyu = {
   keyboardToggle: function () {
     const isKeyboardOn = anzhiyu_keyboard;
 
-    if (!isKeyboardOn) {
+    if (isKeyboardOn) {
       const consoleKeyboard = document.querySelector("#consoleKeyboard");
       consoleKeyboard.classList.remove("on");
-      anzhiyu_keyboard = true;
-      saveToLocal.set("keyboardToggle", anzhiyu_keyboard, 2);
+      anzhiyu_keyboard = false;
     } else {
       const consoleKeyboard = document.querySelector("#consoleKeyboard");
       consoleKeyboard.classList.add("on");
-      anzhiyu_keyboard = null;
-      localStorage.removeItem("keyboardToggle");
+      anzhiyu_keyboard = true;
     }
+
+    localStorage.setItem("keyboardToggle", isKeyboardOn ? "false" : "true");
   },
   rightMenuToggle: function () {
     if (window.oncontextmenu) {
@@ -1266,44 +1207,25 @@ const anzhiyu = {
   switchConsole: () => {
     // switch console
     const consoleEl = document.getElementById("console");
-    if (consoleEl.classList.contains("show")) {
-      consoleEl.classList.remove("show");
-    } else {
-      consoleEl.classList.add("show");
-    }
-
     //初始化隐藏边栏
     const $htmlDom = document.documentElement.classList;
     $htmlDom.contains("hide-aside")
       ? document.querySelector("#consoleHideAside").classList.add("on")
       : document.querySelector("#consoleHideAside").classList.remove("on");
-
+    if (consoleEl.classList.contains("show")) {
+      consoleEl.classList.remove("show");
+    } else {
+      consoleEl.classList.add("show");
+    }
     const consoleKeyboard = document.querySelector("#consoleKeyboard");
+
     if (consoleKeyboard) {
-      if (!saveToLocal.get("keyboardToggle")) {
+      if (localStorage.getItem("keyboardToggle") === "true") {
         consoleKeyboard.classList.add("on");
+        anzhiyu_keyboard = true;
       } else {
         consoleKeyboard.classList.remove("on");
-      }
-    }
-
-    // 热评控制台按钮状态
-    const consoleCommentBarrage = document.querySelector("#consoleCommentBarrage");
-    if (consoleCommentBarrage) {
-      if (saveToLocal.get("commentBarrageSwitch") !== "false") {
-        consoleCommentBarrage.classList.add("on");
-      } else {
-        consoleCommentBarrage.classList.remove("on");
-      }
-    }
-
-    // 音乐控制台按钮状态
-    const consoleMusic = document.querySelector("#consoleMusic");
-    if (consoleMusic) {
-      if (!anzhiyu_musicPlaying) {
-        consoleMusic.classList.remove("on");
-      } else {
-        consoleMusic.classList.add("on");
+        anzhiyu_keyboard = false;
       }
     }
   },
@@ -1345,7 +1267,7 @@ const anzhiyu = {
           left: 0,
           behavior: "smooth",
         });
-        nextButton.innerHTML = '<i class="naokuofont naokuo-icon-angle-double-right"></i>';
+        nextButton.innerHTML = '<i class="anzhiyufont anzhiyu-icon-angle-double-right"></i>';
       } else {
         // 滚动到下一个视图
         items.scrollBy({
@@ -1511,473 +1433,3 @@ const anzhiyuPopupManager = {
     }, duration);
   },
 };
-
-const NaoKuo = {
-  // 统计适配明暗模式
-  switchPostChart: () => {
-    // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义
-    let color = document.documentElement.getAttribute('data-theme') === 'light' ? '#4C4948' : 'rgba(255,255,255,0.7)'
-    if (document.getElementById('posts-chart') && postsOption) {
-      try {
-        let postsOptionNew = postsOption
-        postsOptionNew.title.textStyle.color = color
-        postsOptionNew.xAxis.nameTextStyle.color = color
-        postsOptionNew.yAxis.nameTextStyle.color = color
-        postsOptionNew.xAxis.axisLabel.color = color
-        postsOptionNew.yAxis.axisLabel.color = color
-        postsOptionNew.xAxis.axisLine.lineStyle.color = color
-        postsOptionNew.yAxis.axisLine.lineStyle.color = color
-        postsOptionNew.series[0].markLine.data[0].label.color = color
-        postsChart.setOption(postsOptionNew)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    if (document.getElementById('tags-chart') && tagsOption) {
-      try {
-        let tagsOptionNew = tagsOption
-        tagsOptionNew.title.textStyle.color = color
-        tagsOptionNew.xAxis.nameTextStyle.color = color
-        tagsOptionNew.yAxis.nameTextStyle.color = color
-        tagsOptionNew.xAxis.axisLabel.color = color
-        tagsOptionNew.yAxis.axisLabel.color = color
-        tagsOptionNew.xAxis.axisLine.lineStyle.color = color
-        tagsOptionNew.yAxis.axisLine.lineStyle.color = color
-        tagsOptionNew.series[0].markLine.data[0].label.color = color
-        tagsChart.setOption(tagsOptionNew)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    if (document.getElementById('categories-chart') && categoriesOption) {
-      try {
-        let categoriesOptionNew = categoriesOption
-        categoriesOptionNew.title.textStyle.color = color
-        categoriesOptionNew.legend.textStyle.color = color
-        if (!categoryParentFlag) { categoriesOptionNew.series[0].label.color = color }
-        categoriesChart.setOption(categoriesOptionNew)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-  },
-  PostChartClick: () => {
-    const $console_darkmode = document.querySelector('#console .darkmode_switchbutton');
-    const $rightside_darkmode = document.querySelector('#rightside #darkmode');
-    const $rightMenu_darkmode = document.querySelector('#rightMenu #menu-darkmode');
-    $console_darkmode && anzhiyu.addEventListenerPjax($console_darkmode, "click", function () { setTimeout(NaoKuo.switchPostChart, 100) });
-    $rightside_darkmode && anzhiyu.addEventListenerPjax($rightside_darkmode, "click", function () { setTimeout(NaoKuo.switchPostChart, 100) });
-    $rightMenu_darkmode && anzhiyu.addEventListenerPjax($rightMenu_darkmode, "click", function () { setTimeout(NaoKuo.switchPostChart, 100) });
-  },
-
-  // 欢迎语
-  setWelcome_info: async () => {
-    if (!document.getElementById("welcome-info")) return;
-
-    let ipLoacation = saveToLocal.get('welcome-info');
-
-    try {
-      if (!ipLoacation) {
-        return new Promise((resolve, reject) => {
-          var script = document.createElement('script');
-          var url = `https://apis.map.qq.com/ws/location/v1/ip?key=AKBBZ-A5BKN-732F7-S477E-EA645-OGBJJ&output=jsonp`;
-          script.src = url;
-
-          window.QQmap = (data) => {
-            if (data.status === 0) {
-              // console.info(data);
-              ipLoacation = data;
-              saveToLocal.set('welcome-info', ipLoacation, 0.5);
-              NaoKuo.showWelcome(ipLoacation);
-              resolve();
-            } else {
-              reject(new Error('Failed to fetch location data'));
-            }
-            document.body.removeChild(script);
-            delete window.QQmap;
-          };
-          document.body.appendChild(script);
-        });
-      } else {
-        await Promise.resolve(); // 确保在同步代码路径上也能保持异步风格
-        NaoKuo.showWelcome(ipLoacation);
-      }
-    } catch (err) {
-      console.error("Error fetching data:", err);
-    }
-  },
-  //根据经纬度计算两点距离(点1经度,点1纬度,点2经度,点2纬度)
-  getDistance: (e1, n1, e2, n2) => {
-    const R = 6371
-    const { sin, cos, asin, PI, hypot } = Math
-    let getPoint = (e, n) => {
-      e *= PI / 180
-      n *= PI / 180
-      return { x: cos(n) * cos(e), y: cos(n) * sin(e), z: sin(n) }
-    }
-    let a = getPoint(e1, n1)
-    let b = getPoint(e2, n2)
-    let c = hypot(a.x - b.x, a.y - b.y, a.z - b.z)
-    let r = asin(c / 2) * 2 * R
-    return Math.round(r);
-  },
-  //根据国家、省份、城市信息自定义欢迎语
-  showWelcome: (ipStore) => {
-    const WelcomeInfo = document.getElementById("welcome-info"),
-      IP = ipStore.result.ip || "未知";
-    let dist = NaoKuo.getDistance(106.713478, 26.578343, ipStore.result.location.lng, ipStore.result.location.lat),
-      address,
-      welcome_info;
-    //根据国家、省份、城市信息自定义欢迎语
-    //海外地区不支持省份及城市信息
-    switch (ipStore.result.ad_info.nation) {
-      case "日本":
-        welcome_info = "よろしく，一起去看樱花吗";
-        break;
-      case "美国":
-        welcome_info = "Make America Great Again";
-        break;
-      case "英国":
-        welcome_info = "想同你一起夜乘伦敦眼";
-        break;
-      case "俄罗斯":
-        welcome_info = "干了这瓶伏特加";
-        break;
-      case "法国":
-        welcome_info = "C'est La Vie";
-        break;
-      case "德国":
-        welcome_info = "Die Zeit verging im Fluge";
-        break;
-      case "澳大利亚":
-        welcome_info = "一起去大堡礁吧";
-        break;
-      case "加拿大":
-        welcome_info = "拾起一片枫叶赠予你";
-        break;
-      case "中国":
-        address = ipStore.result.ad_info.province + " " + ipStore.result.ad_info.city;
-        switch (ipStore.result.ad_info.province) {
-          case "北京市":
-            address = "北京市";
-            welcome_info = "北——京——欢迎你";
-            break;
-          case "天津市":
-            address = "天津市";
-            welcome_info = "讲段相声吧";
-            break;
-          case "重庆市":
-            address = "重庆市";
-            welcome_info = "高德地图:已到达重庆，下面交给百度地图导航"
-            break;
-          case "河北省":
-            welcome_info = "山势巍巍成壁垒，天下雄关。铁马金戈由此向，无限江山";
-            break;
-          case "山西省":
-            welcome_info = "展开坐具长三尺，已占山河五百余";
-            break;
-          case "内蒙古自治区":
-            welcome_info = "天苍苍，野茫茫，风吹草低见牛羊";
-            break;
-          case "辽宁省":
-            welcome_info = "我想吃烤鸡架";
-            break;
-          case "吉林省":
-            welcome_info = "状元阁就是东北烧烤之王";
-            break;
-          case "黑龙江省":
-            welcome_info = "很喜欢哈尔滨大剧院";
-            break;
-          case "上海市":
-            address = "上海市";
-            welcome_info = "众所周知，中国只有两个城市";
-            break;
-          case "江苏省":
-            switch (ipStore.result.ad_info.city) {
-              case "南京市":
-                welcome_info = "欢迎来自安徽省南京市的小伙伴";
-                break;
-              case "苏州市":
-                welcome_info = "上有天堂，下有苏杭";
-                break;
-              case "泰州市":
-                welcome_info = "这里也是我的故乡";
-                break;
-              default:
-                welcome_info = "散装是必须要散装的";
-                break;
-            }
-            break;
-          case "浙江省":
-            welcome_info = "东风渐绿西湖柳，雁已还人未南归";
-            break;
-          case "安徽省":
-            welcome_info = "蚌埠住了，芜湖起飞";
-            break;
-          case "福建省":
-            welcome_info = "井邑白云间，岩城远带山";
-            break;
-          case "江西省":
-            welcome_info = "落霞与孤鹜齐飞，秋水共长天一色";
-            break;
-          case "山东省":
-            welcome_info = "遥望齐州九点烟，一泓海水杯中泻";
-            break;
-          case "湖北省":
-            welcome_info = "来碗热干面";
-            break;
-          case "湖南省":
-            welcome_info = "74751，长沙斯塔克";
-            break;
-          case "广东省":
-            welcome_info = "老板来两斤福建人";
-            break;
-          case "广西壮族自治区":
-            welcome_info = "桂林山水甲天下";
-            break;
-          case "海南省":
-            welcome_info = "朝观日出逐白浪，夕看云起收霞光";
-            break;
-          case "四川省":
-            welcome_info = "康康川妹子";
-            break;
-          case "贵州省":
-            welcome_info = "茅台，学生，再塞200";
-            break;
-          case "云南省":
-            welcome_info = "玉龙飞舞云缠绕，万仞冰川直耸天";
-            break;
-          case "西藏自治区":
-            welcome_info = "躺在茫茫草原上，仰望蓝天";
-            break;
-          case "陕西省":
-            welcome_info = "来份臊子面加馍";
-            break;
-          case "甘肃省":
-            welcome_info = "羌笛何须怨杨柳，春风不度玉门关";
-            break;
-          case "青海省":
-            welcome_info = "牛肉干和老酸奶都好好吃";
-            break;
-          case "宁夏回族自治区":
-            welcome_info = "大漠孤烟直，长河落日圆";
-            break;
-          case "新疆维吾尔自治区":
-            welcome_info = "驼铃古道丝绸路，胡马犹闻唐汉风";
-            break;
-          case "台湾省":
-            welcome_info = "我在这头，大陆在那头";
-            break;
-          case "香港特别行政区":
-            address = "香港特别行政区";
-            welcome_info = "永定贼有残留地鬼嚎，迎击光非岁玉";
-            break;
-          case "澳门特别行政区":
-            address = "澳门特别行政区";
-            welcome_info = "性感荷官，在线发牌";
-            break;
-          default:
-            welcome_info = "带我去你的城市逛逛吧";
-            break;
-        }
-        break;
-      default:
-        welcome_info = "带我去你的国家看看吧";
-        break;
-    }
-    //判断时间
-    let timeChange,
-      date = new Date();
-    if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span>🌤️上午好，一日之计在于晨</span>";
-    else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span>☀️中午好，该摸鱼吃午饭了</span>";
-    else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<span>🕞下午好，懒懒地睡个午觉吧</span>";
-    else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<span>🍵三点几啦，饮茶先啦</span>";
-    else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>🌇夕阳无限好，只是近黄昏</span>";
-    else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>🌔晚上好，夜生活嗨起来</span>";
-    else timeChange = "🌌夜深了，早点休息，少熬夜";
-
-    //自定义文本需要放的位置
-    WelcomeInfo && (WelcomeInfo.innerHTML = `🙋欢迎来自 <strong>${address}</strong> 的小伙伴<br>
-    😊<strong>${welcome_info}</strong><br>
-    🗺️您距离 <strong>Naokuo</strong> 约有 <strong>${dist}</strong> 公里！<br>
-    当前IP地址为：<br>
-    <strong style="font-size:12px;"><psw>${IP}</psw></strong><br>
-    <strong>${timeChange}！</strong>`);
-
-  },
-  // 隐私协议信息
-  setuserAgent: async () => {
-    if (!document.querySelector('body[data-type="privacy"]')) return; //判断是否是隐私协议页面    
-    try {
-      let UserInfo = saveToLocal.get('welcome-info');
-      if (!UserInfo) {
-        return new Promise((resolve, reject) => {
-          var script = document.createElement('script');
-          var url = `https://apis.map.qq.com/ws/location/v1/ip?key=AKBBZ-A5BKN-732F7-S477E-EA645-OGBJJ&output=jsonp`;
-          script.src = url;
-
-          window.QQmap = (data) => {
-            if (data.status === 0) {
-              // console.info(data);
-              UserInfo = data;
-              saveToLocal.set('welcome-info', UserInfo, 0.5);
-              setUserInfo();
-              resolve();
-            } else {
-              reject(new Error('Failed to fetch location data'));
-            }
-            document.body.removeChild(script);
-            delete window.QQmap;
-          };
-          document.body.appendChild(script);
-        });
-      } else {
-        await Promise.resolve(); // 确保在同步代码路径上也能保持异步风格
-        setUserInfo();
-      }
-
-      function setUserInfo() {
-        const ua_Ip = document.getElementById("userAgentIp"),
-          ua_City = document.getElementById("userAgentCity"),
-          ua_Os = document.getElementById("userAgentOs");
-        ua_Ip && (ua_Ip.innerText = UserInfo.result.ip);
-        ua_City && (ua_City.innerText = UserInfo.result.ad_info.nation + UserInfo.result.ad_info.province + UserInfo.result.ad_info.city);
-        ua_Os && (ua_Os.innerText = navigator.userAgent);
-      }
-    } catch (err) {
-      console.error("Error fetching data:", err);
-    }
-  },
-
-  // 博客线路切换
-  setNaokuo_Host: () => {
-    const N_hostName = document.querySelector("#travellings_button #naokuo_qiehuan");
-
-    if (N_hostName) {
-      const yupathname = window.location.pathname,
-        yuhostname = window.location.hostname;
-      let yuurl;
-
-      if (yuhostname == 'naokuo.top' || yuhostname == 'www.naokuo.top' || yuhostname == 'blog.naokuo.top') {
-        yuurl = "https://myxiaochuang.gitee.io" + yupathname;
-        N_hostName.href = yuurl;
-      } else if (yuhostname == 'myxiaochuang.gitee.io') {
-        yuurl = "https://naokuo.top" + yupathname;
-        N_hostName.href = yuurl;
-      }
-    }
-  },
-  // 音乐歌单切换
-  musicBtnClis: () => {
-    document.getElementById("eo-music-list").classList.add("eomusic-onoff"),
-      document.getElementById("menu-mask").style.display = "block",
-      document.getElementById("menu-mask").style.animation = "0.5s ease 0s 1 normal none running to_show"
-  },
-  musicListHide: () => {
-    document.getElementById("eo-music-list").classList.remove("eomusic-onoff"),
-      document.getElementById("menu-mask").style.cssText = "";
-  },
-  clocClass: () => {
-    var e = document.querySelectorAll("#eo-music-list .eolistbg");
-    if (!e) return;
-    for (let t = 0; t < e.length; t++)
-      e[t].classList.remove("playlistimgbg"),
-        e[t].classList.remove("playimgbg")
-  },
-  musicListClick: (e, t, s) => {
-    indexNex = indexNum,
-      indexNum = s,
-      NaoKuo.clocClass(),
-      NaoKuo.musicListHide(),
-      window.screen.width > 768 && (document.getElementById("eolistbg" + indexNum).classList.add("playlistimgbg"),
-        document.getElementById("eolistbg" + indexNum).classList.add("playimgbg")),
-      indexNum != indexNex && (document.getElementsByClassName("eo-music")[0].style.left = "-200%",
-        document.getElementsByClassName("eo-music")[0].style.right = "0%",
-        document.getElementsByClassName("eo-music")[0].style.opacity = 0,
-        setTimeout((() => {
-          document.getElementsByClassName("eo-music")[0].style.right = "-200%",
-            document.getElementsByClassName("eo-music")[0].style.left = "0%",
-            document.getElementsByClassName("eo-music")[0].style.opacity = 0;
-          const s = document.querySelector("#anMusic-page .eo-music").aplayer;
-          var n = `https://meting.naokuo.top/api?server=${t}&type=playlist&id=${e}`;
-          s.list.clear(),
-            fetch(n).then((e => e.json())).then((e => {
-              s.list.add(e)
-            }
-            )).catch((e => console.error(e))),
-            setTimeout((() => {
-              document.getElementsByClassName("eo-music")[0].style.right = "0%",
-                document.getElementsByClassName("eo-music")[0].style.left = "0%",
-                document.getElementsByClassName("eo-music")[0].style.opacity = 1;
-            }
-            ), 200)
-        }
-        ), 600))
-  },
-  naoDarkButton: function (elementId, childSelector) {
-    const willChangeMode = document.documentElement.getAttribute("data-theme");
-    const element = document.getElementById(elementId);
-    if (element && childSelector) {
-      const childElement = element.querySelector(childSelector);
-      childElement && childElement.addEventListener("click", () => {
-        const isMode = element.getAttribute("button-theme") === "dark" ? "light" : "dark";
-        element.setAttribute("button-theme", isMode);
-      });
-    }
-    if (element && willChangeMode) {
-      element.setAttribute("button-theme", willChangeMode);
-    }
-  },
-  // 宠物挂件随机移动
-  changeMarginLeft: function (element, parent) {
-    const Width = document.querySelector(parent).offsetWidth - 240;
-    var randomMargin = Math.floor(Math.random() * (Width - 100 + 1)) + 100; // 生成100-父元素之间的随机数
-    element.style.marginLeft = randomMargin + 'px';
-  },
-  // 随机宠物挂件图片
-  animalsRandomImage: function () {
-    const element = document.getElementById('console_climb'),
-      images = [
-        'https://cdn.cbd.int/naokuo-blog-static@1.0.12/img/animals/kaluote.webp',
-        'https://cdn.cbd.int/naokuo-blog-static@1.0.12/img/animals/keke.webp',
-        'https://cdn.cbd.int/naokuo-blog-static@1.0.12/img/animals/nimo.webp',
-        'https://cdn.cbd.int/naokuo-blog-static@1.0.12/img/animals/tugou.webp',
-        'https://cdn.cbd.int/naokuo-blog-static@1.0.12/img/animals/wate.webp',
-      ],
-      randomIndex = Math.floor(Math.random() * images.length),
-      randomImageUrl = images[randomIndex];
-
-    if (element && randomImageUrl) {
-      element.src = randomImageUrl;
-    }
-  },
-  // 定义更新时钟显示的函数
-  updateClock: function () {
-    // 获取时钟显示容器
-    const clockDisplay = document.getElementById('rightside-clock'),
-    clockPeriod = document.getElementById('rightside-clock-period');
-    // 获取当前时间
-    const now = new Date();
-
-    // 提取小时、分钟，并补零
-    let hours = now.getHours();
-    let period = null;
-    if (hours > 12) {
-      hours -= 12; // 将24小时制转换为12小时制
-      period = 'PM';
-    } else if (hours === 0) {
-      hours = 12; // 0点应显示为12点
-      period = 'AM';
-    } else {
-      period = 'AM';
-    }
-    hours = String(hours).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-
-    // 组合时间字符串并设置到页面上
-    clockDisplay.textContent = `${hours}:${minutes}`;
-    clockPeriod.textContent = `${period}`;
-    // 每秒钟调用一次此函数以保持时间更新
-    setTimeout(NaoKuo.updateClock, 1000);
-  }
-}

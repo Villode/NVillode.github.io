@@ -97,8 +97,7 @@ var randomPostTips = [
 ];
 var randomPostClick = 0;
 function fetchRandomPost() {
-  const Element = document.getElementById('random-post');
-  if (!Element) return;
+  if (!document.getElementById("random-post")) return;
   if (randomPostWorking == false) {
     randomPostWorking = true;
     //获取旋转角度
@@ -125,10 +124,10 @@ function fetchRandomPost() {
       randomPostLevel = "钓鱼新手";
     }
     if (randomPostTimes >= 5) {
-      Element.innerHTML =
+      document.getElementById("random-post").innerHTML =
         `钓鱼中... （Lv.` + randomPostTimes + ` 当前称号：` + randomPostLevel + `）`;
     } else {
-      Element.innerHTML = `钓鱼中...`;
+      document.getElementById("random-post").innerHTML = `钓鱼中...`;
     }
 
     let randomTime = randomNum(1000, 3000);
@@ -136,36 +135,31 @@ function fetchRandomPost() {
     if (randomPostTimes == 0) {
       randomTime = 0;
     }
-    const random_post_start = document.querySelector(".random-post-start");
-    if (random_post_start) {
-      random_post_start.style.opacity = "0.2";
-      random_post_start.style.transitionDuration = "0.3s";
-      random_post_start.style.transform = "rotate(" + randomRotate + "deg)";
-    }
+
+    document.querySelector(".random-post-start").style.opacity = "0.2";
+    document.querySelector(".random-post-start").style.transitionDuration = "0.3s";
+    document.querySelector(".random-post-start").style.transform = "rotate(" + randomRotate + "deg)";
 
     //判断是否饥饿
     if (
-      Element !== null &&
+      document.getElementById("random-post") &&
       randomPostClick * fdata.hungryFish + fdata.defaultFish < randomPostTimes &&
       Math.round(Math.random()) == 0
     ) {
-      Element.innerHTML =
+      document.getElementById("random-post").innerHTML =
         "因为只钓鱼不吃鱼，过分饥饿导致本次钓鱼失败...(点击任意一篇钓鱼获得的文章即可恢复）";
       randomPostWorking = false;
     } else {
-      try {
-        const fetchRandomPost = async url => {
-          const response = await fetch(url);
-          return await response.json();
-        };
-        const fetchUrl = fdata.apiurl + "randompost";
-        fetchRandomPost(fetchUrl).then(json => {
-          let title = json.title;
-          let link = json.link;
-          let author = json.author;
-          if (Element !== null) {
+      var fetchUrl = fdata.apiurl + "randompost";
+      fetch(fetchUrl)
+        .then(res => res.json())
+        .then(json => {
+          var title = json.title;
+          var link = json.link;
+          var author = json.author;
+          if (document.getElementById("random-post")) {
             window.setTimeout(function () {
-              Element.innerHTML =
+              document.getElementById("random-post").innerHTML =
                 randomPostTipsItem +
                 `来自友链 <b>` +
                 author +
@@ -176,26 +170,11 @@ function fetchRandomPost() {
                 `</a>`;
               randomPostTimes += 1;
               localStorage.setItem("randomPostTimes", randomPostTimes);
-              document.querySelector(".random-post-start") && (document.querySelector(".random-post-start").style.opacity = "1");
+              document.querySelector(".random-post-start").style.opacity = "1";
             }, randomTime);
           }
-          randomPostWorking = false;
-        }).catch(() => {
-          if (Element !== null) {
-            window.setTimeout(function () {
-              Element.innerHTML = "😮啊！鱼塘都不见了。";
-            }, randomTime);
-          }
-          randomPostWorking = false;
         });
-      } catch {
-        if (Element !== null) {
-          window.setTimeout(function () {
-            Element.innerHTML = "😮啊！鱼塘都不见了。";
-          }, randomTime);
-        }
-        randomPostWorking = false;
-      }
+      randomPostWorking = false;
     }
   }
 }
@@ -206,11 +185,8 @@ function initRandomPost() {
   if (localStorage.randomPostTimes) {
     randomPostTimes = parseInt(localStorage.randomPostTimes);
     randomPostClick = parseInt(localStorage.randomPostClick);
-    const random_post_start = document.querySelector(".random-post-start");
-    if (random_post_start) {
-      random_post_start.style.transitionDuration = "0.3s";
-      random_post_start.style.transform = "rotate(" + 360 * randomPostTimes + "deg)";
-    }
+    document.querySelector(".random-post-start").style.transitionDuration = "0.3s";
+    document.querySelector(".random-post-start").style.transform = "rotate(" + 360 * randomPostTimes + "deg)";
   }
   fetchRandomPost();
 }
