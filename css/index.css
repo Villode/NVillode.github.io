@@ -13532,7 +13532,6 @@ h1.page-title + .tag-cloud-list {
   }
   #nav {
     border-bottom: none;
-    background: var(--anzhiyu-background);
   }
   #page-header #nav #nav-right div {
     margin-left: 0.5rem;
@@ -19333,7 +19332,6 @@ p.p.gray {
 }
 [data-theme='dark'] #page-header.nav-fixed > #nav,
 [data-theme='dark'] #page-header.not-top-img > #nav {
-  backdrop-filter: blur(5px);
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
 }
@@ -20602,7 +20600,7 @@ a.catalog-more:hover {
     background: var(--anzhiyu-background);
   }
   [data-theme="dark"] #category-bar.category-bar {
-    background: var(--anzhiyu-black);
+    background: #00000059;
   }
   #category-bar.category-bar:hover {
     border: none;
