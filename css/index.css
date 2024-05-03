@@ -10429,6 +10429,7 @@ h1.page-title + .tag-cloud-list {
 #footer {
   position: relative;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   background-attachment: scroll;
   background-position: bottom;
   background-size: cover;
@@ -10444,6 +10445,7 @@ h1.page-title + .tag-cloud-list {
   color: var(--anzhiyu-fontcolor);
   margin-top: 1rem;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -11182,7 +11184,8 @@ h1.page-title + .tag-cloud-list {
 #page-header.nav-fixed #nav {
   position: fixed;
   z-index: 91;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   outline: 1px solid var(--anzhiyu-card-border);
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -15276,6 +15279,7 @@ blockquote {
   top: 10%;
   left: 10%;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   color: var(--anzhiyu-fontcolor);
   border-radius: 12px;
   z-index: 10002;
@@ -19311,6 +19315,7 @@ p.p.gray {
 }
 [data-theme='dark'] #footer {
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 [data-theme='dark'] #article-container pre > code {
   background: #171717;
@@ -20245,7 +20250,11 @@ div#category {
 } */
 
 [data-theme="dark"] .card-widget {
+    /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
 }
 
 [data-theme="dark"] div#post {
@@ -20402,7 +20411,10 @@ html.hide-aside .layout > div:first-child {
   height: 110px;
 }
 [data-theme="dark"] #aside-content .card-widget#card-wechat {
+    /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
   border: var(--style-border);
 }
 
@@ -20514,7 +20526,10 @@ a.catalog-more:hover {
 
 #category-bar {
   padding: 0.5rem 10px;
+  /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
   display: flex;
   white-space: nowrap;
   overflow: hidden;
@@ -20577,7 +20592,10 @@ a.catalog-more:hover {
 }
 
 [data-theme="dark"] #category-bar.category-bar {
+  /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
 }
 
 @media screen and (max-width: 768px) {
@@ -22358,7 +22376,10 @@ body[data-type="essay"] #page .author-content-item .card-content .banner-button-
   }
 }
 [data-theme="dark"] #bbTimeList {
+    /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
 }
 #bbtalk {
   width: 100%;
@@ -22597,7 +22618,10 @@ i.bber-gotobb {
   background: var(--anzhiyu-main);
   border: var(--style-border-hover);
   backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: blur(20px);
+    /* 兼容大多数现代浏览器 */
+  backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
   transform: translateZ(0);
 }
 
@@ -23226,17 +23250,26 @@ a.categoryButton:after {
 [data-theme="dark"] a.categoryButton.blue {
   background: linear-gradient(to right, #0653b8b0, #2fcbff);
   background-size: 200%;
+    /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
 }
 [data-theme="dark"] a.categoryButton.red {
   background: linear-gradient(to right, #e22a16b0, #da980c);
   background-size: 200%;
+    /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
 }
 [data-theme="dark"] a.categoryButton.green {
   background: linear-gradient(to right, #099e74b0, #0ea4a4);
   background-size: 200%;
+    /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
 }
 
 #topPostGroup .top-group-list-item {
@@ -23909,7 +23942,10 @@ div#swiper_container:hover {
   object-fit: cover;
   width: 100%;
   height: 80px;
+    /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 12px 12px 0 0;
 }
 .topGroup .recent-post-item:nth-child(4),
