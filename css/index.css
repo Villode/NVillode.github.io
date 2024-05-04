@@ -19341,7 +19341,7 @@ p.p.gray {
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
 }
 [data-theme='dark'] .post #page-header.nav-fixed > #nav {
-  background: var(--anzhiyu-card-bg);
+  background: rgba(29,30,34,0.549);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
