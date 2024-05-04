@@ -602,7 +602,7 @@ site_verification:
 theme_color:
   enable: true
   main: "#425AEF"
-  dark_main: "#f2b94b"
+  dark_main: "#f59340"
   paginator: "#425AEF"
   #   button_hover: "#FF7242"
   text_selection: "#2128bd"
@@ -748,7 +748,7 @@ hr_icon:
 
 # the subtitle on homepage (主页subtitle)
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect (打字效果)
   effect: true
   # Effect Speed Options (打字效果速度参数)
@@ -766,7 +766,7 @@ subtitle:
   source: 1
   # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
   sub:
-    # - 生活明朗&#44;万物可爱&#44;人间值得&#44;未来可期.
+    - 生活明朗&#44;万物可爱&#44;人间值得&#44;未来可期.
 
 # Loading Animation (加载动画)
 preloader:
@@ -778,7 +778,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/3a20886c6d062395dc18ba47c4a0c2c2.jpg #https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/TX_20240430_014532.jpg #https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -906,12 +906,12 @@ centerConsole:
 darkmode:
   enable: true
   # Toggle Button to switch dark/light mode
-  button: false
+  button: true
   # Switch dark/light mode automatically (自动切换 dark mode和 light mode)
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
   start: # 8
   end: # 22
 
@@ -1037,9 +1037,9 @@ css_prefix: true
 home_top:
   enable: true # 开关
   timemode: date #date/updated
-  title: 生活明朗
-  subTitle: 万物可爱。
-  siteText: anheyu.com
+  title: 親身經歷后才知我們
+  subTitle: 生活在巨大差距裏
+  siteText: Villode Blog 520773.xyz
   category:
     - name: 前端
       path: /categories/前端开发/
@@ -1063,8 +1063,8 @@ home_top:
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
     tips: 新品主题
-    title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
+    title: Customized Theme
+    image: https://i.pinimg.com/736x/83/ee/dc/83eedcb8dbd659eca35c216e894db540.jpg
     link: https://docs.anheyu.com/
 
 # 朋友圈配置
