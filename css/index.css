@@ -3756,9 +3756,6 @@ body[data-type='about'] .page #footer-wrap {
   min-height: 16px;
   color: #666;
 }
-body[data-type='about'] #web_bg {
-  background: var(--anzhiyu-background);
-}
 #about-page {
   padding-top: 1rem;
 }
@@ -3848,7 +3845,8 @@ body[data-type='about'] #web_bg {
   -ms-transform: translate(0, -4px);
   transform: translate(0, -4px);
   padding: 1px 8px;
-  background: var(--anzhiyu-card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: var(--style-border-always);
   border-radius: 40px;
   margin-top: 6px;
@@ -4013,7 +4011,8 @@ body[data-type='about'] #web_bg {
 .author-content-item {
   width: 49%;
   border-radius: 24px;
-  background: var(--anzhiyu-card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: var(--style-border-always);
   -webkit-box-shadow: var(--anzhiyu-shadow-border);
   box-shadow: var(--anzhiyu-shadow-border);
@@ -12990,12 +12989,16 @@ h1.page-title + .tag-cloud-list {
   top: 55px;
   pointer-events: auto;
   left: 0;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .back-home-button .back-menu-list-groups {
   position: absolute;
   top: 65px;
   left: 0;
-  background: var(--anzhiyu-card-bg);
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 12px;
   border: var(--style-border);
   -webkit-box-orient: vertical;
@@ -22046,12 +22049,16 @@ body[data-type="essay"] #page {
   box-shadow: none !important;
   padding: 0 !important;
   background: transparent !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 body[data-type="essay"] #page .page-title {
   display: none;
 }
 body[data-type="essay"] #web_bg {
-  background: var(--anzhiyu-background);
+  /* background: var(--anzhiyu-background); */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 #bber .bber-container-img {
   display: flex;
@@ -22140,7 +22147,7 @@ body[data-type="essay"] #web_bg {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  background: var(--anzhiyu-card-bg);
+  /* background: var(--anzhiyu-card-bg); */
   box-shadow: var(--anzhiyu-shadow-border);
   margin-right: 2%;
 }
@@ -22607,7 +22614,8 @@ i.bber-gotobb {
 }
 
 #nav-music .aplayer {
-  background: var(--card-bg);
+  /* background: var(--card-bg); */
+  background: #12121200;
   border-radius: 60px;
   height: 41px;
   display: flex;
@@ -22618,7 +22626,7 @@ i.bber-gotobb {
 }
 
 #nav-music.playing .aplayer {
-  background: var(--anzhiyu-main);
+  /* background: var(--anzhiyu-main); */
   border: var(--style-border-hover);
   backdrop-filter: saturate(180%) blur(20px);
     /* 兼容大多数现代浏览器 */
