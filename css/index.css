@@ -6132,7 +6132,7 @@ body[data-type='about'] .page #footer-wrap {
   border: var(--style-border-always);
   overflow: hidden;
   margin: 8px 6px;
-  background: var(--anzhiyu-card-bg);
+  background: rgba(29,30,34,0.412);
   -webkit-box-shadow: var(--anzhiyu-shadow-border);
   box-shadow: var(--anzhiyu-shadow-border);
   min-height: 400px;
@@ -6201,7 +6201,7 @@ body[data-type='about'] .page #footer-wrap {
 .equipment-item .equipment-item-content .equipment-item-content-item .equipment-item-content-item-cover {
   width: 100%;
   height: 200px;
-  background: var(--anzhiyu-secondbg);
+  background: rgba(33,35,42,0);
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -6246,7 +6246,8 @@ body[data-type='about'] .page #footer-wrap {
   padding: 0 16px;
 }
 body[data-type="equipment"] #web_bg {
-  background: var(--anzhiyu-background);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 body[data-type="equipment"] #page {
   border: 0;
@@ -6270,7 +6271,7 @@ body[data-type="link"] #page .page-title {
   display: flex;
   width: 100%;
   height: 76%;
-  background: var(--anzhiyu-card-bg);
+  background: rgba(29,30,34,0);
   padding: 1.5rem;
   border: var(--style-border);
   border-radius: 12px;
@@ -20064,7 +20065,10 @@ body[data-type="album_detail"] #page .author-content-item .card-content .banner-
 
 /* 处理单页背景 */
 body[data-type="album"] #web_bg {
-  background: var(--anzhiyu-background);
+    /* 兼容大多数现代浏览器 */
+    backdrop-filter: blur(5px);
+    /* Safari 和其他 WebKit 内核浏览器 */
+    -webkit-backdrop-filter: blur(5px);
 }
 body[data-type="album"] #page {
   border: 0;
@@ -20267,11 +20271,16 @@ div#category {
 }
 
 [data-theme="dark"] div#tag {
-  background: var(--anzhiyu-card-bg);
+  background: #1d1e2200;
 }
 
 [data-theme="dark"] div#archive {
-  background: var(--anzhiyu-card-bg);
+  background: #1d1e227d;
+    /* 兼容大多数现代浏览器 */
+    backdrop-filter: blur(5px);
+    /* Safari 和其他 WebKit 内核浏览器 */
+    -webkit-backdrop-filter: blur(5px);
+
 }
 
 [data-theme="dark"] div#page {
@@ -21137,7 +21146,7 @@ details .content > *:nth-child(1) {
 }
 
 #console .console-card {
-  background: var(--card-bg);
+  background: #12121200;
   border-radius: 12px;
   overflow: hidden;
   border: var(--style-border);
@@ -21285,7 +21294,7 @@ details .content > *:nth-child(1) {
 #console .button-group .console-btn-item a {
   width: 100%;
   height: 100%;
-  background: var(--card-bg);
+  background: #12121200;
   border: var(--style-border);
   border-radius: 60px;
   display: flex;
@@ -21359,7 +21368,7 @@ details .content > *:nth-child(1) {
   flex-direction: column;
   align-content: space-between;
   border: var(--style-border);
-  background: var(--card-bg);
+  background: #12121200;
   padding: 8px 16px;
 }
 
@@ -23081,7 +23090,7 @@ body[data-type="fcircle"] #page {
 }
 #random-post {
   min-height: 32px;
-  background: var(--card-bg);
+  background: #12121200;
   border: var(--style-border-always);
   box-shadow: var(--anzhiyu-shadow-border);
   padding: 20px 30px;
@@ -27408,11 +27417,10 @@ div#runtime {
   padding: 1.25rem;
   width: 37.5rem;
   border-radius: 8px;
-  background: var(--search-bg);
   border-radius: 12px;
   -webkit-box-shadow: var(--anzhiyu-shadow-lightblack);
   box-shadow: var(--anzhiyu-shadow-lightblack);
-  background: var(--anzhiyu-card-bg);
+  background: rgba(29,30,34,0);
   border: var(--style-border);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
