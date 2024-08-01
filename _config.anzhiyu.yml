@@ -235,7 +235,7 @@ post_copyright:
   enable: true
   decode: true
   author_href:
-  location: 火星
+  location: 地球
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   avatarSinks: false # hover时头像下沉
