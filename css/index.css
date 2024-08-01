@@ -20275,7 +20275,9 @@ div#category {
 }
 
 [data-theme="dark"] div#page {
-  background: var(--anzhiyu-card-bg);
+  /* background: var(--anzhiyu-card-bg); */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 [data-theme="dark"] div#category {
