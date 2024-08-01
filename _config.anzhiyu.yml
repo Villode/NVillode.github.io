@@ -31,12 +31,12 @@ nav:
     - title: 网页
       item:
         - name: 博客
-          link: https://520773.xyz/
+          link: https://002777.xyz/
           icon: /img/favicon.ico
     - title: 项目
       item:
         - name: 待定
-          link: https://520773.xyz/
+          link: https://002777.xyz/
           icon: https://image.anheyu.com/favicon.ico
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
@@ -1039,7 +1039,7 @@ home_top:
   timemode: date #date/updated
   title: 親身經歷后才知我們
   subTitle: 生活在巨大差距裏
-  siteText: Villode Blog 520773.xyz
+  siteText: Villode Blog 002777.xyz
   category:
     - name: 前端
       path: /categories/前端开发/
@@ -1178,7 +1178,7 @@ post_head_ai_description:
   randomNum: 3 # 按钮最大的随机次数，也就是一篇文章最大随机出来几种
   basicWordCount: 1000 # 最低获取字符数, 最小1000, 最大1999
   key: 33c04deb0ac607654b4d
-  Referer: https://520773.xyz/
+  Referer: https://002777.xyz/
 
 # 快捷键配置
 shortcutKey:
