@@ -1,6 +1,6 @@
 - class_name: 关于页
   subtitle: 生活明朗，万物可爱✨
-  avatarImg: https://img.villode.us.kg/202312042027013.gif
+  avatarImg: https://img.villode.us.kg/3a20886c6d062395dc18ba47c4a0c2c2.jpg
   #https://img.villode.us.kg/202312030306423.gif
   avatarSkills:
     left:
@@ -14,7 +14,7 @@
       - 玩机坚强的后盾 🧱
       - 沉默寡言实干家 💢
   name: W東方
-  description: 是一名 學生、打工人、UP主、獨立開發者
+  description: 是一名 學生、打工人、UP主、開發者
   aboutsiteTips:
     tips: 追求
     title1: 源于
@@ -34,7 +34,7 @@
     # list:
     #   - desc: 學生,軟體技術專業
     #     color: "#357ef5"
-    img: https://img.villode.us.kg/202312040357938.gif
+    img: https://img.villode.us.kg/历程.png
   statistic:
     link: /archives
     text: 文章隧道
@@ -42,8 +42,8 @@
   map:
     title: 我现在住在
     StrengthenTitle: 中国大陆
-    background: https://img.villode.us.kg/202312040144919.gif
-    backgroundDark: https://img.villode.us.kg/202312040144919.gif
+    background: https://img.villode.us.kg/202312040144919.png
+    backgroundDark: https://img.villode.us.kg/202312040144919.png
   selfInfo:
     selfInfoTips1: 生于
     selfInfoContentYear: 千禧年
@@ -54,7 +54,7 @@
   personalities:
     author_name: 鑑賞家
     personality_type: ISTP
-    photo_url: https://img.villode.us.kg/202312041612948.gif
+    photo_url: https://img.villode.us.kg/蘑菇.png
     personality_img: https://www.16personalities.com/static/images/personality-types/avatars/istp-virtuoso.svg
     name_url: https://www.16personalities.com/ch/istp-%E4%BA%BA%E6%A0%BC
   maxim:
@@ -69,26 +69,26 @@
     game_tips: 爱好游戏
     game_title: 仙劍奇俠傳四
     game_uid: "为前人所不能为之事，否则人生一世，还有何意！ —— 玄霄"
-    game_bg: https://img.villode.us.kg/202312042300947.gif
+    game_bg: https://img.villode.us.kg/202312042300947.png
   comic:
     comic_tips: 爱好番剧
     comic_title: 追番
     comic_list:
       - name: 某科学的超电磁炮T
         href:  https://www.bilibili.com/bangumi/play/ss29325/?spm_id_from=333.999.0.0
-        cover: https://img.villode.us.kg/202312041557213.gif
+        cover: https://img.villode.us.kg/202312041557213.png
       - name: 间谍过家家 粤配版
         href:  https://www.bilibili.com/bangumi/play/ss43056/?spm_id_from=333.999.0.0
-        cover: https://img.villode.us.kg/202312041557134.gif
+        cover: https://img.villode.us.kg/202312041557134.png
       - name: 干物妹！小埋 粤配版
         href:  https://www.bilibili.com/bangumi/play/ss40753/?spm_id_from=333.999.0.0
-        cover: https://img.villode.us.kg/202312041558607.gif
+        cover: https://img.villode.us.kg/202312041558607.png
       - name: 小林家的龙女仆
         href:  https://www.bilibili.com/bangumi/play/ss5800/?spm_id_from=333.999.0.0
-        cover: https://img.villode.us.kg/202312041559812.gif
+        cover: https://img.villode.us.kg/202312041559812.png
       - name: 犬夜叉
         href:  https://www.bilibili.com/bangumi/play/ep289986?from_spmid=666.4.feed.10
-        cover: https://img.villode.us.kg/202312041555764.gif
+        cover: https://img.villode.us.kg/202312041555764.png
   like:
     like_tips: 关注偏好
     like_title: 数码科技
