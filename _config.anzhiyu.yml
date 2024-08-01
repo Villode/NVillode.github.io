@@ -138,11 +138,11 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/3a20886c6d062395dc18ba47c4a0c2c2.jpg  #/favicon.ico
+favicon: https://img.villode.us.kg/3a20886c6d062395dc18ba47c4a0c2c2.jpg  #/favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/3a20886c6d062395dc18ba47c4a0c2c2.jpg
+  img: https://img.villode.us.kg/3a20886c6d062395dc18ba47c4a0c2c2.jpg
   effect: false
 
 # Disable all banner image
@@ -248,10 +248,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042106866.png
+    - img: https://img.villode.us.kg/202312042106866.png
       link:
       text: 微信
-    - img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042106755.png
+    - img: https://img.villode.us.kg/202312042106755.png
       link:
       text: 支付宝
 
@@ -419,9 +419,9 @@ footer:
   runtime:
     enable: true
     launch_time: 04/01/2021 00:00:00 # 网站上线时间
-    work_img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042124603.png
+    work_img: https://img.villode.us.kg/202312042124603.png
     work_description: 每天都要元气满满呀，哈哈~
-    offduty_img: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042120300.png
+    offduty_img: https://img.villode.us.kg/202312042120300.png
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
@@ -778,7 +778,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/3a20886c6d062395dc18ba47c4a0c2c2.jpg #https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: https://img.villode.us.kg/3a20886c6d062395dc18ba47c4a0c2c2.jpg #https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -803,8 +803,8 @@ aside:
     content: 欢迎来看我的博客鸭~
   card_weixin:
     enable: true
-    face: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042218647.png
-    backFace: https://ntiwnzcz5rc46l-c5zyo77ym5oir5zac5qyi5l2g.520150.xyz/202312042218674.png
+    face: https://img.villode.us.kg/202312042218647.png
+    backFace: https://img.villode.us.kg/202312042218674.png
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
