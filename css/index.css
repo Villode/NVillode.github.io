@@ -15627,7 +15627,7 @@ blockquote {
   overflow: hidden auto;
   width: 300px;
   height: 100%;
-  background: var(--anzhiyu-background);
+  background: rgba(0,0,0,0);
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
@@ -15839,7 +15839,7 @@ blockquote {
   list-style: none;
 }
 #sidebar #sidebar-menus .menus_items .menus_item_child .site-page.child {
-  background: var(--anzhiyu-card-bg);
+  background: rgba(6,6,6,0.051);
 }
 #aside-content .card-tag-cloud a {
   border-radius: var(--anzhiyu-border-radius);
