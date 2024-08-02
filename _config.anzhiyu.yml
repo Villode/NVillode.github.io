@@ -417,7 +417,7 @@ footer:
   custom_text:
   runtime:
     enable: true
-    launch_time: 06/01/2021 00:00:00 # 网站上线时间
+    launch_time: 06/01/2018 00:00:00 # 网站上线时间
     work_img: https://img.villode.us.kg/202312042124603.png
     work_description: 每天都要元气满满呀，哈哈~
     offduty_img: https://img.villode.us.kg/202312042120300.png
