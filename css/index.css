@@ -14159,7 +14159,7 @@ blockquote {
 }
 @media screen and (max-width: 768px) {
   #post {
-    background: var(--anzhiyu-background) !important;
+    background: rgba(24,23,29,0) !important;
     border: none;
   }
 }
