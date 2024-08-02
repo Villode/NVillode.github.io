@@ -5959,7 +5959,7 @@ body[data-type='about'] .page #footer-wrap {
 }
 @media screen and (max-width: 768px) {
   .post .layout#content-inner {
-    background: var(--anzhiyu-main);
+    background: rgba(0,0,0,0.412);
   }
 }
 #body-wrap {
@@ -5988,7 +5988,7 @@ body[data-type='about'] .page #footer-wrap {
     padding: 0;
   }
   #body-wrap #archive {
-    background: var(--anzhiyu-background);
+    background: rgba(0,0,0,0.412);
     border: none;
     padding-top: 0px;
   }
