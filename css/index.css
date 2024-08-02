@@ -12294,7 +12294,7 @@ h1.page-title + .tag-cloud-list {
   padding: 8px;
   border-radius: 12px;
   border: var(--style-border-always);
-  background: var(--anzhiyu-card-bg);
+  background: rgba(0,0,0,0);
   font-size: 14px;
   height: 4.2rem;
   width: 7rem;
@@ -15676,7 +15676,7 @@ blockquote {
 }
 #sidebar #sidebar-menus .back-menu-list-groups .back-menu-list .back-menu-item {
   width: calc(50% - 16px);
-  background: var(--anzhiyu-card-bg);
+  background: rgba(29,30,34,0);
   border: var(--style-border-always);
   border-radius: 8px;
   display: -webkit-box;
