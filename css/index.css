@@ -24109,7 +24109,7 @@ div#swiper_container:hover {
     box-shadow: none !important;
   }
   .categoryGroup {
-    display: flex !important;
+    /* display: flex !important; */
   }
   #bbTimeList {
     margin: 0 1.5rem;
