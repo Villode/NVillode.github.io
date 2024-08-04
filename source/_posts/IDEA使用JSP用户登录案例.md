@@ -9,7 +9,7 @@ date: '2022-03-25'
 description: IDEA使用JSP用户登录案例
 excerpt: '100'
 keywords: IDEA使用JSP用户登录案例
-locate: 广西
+locate: 火星
 recommend: true
 tags:
 - IDEA
