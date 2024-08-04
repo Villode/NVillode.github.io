@@ -1,7 +1,7 @@
 ---
 aside: true
 categories:
-- - IDEA
+- - 教程
 cc: 原创
 comment: true
 cover: ''

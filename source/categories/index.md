@@ -29,7 +29,7 @@ top_img: false
   </card>
 </a>
 
-<a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/Daily_life/")'>
+<a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/生活日常/")'>
   <card data-image="https://img02.anheyu.com/adminuploads/1/2022/09/05/6315e142a69a9.webp">
     <h1 slot="header">生活</h1>
     <p slot="content">和好朋友👬们一起经历的有趣事。</p>

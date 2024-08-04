@@ -1041,12 +1041,12 @@ home_top:
   siteText: Villode Blog 002777.xyz
   category:
     - name: 生活
-      path: /categories/Daily_life/
+      path: /categories/生活日常/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
     - name: 求职
-      path: /categories/前端开发/
+      path: /categories/求职/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
