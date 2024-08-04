@@ -13735,7 +13735,7 @@ h1.page-title + .tag-cloud-list {
 }
 @media screen and (min-width: 768px) {
   #pagination .page-number.current:hover {
-    background: var(--anzhiyu-theme);
+    background: #4b7cf2;
     -webkit-box-shadow: var(--anzhiyu-shadow-theme);
     box-shadow: var(--anzhiyu-shadow-theme);
     color: var(--anzhiyu-white);
@@ -13754,8 +13754,7 @@ h1.page-title + .tag-cloud-list {
     overflow: visible;
   }
   #pagination .page-number.current {
-    background: var(--anzhiyu-theme);
-    border: var(--style-border-hover);
+    background: #4b7cf2;
     -webkit-box-shadow: var(--anzhiyu-shadow-theme);
     box-shadow: var(--anzhiyu-shadow-theme);
   }
@@ -20302,6 +20301,8 @@ div#category {
 
 [data-theme="dark"] div#category {
   background: transparent !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 /* md网站下划线 */
@@ -20530,7 +20531,7 @@ html.hide-aside .layout>div:first-child {
 }
 
 .catalog-list-item.selected a {
-  background: var(--anzhiyu-lighttext);
+  background: #4b7cf2;
   color: var(--anzhiyu-white);
 }
 
