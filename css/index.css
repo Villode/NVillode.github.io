@@ -23247,6 +23247,10 @@ a.categoryButton.green {
   background: linear-gradient(to right, #18e7ae, #1eebeb);
   background-size: 200%;
 }
+a.categoryButton.purple {
+  background: linear-gradient(to right, #895bd89c, #00ddc1);
+  background-size: 200%;
+}
 
 .categoryItem:hover {
   width: 50%;
@@ -23299,6 +23303,14 @@ a.categoryButton:after {
   background: linear-gradient(to right, #099e74b0, #0ea4a4);
   background-size: 200%;
     /* 兼容大多数现代浏览器 */
+  backdrop-filter: blur(5px);
+  /* Safari 和其他 WebKit 内核浏览器 */
+  -webkit-backdrop-filter: blur(5px);
+}
+[data-theme="dark"] a.categoryButton.purple {
+  background: linear-gradient(to right, #895bd89c, #00ddc1);
+  background-size: 200%;
+      /* 兼容大多数现代浏览器 */
   backdrop-filter: blur(5px);
   /* Safari 和其他 WebKit 内核浏览器 */
   -webkit-backdrop-filter: blur(5px);
