@@ -1057,8 +1057,8 @@ home_top:
       icon: anzhiyu-icon-fire
     - name: 教程
       path: /categories/教程/
-      shadow: var(--anzhiyu-shadow-red)
-      class: red
+      shadow: var(--anzhiyu-shadow-purple)
+      class: purple
       icon: anzhiyu-icon-fire
 
   default_descr: 再怎么看我也不知道怎么描述它的啦！
