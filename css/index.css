@@ -24070,6 +24070,7 @@ div#swiper_container:hover {
   div#bannerGroup {
     height: auto;
     width: auto;
+    display: none !important;
   }
 
   .topGroup .recent-post-item {
