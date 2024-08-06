@@ -55,6 +55,10 @@ jobs:
           publish_dir: './public'
           allow_empty_commit: True
       - name: 部署到 Vercel
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           npm install -g vercel
-          vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --confirm
+          vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --yes --name v-blog
