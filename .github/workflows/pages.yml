@@ -12,10 +12,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
+
       - name: 使用 Node.js 16.x
         uses: actions/setup-node@v2
         with:
           node-version: '18.15.0'
+
       - name: 缓存 NPM 依赖
         uses: actions/cache@v2
         with:
@@ -23,42 +25,53 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
+
       - name: 查看目录列表
         run: tree -L 3 -a
+
       - name: 安装依赖
         run: npm install
+
       - name: 安装 hexo-butterfly-envelope
         run: npm install hexo-butterfly-envelope --save
+        
       - name: 安装本地搜索
         run: npm install hexo-generator-search --save
+
       - name: 字数统计
         run: npm install hexo-wordcount --save
+
       - name: 安装留言功能
         run: npm install hexo-butterfly-envelope --save
+
       - name: 再次查看目录列表
         run: tree -L 3 -a
+
       - name: 安装主题
         run: git submodule add https://github.com/Villode/Blog-theme-magic.git themes/anzhiyu
+        #https://github.com/Villode/Vblog.git themes/anzhiyu
+        #https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git 
+        #https://github.com/Villode/hexo-theme-anzhiyu.git 
+
       - name: 清理
         run: npm run clean
+
       - name: 构建
         run: npm run build
-      - name: 部署到 GitHub Pages
+        
+      - name: 部署
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY  }}
           user_name: Villode
           user_email: vip520moyan@gmail.com
+          # 获取提交文章源码时的commit message，作为发布gh-pages分支的信息
           commit_message: ${{ github.event.head_commit.message }}
           full_commit_message: ${{ github.event.head_commit.message }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: './public'
-          allow_empty_commit: True
-      - name: 部署到 Vercel
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          npm install -g vercel
-          vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --yes --name v-blog
+          # GITHUB_TOKEN不是个人访问令牌，GitHub Actions 运行器会自动创建一个GITHUB_TOKEN密钥以在您的工作流程中进行身份验证。因此，您无需任何配置即可立即开始部署
+          publish_dir: ./public
+          allow_empty_commit: true # 允许空提交
+      # Use the output from the `deploy` step(use for test action)
+      
+
