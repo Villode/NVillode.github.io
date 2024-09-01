@@ -7917,7 +7917,7 @@ body:has(#console.show) #nav-music {
   display: flex;
   width: 50px;
   height: 50px;
-  bottom: 100px;
+  bottom: -50px;
   padding: 5px;
   background: var(--anzhiyu-white-op);
   backdrop-filter: saturate(180%) blur(20px);
@@ -8044,7 +8044,7 @@ body:has(#console.show) #nav-music {
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 50px;
+  bottom: -85px;
 }
 #anMusic-page meting-js .aplayer .aplayer-body .aplayer-info .aplayer-controller .aplayer-bar-wrap {
   margin: 0 160px 0 150px;
