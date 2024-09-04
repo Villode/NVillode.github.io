@@ -12263,11 +12263,11 @@ i.heoblogIcon {
   margin-top: 7rem;
 }
 #random-banner #skills-tags-group-all {
-  -webkit-transform: rotate(270.1deg);
-  -moz-transform: rotate(270.1deg);
-  -o-transform: rotate(270.1deg);
-  -ms-transform: rotate(270.1deg);
-  transform: rotate(270.1deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 #random-banner #random-hover {
   position: absolute;
@@ -27234,7 +27234,7 @@ div#runtime {
   display: flex;
   transform: rotate(0);
   transition: 0.3s;
-  width: 1000px;
+  width: 1250px;
 }
 #skills-tags-group-all .tags-group-wrapper {
   margin-top: 0;
