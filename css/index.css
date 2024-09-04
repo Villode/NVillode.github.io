@@ -27257,6 +27257,7 @@ div#runtime {
   width: 120px;
   height: 120px;
   border-radius: 30px;
+  transform: translate(-60px);
 }
 #skills-tags-group-all .tags-group-icon img {
   width: 60px;
@@ -27267,7 +27268,7 @@ div#runtime {
 }
 #skills-tags-group-all .tags-group-icon-pair .tags-group-icon:nth-child(even) {
   margin-top: 1rem;
-  transform: translate(-60px);
+  transform: rotate(270deg)!important;
 }
 
 #skills-tags-group-all .etc {
