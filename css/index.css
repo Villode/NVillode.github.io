@@ -12177,11 +12177,11 @@ h1.page-title + .tag-cloud-list {
   margin-top: 7rem;
 }
 #random-banner #skills-tags-group-all {
-  -webkit-transform: rotate(-30deg);
-  -moz-transform: rotate(-30deg);
-  -o-transform: rotate(-30deg);
-  -ms-transform: rotate(-30deg);
-  transform: rotate(-30deg);
+  -webkit-transform: rotate(270.1deg);
+  -moz-transform: rotate(270.1deg);
+  -o-transform: rotate(270.1deg);
+  -ms-transform: rotate(270.1deg);
+  transform: rotate(270.1deg);
 }
 #random-banner #random-hover {
   position: absolute;
@@ -27148,17 +27148,13 @@ div#runtime {
   display: flex;
   transform: rotate(0);
   transition: 0.3s;
+  width: 1000px;
 }
 #skills-tags-group-all .tags-group-wrapper {
-  /* margin-top: 40px;  （原來的样式） 
-  display: flex;
-  flex-wrap: nowrap;
-  animation: rowup 60s linear infinite; */
   margin-top: 0;
     display: flex;
     flex-wrap: wrap;
-    animation: rowup 60s linear infinite;
-    width: 320px;
+    animation: rowup 60s cubic-bezier(0.4, 0, 1, 1) infinite;
     margin-left: auto;
 }
 #skills-tags-group-all .tags-group-icon-pair {
