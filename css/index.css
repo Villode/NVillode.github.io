@@ -27153,7 +27153,7 @@ div#runtime {
 #skills-tags-group-all .tags-group-wrapper {
   margin-top: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     animation: rowup 60s cubic-bezier(0.4, 0, 1, 1) infinite;
     margin-left: auto;
 }
