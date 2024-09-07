@@ -18,4 +18,6 @@ tags:
 title: 软件工程资源
 ---
 
-测试
+### 资源来之不易，来源于Villode收集资源-个人博客002777.xyz
+
+# [点击获取资源](https://share.anheyu.com/share/R5AQBSK7)
