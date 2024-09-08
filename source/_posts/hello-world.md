@@ -4,7 +4,7 @@ aside: ''
 categories: []
 cc: ''
 comment: ''
-cover: ''
+cover: https://img.villode.us.kg/null_text.png
 date: ''
 description: ''
 excerpt: ''

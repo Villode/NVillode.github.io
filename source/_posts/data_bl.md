@@ -4,7 +4,7 @@ categories:
 - - 招聘
 cc: 网络
 comment: true
-cover: ''
+cover: https://img.villode.us.kg/null_text.png
 date: '2022-03-25'
 description: 黑榜
 excerpt: '100'

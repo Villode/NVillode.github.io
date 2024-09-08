@@ -4,7 +4,7 @@ categories:
 - - 教程
 cc: 原创
 comment: true
-cover: ''
+cover: https://img.villode.us.kg/null_text.png
 date: '2022-03-25'
 description: IDEA使用JSP用户登录案例
 excerpt: '100'

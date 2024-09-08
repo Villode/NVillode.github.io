@@ -1,18 +1,14 @@
 ---
-title: Hi
+title: 即刻短文静态部署版
 date: 2014-6-1
 updated: 2023-9-6
-cover: https://isgodata.files.wordpress.com/2023/04/e59bbee58fa8e58fa8_20230401_1640260.webp
-description: hi #文章描述
+cover: https://img.villode.us.kg/null_text.png
+description: 即刻短文静态部署版 #文章描述
 keywords: HEXO #文章关键字
 tags:
-  - 搞机
-  - 热门
   - 教程
 categories:
-  - UI设计
-  # - AI图片
-  # - category_name3
+  - Hexo
 cc: 转载 #原创
 locate: 北京 #IP位置
 excerpt: 100  #文章权重
