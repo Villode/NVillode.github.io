@@ -20,6 +20,8 @@ title: 软件工程资源
 
 ### 资源来之不易，来源于Villode收集资源-个人博客002777.xyz
 
+## 你将会获得
+<!-- 图片 -->
+<img src="https://img.villode.us.kg/2024-09-09 000553.png" alt="软件工程资源" style="width: 100%;">
 
-
-# [点击获取资源](https://share.anheyu.com/share/R5AQBSK7)
+# [点击获取资源](https://code.002777.xyz)
