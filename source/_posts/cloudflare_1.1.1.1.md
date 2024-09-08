@@ -5,7 +5,7 @@ categories:
 cc: 原创
 comment: true
 ai: true
-cover: https://1.1.1.1/media/warp-plus.png
+cover: https://img.villode.us.kg/null_text.png
 date: '2023-08-03T23:11:14.291466+08:00'
 description: 网络隐私保护，1.1.1.1使 Internet 更安全的免费应用。 现已可用于更多设备。
 excerpt: 现如今网络隐私的重要性 在当今网络时代，隐私的维护变得相当重要。最近我在某视频网站的评论区发现一些人的IP显示为Cloudflare等一些不寻常的IP地址，通常IP应该是形如"北京、美国"这样的。这看起来像是使用了代理工具，而Cloudflare的名字似乎非常熟悉。  介绍Cloudflare
