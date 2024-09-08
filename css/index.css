@@ -13017,6 +13017,7 @@ i.heoblogIcon {
   position: absolute;
   overflow: hidden;
   left: 0;
+  backdrop-filter: blur(2px);
 }
 #nav .menus_items .menus_item > a > i:last-child {
   display: none;
