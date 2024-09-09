@@ -32,23 +32,27 @@ jobs:
       - name: 安装依赖
         run: npm install
 
-      - name: 安装 hexo-butterfly-envelope
-        run: npm install hexo-butterfly-envelope --save
+    # 安知鱼 - name: 安装 hexo-butterfly-envelope
+    #    run: npm install hexo-butterfly-envelope --save
         
-      - name: 安装本地搜索
-        run: npm install hexo-generator-search --save
+    #  - name: 安装本地搜索
+    #    run: npm install hexo-generator-search --save
 
-      - name: 字数统计
-        run: npm install hexo-wordcount --save
+    #  - name: 字数统计
+    #    run: npm install hexo-wordcount --save
 
-      - name: 安装留言功能
-        run: npm install hexo-butterfly-envelope --save
+     # - name: 安装留言功能
+     #   run: npm install hexo-butterfly-envelope --save
+
+      - name: 安装hexo -renderer-pug hexo-renderer-stylus
+        run: npm install hexo-renderer-pug hexo-renderer-stylus
 
       - name: 再次查看目录列表
         run: tree -L 3 -a
 
       - name: 安装主题
-        run: git submodule add https://github.com/Villode/Blog-theme-magic.git themes/anzhiyu
+        run: git submodule add https://github.com/Villode/hexo-theme-butterfly-eurkon.git themes/butterfly
+        #https://github.com/Villode/Blog-theme-magic.git themes/anzhiyu
         #https://github.com/Villode/Vblog.git themes/anzhiyu
         #https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git 
         #https://github.com/Villode/hexo-theme-anzhiyu.git 
